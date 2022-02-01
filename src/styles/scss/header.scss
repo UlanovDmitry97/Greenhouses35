@@ -1,0 +1,375 @@
+@import '_variables.scss';
+
+.header {
+
+  &__top {
+    display: flex;
+    align-items: center;
+    min-height: 130px;
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__request-call {
+    @include buttonReset();
+    padding: 9px 19px;
+    margin-right: 23.5px;
+    background-color: #FF0000;
+    border-radius: 8px;
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 700;
+    color: $whiteText;
+    text-transform: uppercase;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+  }
+
+  &__request-call:hover {
+    background-color: $hoverYellowBg;
+    color: $darckText;
+  }
+
+  &__request-call:active {
+    background-color: $activeYellowBg;
+  }
+
+  &__delimiter {
+    width: 100%;
+    height: 8px;
+    background-color: $hoverGreenText;
+  }
+
+  &__bottom {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo {
+  display: flex;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 600;
+  color: $darckText;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    max-width: 210px;
+    padding-left: 49px;
+    background-image: url("images/icon-mark.svg");
+    background-position: 10px 46px;
+    background-repeat: no-repeat;
+
+  }
+
+  &__location {
+    display: block;
+    margin-top: auto;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  &__name {
+    text-transform: uppercase;
+  }
+}
+
+.socials {
+  display: flex;
+  margin-right: 12px;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  &__link {
+    display: block;
+    height: 62px;
+    border-radius: 50%;
+    transition: box-shadow .2s ease-in-out;
+  }
+
+  &__link:hover {
+    box-shadow: 0px 0px 25px rgba($darckText, .35);
+  }
+}
+
+.phones {
+  margin-right: 25px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+
+  &__phone {
+    color: $darckText;
+    transition: color .2s ease-in-out;
+  }
+
+  &__phone:hover {
+    color: $hoverGreenText;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.basket {
+  @include buttonReset();
+  position: relative;
+
+  & svg {
+    transition: fill .2s ease-in-out;
+  }
+
+  &:hover svg {
+    fill: $hoverGreenText;
+  }
+  &__icon {
+    width: 60px;
+    height: 50px;
+  }
+
+  &_full::after {
+    position: absolute;
+    content: "1";
+    top: -10px;
+    right: -10px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: #FF0000;
+    color: $whiteText;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    z-index: 10;
+  }
+}
+
+.nav {
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    color: $darckText;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: $hoverGreenText;
+    }
+
+    &:active {
+      color: $activeGreenText;
+    }
+  }
+}
+
+.burger {
+  @include buttonReset();
+  position: relative;
+  padding-left: 33px;
+  margin-right: 33px;
+  background-image: url("images/burger.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: color .2s ease-in-out;
+
+  &:hover {
+    color: $hoverGreenText;
+  }
+
+  &:active {
+    color: $activeGreenText;
+  }
+}
+
+.menu {
+  position: relative;
+
+  &-mobile {
+    display: none;
+  }
+
+  &__item {
+    height: 35px;
+  }
+
+  &__list {
+    position: absolute;
+    display: none;
+    min-width: 235px;
+    font-size: 15px;
+    line-height: 35px;
+    box-shadow: 2px 2px 8px 0 rgb(128 128 128);
+    z-index: 10;
+
+    &_visable {
+      display: block;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    color: $darckText;
+    transition: background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: #e6e6e6;
+    }
+  }
+}
+
+@media (max-width:1366px) {
+  .nav__list {
+    display: none;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .header {
+     &__top {
+      flex-wrap: wrap;
+      min-height: 93px;
+    }
+
+    &__delimiter {
+      display: none;
+    }
+
+    &__request-call {
+      margin-right: 13px;
+      font-size: 7px;
+      line-height: 1;
+    }
+
+    &__bottom {
+      display: none;
+    }
+
+    &__inner {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+
+  .logo__img {
+    width: 50px;
+    height: 37px;
+  }
+
+  .logo__location {
+    display: none;
+  }
+
+  .logo__info {
+    max-width: 57px;
+    padding-left: 7px;
+    font-size: 5px;
+    line-height: 1;
+  }
+
+  .socials {
+    margin-right: 7px;
+
+    &__link {
+      width: 25px;
+      height: 25px;
+    }
+
+    &__icon {
+      width: 25px;
+      height: 25px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  .phones {
+    margin-right: 0;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .basket__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .basket_full::after {
+    top: -3px;
+    right: -3px;
+    width: 11px;
+    height: 11px;
+    font-size: 7px;
+    line-height: 11px;
+  }
+
+  .menu {
+    display: none;
+
+    &-mobile {
+      display: block;
+      margin-right: auto;
+    }
+
+    &__list {
+      top: 23px;
+    }
+  }
+
+  .burger {
+    padding-right: 5px;
+    padding-left: 31px;
+    margin-right: 0;
+    border-radius: 3px;
+    border: 0.2px solid $darckText;
+    background-size: 17px 8px;
+    background-position: 7px center;
+    font-size: 7.5px;
+    line-height: 20px;
+  }
+
+}
+
+
