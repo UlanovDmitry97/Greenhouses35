@@ -1,0 +1,162 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.catalog {
+  margin-bottom: 90px;
+  background-image: url("./images/catalog/catalog-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  &__container {
+    max-width: 1500px;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 60px 36px;
+  }
+
+  &__item {
+    grid-column: 3 span;
+  }
+}
+
+.bread-crumbs {
+  display: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 27px;
+    line-height: 1;
+    font-weight: 800;
+    color: $darckText;
+    text-align: center;
+    text-transform: uppercase
+  }
+
+  &__btn {
+    @include buttonReset();
+    padding: 12px 55px;
+    margin-top: 35px;
+    background-color: $hoverGreenText;
+    border-radius: 5px;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 800;
+    color: $whiteText;
+    text-transform: uppercase;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: $hoverYellowBg;
+      color: $darckText;
+    }
+
+    &:active {
+      background-color: $activeYellowBg;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .card {
+    &__title {
+      margin-bottom: 20px;
+      font-size: 21px;
+    }
+
+    &__btn {
+      margin-top: 40px;
+      padding: 14px 30px;
+      font-size: 21px;
+    }
+  }
+
+
+  .catalog {
+
+    &__list {
+      gap: 70px 20px;
+    }
+
+    &__item {
+      grid-column: 3 span;
+    }
+
+    &__title {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  .catalog {
+    background-image: none;
+
+    &__list {
+      gap: 50px 30px;
+    }
+
+    &__item {
+      grid-column: 6 span;
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  .bread-crumbs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 6px;
+    line-height: 1;
+  }
+
+  .card {
+    &__title {
+      margin-bottom: 9px;
+      font-size: 10px;
+    }
+
+    &__btn {
+      padding: 7px 20px;
+      margin-top: 12px;
+      font-size: 8px;
+    }
+  }
+
+  .catalog {
+    margin-bottom: 30px;
+    background-image: none;
+
+    &__list {
+      gap: 35px 24px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+}

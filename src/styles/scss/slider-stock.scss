@@ -1,0 +1,100 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.slider-stock {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 32px;
+
+  &__container {
+    position: relative;
+    max-width: 1920px;
+    padding: 0;
+    padding-bottom: 46px;
+  }
+
+  &__btn {
+    @include buttonReset();
+    @include button();
+    position: absolute;
+    bottom: 100px;
+    right: 375px;
+    background-color: #FFC000;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+    z-index: 100;
+
+    &:hover {
+      background-color: #FF0000;
+      color: $whiteText;
+    }
+
+    &:active {
+      background-color: #fa5353;
+    }
+  }
+}
+
+.swiper-stock {
+  overflow: hidden;
+}
+
+
+.swiper-pagination-bullet {
+  width: 17px;
+  height: 17px;
+  background-color: #BABABA;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $hoverGreenText;
+}
+
+.swiper-slide-stock__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width:1366px) {
+  .slider-stock {
+    &__btn {
+      bottom: 50px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+
+  .swiper-slide-stock {
+    height: auto;
+  }
+}
+
+@media (max-width: 968px) {
+  .slider-stock__btn {
+    display: none;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .slider-stock__container {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-stock {
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+
+  .slider-stock .swiper-pagination  {
+    display: none;
+  }
+}

@@ -1,0 +1,133 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.benefits {
+  margin-bottom: 90px;
+
+  &__container {
+    max-width: 1500px;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 100px;
+    padding: 70px 55px 90px;
+    gap: 53px 50px;
+    background-color: #F4F5F5;
+    border: 2px solid $hoverGreenText;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    grid-column: 1 span;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: left center;
+
+    &_quality {
+      background-image: url("./images/quality.svg");
+    }
+
+    &_prices {
+      background-image: url("./images/prices.svg");
+    }
+
+    &_guarantee {
+      background-image: url("./images/guarantee.svg");
+    }
+
+    &_production {
+      background-image: url("./images/production.svg");
+    }
+
+    &_warehouse {
+      background-image: url("./images/warehouse.svg");
+    }
+
+    &_service {
+      background-image: url("./images/service.svg");
+    }
+  }
+
+  &__info {
+    display: block;
+    padding-left: 125px;
+    font-size: 30px;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 1366px) {
+  .benefits__info {
+    width: 100%;
+    padding-left: 110px;
+    font-size: 27px;
+  }
+
+  .benefits__list {
+    padding: 70px 20px 100px;
+    gap: 53px 19px;
+  }
+}
+
+@media (max-width: 968px) {
+  .benefits__container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .benefits__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    padding: 70px 20px 90px;
+  }
+
+  .benefits__item {
+    grid-column: 1 span;
+  }
+
+  .benefits__info {
+    text-align: center;
+  }
+
+  .benefits__title {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  .benefits {
+    margin-bottom: 30px;
+  }
+
+  .benefits__list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    padding: 70px 20px 90px;
+  }
+
+  .benefits__info {
+    padding-left: 0;
+    font-size: 22px;
+  }
+
+  .benefits__item {
+    grid-column: 2 span;
+  }
+
+  .benefits__item {
+    padding-top: 120px;
+    background-size: 100px 100px;
+    background-position: top center;
+  }
+
+  .benefits__title {
+    margin-bottom: 24px;
+  }
+}

@@ -1,6 +1,10 @@
 @import '_variables.scss';
+@import '_mixin.scss';
 
 .header {
+  position: relative;
+  z-index: 100;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
 
   &__top {
     display: flex;
@@ -14,12 +18,12 @@
 
   &__request-call {
     @include buttonReset();
-    padding: 9px 19px;
+    padding: 12px 19px;
     margin-right: 23.5px;
     background-color: #FF0000;
     border-radius: 8px;
     font-size: 21px;
-    line-height: 28px;
+    line-height: 1;
     font-weight: 700;
     color: $whiteText;
     text-transform: uppercase;
@@ -224,18 +228,30 @@
     display: none;
   }
 
-  &__item {
-    height: 35px;
+  &__title {
+    display: none;
+  }
+
+  &__info:not(:first-child) {
+    display: none;
+  }
+
+  &__wrapp {
+    display: none;
+    position: absolute;
+    min-width: 235px;
+    z-index: 10;
+
+    &_visable {
+      display: block;
+      box-shadow: 2px 2px 8px 0 rgb(128 128 128);
+    }
   }
 
   &__list {
-    position: absolute;
-    display: none;
-    min-width: 235px;
     font-size: 15px;
     line-height: 35px;
-    box-shadow: 2px 2px 8px 0 rgb(128 128 128);
-    z-index: 10;
+    background-color: $whiteText;
 
     &_visable {
       display: block;
@@ -261,13 +277,74 @@
     display: none;
   }
 
+  .header__top {
+    flex-wrap: wrap;
+    min-height: 181px;
+    padding-top: 25px;
+    padding-bottom: 12px;
+  }
+
+  .header__inner {
+    width: 100%;
+    justify-content: end;
+  }
+
+  .phones {
+    margin-right: 0;
+  }
+
+  .menu {
+    position: static;
+
+    &__info:not(:first-child) {
+      display: block;
+    }
+
+    &__wrapp {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100vw;
+      left: 0;
+      background-color: $whiteText;
+      padding: 25px 50px;
+      gap: 53px;
+      transform: translateX(-100%);
+      transition: transform .3s ease-in-out;
+
+      &_visable {
+        transform: translateX(0);
+      }
+    }
+
+    &__link {
+      padding-left: 0;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    &__title {
+      display: block;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $darckText;
+      font-size: 20px;
+      line-height: 35px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+
+  .header__bottom {
+    position: relative;
+  }
 }
 
-@media (max-width: 480px) {
-  .header {
+@media (max-width: 968px) {
+ .header {
      &__top {
       flex-wrap: wrap;
-      min-height: 93px;
+      min-height: 225px;
+      padding-top: 10px;
+      padding-bottom: 30px;
     }
 
     &__delimiter {
@@ -275,9 +352,8 @@
     }
 
     &__request-call {
-      margin-right: 13px;
-      font-size: 7px;
-      line-height: 1;
+      margin-right: 30px;
+      font-size: 24px;
     }
 
     &__bottom {
@@ -287,9 +363,120 @@
     &__inner {
       display: flex;
       width: 100%;
+      margin-top: 10px;
     }
   }
 
+
+  .logo__img {
+    width: 120px;
+    height: 88px;
+  }
+
+  .logo__location {
+    display: none;
+  }
+
+  .logo__info {
+    max-width: 163px;
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 1.25;
+    background-image: none;
+  }
+
+  .socials {
+    margin-right: 17px;
+
+    &__link {
+      width: auto;
+      height: auto;
+    }
+
+    &__icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 17px;
+    }
+  }
+
+  .phones {
+    margin-right: 0;
+    margin-left: auto;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .basket__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .basket_full::after {
+    top: -3px;
+    right: -3px;
+    width: 27px;
+    height: 27px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .menu {
+    display: none;
+
+    &-mobile {
+      display: block;
+      margin-right: auto;
+    }
+
+    &__link {
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    &__wrapp {
+      padding-left: 0;
+      padding-right: 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .burger {
+    padding-right: 11px;
+    padding-left: 65px;
+    margin-right: 0;
+    border-radius: 5px;
+    border: 0.4px solid $darckText;
+    background-size: 42px 19px;
+    background-position: 7px center;
+    font-size: 24px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+     &__top {
+      min-height: 93px;
+      padding-bottom: 10px;
+    }
+
+    &__request-call {
+      margin-right: 13px;
+      font-size: 7px;
+      line-height: 1;
+    }
+
+  }
 
   .logo__img {
     width: 50px;
@@ -310,11 +497,6 @@
   .socials {
     margin-right: 7px;
 
-    &__link {
-      width: 25px;
-      height: 25px;
-    }
-
     &__icon {
       width: 25px;
       height: 25px;
@@ -327,6 +509,7 @@
 
   .phones {
     margin-right: 0;
+    margin-left: 0;
     font-size: 10px;
     line-height: 12px;
   }
@@ -355,6 +538,14 @@
 
     &__list {
       top: 23px;
+    }
+
+    &__title {
+      font-size: 15px;
+    }
+
+    &__link {
+      font-size: 12px;
     }
   }
 

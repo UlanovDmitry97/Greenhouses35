@@ -36,9 +36,49 @@ html {
   margin: 0 auto;
 }
 
+.section-title {
+  font-size: 34px;
+  line-height: 1.5;
+  font-weight: 800;
+  color: $darckText;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+
+  &_green {
+    color: $hoverGreenText;
+    text-decoration: underline;
+  }
+}
+
+.w100 {
+  width: 100%;
+}
+
+@media (max-width:1366px) {
+  .container {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .section-title {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 968px) {
+  .section-title {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
     padding-left: 16px;
     padding-right: 16px;
-}
+  }
+
+  .section-title {
+    font-size: 15px;
+  }
 }
