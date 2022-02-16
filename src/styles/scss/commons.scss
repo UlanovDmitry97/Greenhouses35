@@ -55,6 +55,24 @@ html {
   width: 100%;
 }
 
+.green-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #C4E3C2;
+  z-index: -1;
+}
+
+.green-text {
+  color: $hoverGreenText;
+  font-weight: 600;
+}
+
+.scroll-hidden {
+  overflow: hidden;
+}
+
 @media (max-width:1366px) {
   .container {
     padding-left: 45px;
@@ -68,17 +86,17 @@ html {
 
 @media (max-width: 968px) {
   .section-title {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .container {
     padding-left: 16px;
     padding-right: 16px;
   }
 
   .section-title {
-    font-size: 15px;
+    font-size: 20px;
   }
 }

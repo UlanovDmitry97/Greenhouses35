@@ -1,0 +1,42 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.promotion-banner {
+  margin-bottom: 90px;
+
+  &__container {
+    position: relative;
+    max-width: 1920px;
+    min-height: auto;
+  }
+
+  &__img {
+    width: 100%;
+    min-height: 516px;
+    object-fit: none;
+  }
+}
+
+@media (max-width: 1366px) {
+  .promotion-banner__img {
+    object-fit: cover;
+  }
+
+  .promotion-banner__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 968px) {
+  .promotion-banner__img {
+    object-fit: contain;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotion-banner {
+    margin-bottom: 30px;
+  }
+}

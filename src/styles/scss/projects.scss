@@ -1,0 +1,149 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.projects {
+  position: relative;
+  margin-bottom: 90px;
+
+  &__title {
+    margin-bottom: 90px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  &__img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 14px 5px $darckText;
+    }
+  }
+
+  &__close {
+    @include buttonReset();
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-image: url("/images/exit-icon.svg");
+  }
+
+  &__green-bg {
+    top: 366px;
+    height: 815px;
+  }
+
+  &__modal-wrapp {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($darckText, $alpha: .5);
+    opacity: 0;
+    transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+    z-index: 1000;
+
+    &_visapble {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__modal-img {
+    width: 800px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .projects {
+    &__container {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__green-bg {
+      display: none;
+    }
+
+    &__modal-img {
+      width: 600px;
+      height: 400px;
+    }
+
+    &__close {
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  .projects {
+
+    &__container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    &__title {
+      margin-bottom: 70px;
+    }
+
+    &__modal-img {
+      width: 600px;
+      height: 400px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    margin-bottom: 30px;
+
+    &__list {
+      gap: 12px;
+    }
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__modal-img {
+      width: 300px;
+      height: 200px;
+    }
+  }
+}

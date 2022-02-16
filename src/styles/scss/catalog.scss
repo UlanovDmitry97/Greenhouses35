@@ -2,11 +2,13 @@
 @import '_mixin.scss';
 
 .catalog {
+  position: relative;
   margin-bottom: 90px;
-  background-image: url("./images/catalog/catalog-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+
+  &__green-bg {
+    top: 256px;
+    height: 562px;
+  }
 
   &__container {
     max-width: 1500px;
@@ -96,6 +98,11 @@
 
   .catalog {
 
+    &__green-bg {
+      top: 250px;
+      height: 400px;
+    }
+
     &__list {
       gap: 70px 20px;
     }
@@ -112,7 +119,10 @@
 
 @media (max-width: 968px) {
   .catalog {
-    background-image: none;
+
+    &__green-bg {
+      display: none;
+    }
 
     &__list {
       gap: 50px 30px;
@@ -123,6 +133,17 @@
     }
   }
 
+  .bread-crumbs {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 300;
+    color: $darckText;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -130,7 +151,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
-    font-size: 6px;
+    font-size: 18px;
     line-height: 1;
   }
 

@@ -22,6 +22,9 @@
   <meta name="theme-color" content="#ffffff">
   <!-- Это ↓ подключение js для слайдеров, очень важно его не пропустить -->
   <script src="./swiper/swiper-bundle.min.js"></script>
+  <!-- Это ↓ подключение js для карты, очень важно его не пропустить, на деле там вроде еще надо будет подшаманить с ключем -->
+  <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" defer>
+  </script>
   <script src="app.js" defer></script>
   <link rel="stylesheet" href="normalize.css">
   <!-- Это ↓ подключение стилей для слайдеров, очень важно его не пропустить -->
@@ -260,7 +263,7 @@
             <!-- Слайды -->
             <div class="swiper-slide swiper-slide-stock">
               <picture>
-                <source srcset="/images/slider-stock/slide1_320.jpg" media="(max-width: 480px)">
+                <source srcset="/images/slider-stock/slide1_320.jpg" media="(max-width: 576px)">
                 <source srcset="/images/slider-stock/slide1_968.jpg" media=" (max-width: 968px)">
                 <source srcset="/images/slider-stock/slide1_1024.jpg" media=" (max-width: 1366px)">
                 <source srcset="/images/slider-stock/slide1.jpg" media=" (max-width: 1920px)">
@@ -270,7 +273,7 @@
 
             <div class="swiper-slide swiper-slide-stock">
               <picture>
-                <source srcset="/images/slider-stock/slide2.jpg" media="(max-width: 480px)">
+                <source srcset="/images/slider-stock/slide2.jpg" media="(max-width: 576px)">
                 <source srcset="/images/slider-stock/slide2.jpg" media=" (max-width: 1920px)">
                 <img src="/images/slider-stock/slide2.jpg" alt="Акция" class="swiper-slide-stock__img">
               </picture>
@@ -278,7 +281,7 @@
 
             <div class="swiper-slide swiper-slide-stock">
               <picture>
-                <source srcset="/images/slider-stock/slide3.jpg" media="(max-width: 480px)">
+                <source srcset="/images/slider-stock/slide3.jpg" media="(max-width: 576px)">
                 <source srcset="/images/slider-stock/slide3.jpg" media=" (max-width: 1920px)">
                 <img src="/images/slider-stock/slide3.jpg" alt="Акция" class="swiper-slide-stock__img">
               </picture>
@@ -292,6 +295,8 @@
 
     <!-- Секция с каталогом -->
     <section class="catalog">
+      <div class="catalog__green-bg green-bg"></div>
+
       <div class="container catalog__container">
         <div class="bread-crumbs">
           <span class="bread-crumbs__bread-crumb">Главная</span>
@@ -305,7 +310,7 @@
               <h3 class="card__title">теплицы</h3>
 
               <picture class="w100">
-                <source srcset="/images/catalog/greenhouse_320.jpg" media="(max-width: 480px)">
+                <source srcset="/images/catalog/greenhouse_320.jpg" media="(max-width: 576px)">
                 <source srcset="/images/catalog/greenhouse.jpg" media="(max-width: 1920px)">
                 <img src="/images/catalog/greenhouse.jpg" alt="Теплица" class="card__img">
               </picture>
@@ -318,7 +323,7 @@
               <h3 class="card__title">парники</h3>
 
               <picture class="w100">
-                <source srcset="/images/catalog/seedbed_320.jpg" media="(max-width: 480px)">
+                <source srcset="/images/catalog/seedbed_320.jpg" media="(max-width: 576px)">
                 <source srcset="/images/catalog/seedbed.jpg" media="(max-width: 1920px)">
                 <img src="/images/catalog/seedbed.jpg" alt="Парники" class="card__img">
               </picture>
@@ -331,7 +336,7 @@
               <h3 class="card__title">грядки</h3>
 
               <picture class="w100">
-                <source srcset="/images/catalog/garden-bed_320.jpg" media="(max-width: 480px)">
+                <source srcset="/images/catalog/garden-bed_320.jpg" media="(max-width: 576px)">
                 <source srcset="/images/catalog/garden-bed.jpg" media="(max-width: 1920px)">
                 <img src="/images/catalog/garden-bed.jpg" alt="Грядки" class="card__img">
               </picture>
@@ -344,7 +349,7 @@
               <h3 class="card__title">Клумбы</h3>
 
               <picture class="w100">
-                <source srcset="/images/catalog/flower-bed_320.jpg" media="(max-width: 480px)">
+                <source srcset="/images/catalog/flower-bed_320.jpg" media="(max-width: 576px)">
                 <source srcset="/images/catalog/flower-bed.jpg" media="(max-width: 1920px)">
                 <img src="/images/catalog/flower-bed.jpg" alt="Клумбы" class="card__img">
               </picture>
@@ -357,7 +362,7 @@
               <h3 class="card__title">поликарбонат</h3>
 
               <picture class="w100">
-                <source srcset="/images/catalog/polycarbonate_320.jpg" media="(max-width: 480px)">
+                <source srcset="/images/catalog/polycarbonate_320.jpg" media="(max-width: 576px)">
                 <source srcset="/images/catalog/polycarbonate.jpg" media="(max-width: 1920px)">
                 <img src="/images/catalog/polycarbonate.jpg" alt="Поликарбонат" class="card__img">
               </picture>
@@ -370,7 +375,7 @@
               <h3 class="card__title">беседки</h3>
 
               <picture class="w100">
-                <source srcset="/images/catalog/gazebos_320.jpg" media="(max-width: 480px)">
+                <source srcset="/images/catalog/gazebos_320.jpg" media="(max-width: 576px)">
                 <source srcset="/images/catalog/gazebos.jpg" media="(max-width: 1920px)">
                 <img src="/images/catalog/gazebos.jpg" alt="Беседки" class="card__img">
               </picture>
@@ -383,7 +388,7 @@
               <h3 class="card__title">душевые кабины</h3>
 
               <picture class="w100">
-                <source srcset="/images/catalog/shower-cabins_320.jpg" media="(max-width: 480px)">
+                <source srcset="/images/catalog/shower-cabins_320.jpg" media="(max-width: 576px)">
                 <source srcset="/images/catalog/shower-cabins.jpg" media="(max-width: 1920px)">
                 <img src="/images/catalog/shower-cabins.jpg" alt="Душевые кабины" class="card__img">
               </picture>
@@ -396,7 +401,7 @@
               <h3 class="card__title">штакетник</h3>
 
               <picture class="w100">
-                <source srcset="/images/catalog/fence_320.jpg" media="(max-width: 480px)">
+                <source srcset="/images/catalog/fence_320.jpg" media="(max-width: 576px)">
                 <source srcset="/images/catalog/fence.jpg" media="(max-width: 1920px)">
                 <img src="/images/catalog/fence.jpg" alt="Штакетник" class="card__img">
               </picture>
@@ -427,13 +432,12 @@
                 <span class="buyer-choice__promotion">-10%</span>
 
                 <picture class="w100">
-                  <source srcset="/images/buyers-choice/fortress_320.jpg" media="(max-width: 480px)">
+                  <source srcset="/images/buyers-choice/fortress_320.jpg" media="(max-width: 576px)">
                   <source srcset="/images/buyers-choice/fortress.jpg" media="(max-width: 1920px)">
                   <img src="/images/buyers-choice/fortress.jpg" alt="Теплица из поликарбоната 'Крепость'"
                     class="buyer-choice__img w100">
                 </picture>
               </div>
-
 
               <span class="buyer-choice__assessment">
                 <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
@@ -461,14 +465,14 @@
 
               <div class="buyer-choice__inner-img w100">
                 <picture class="w100">
-                  <source srcset="/images/buyers-choice/butterfly__320.jpg" media="(max-width: 480px)">
+                  <source srcset="/images/buyers-choice/butterfly__320.jpg" media="(max-width: 576px)">
                   <source srcset="/images/buyers-choice/butterfly.jpg" media="(max-width: 1920px)">
                   <img src="/images/buyers-choice/butterfly.jpg" alt="Парник из поликарбоната 'Бабочка'"
                     class="buyer-choice__img w100">
                 </picture>
               </div>
 
-
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
               <span class="buyer-choice__assessment">
                 <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
                 <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
@@ -498,14 +502,14 @@
                 <span class="buyer-choice__promotion">ХИТ</span>
 
                 <picture class="w100">
-                  <source srcset="/images/buyers-choice/droplet__320.jpg" media="(max-width: 480px)">
+                  <source srcset="/images/buyers-choice/droplet__320.jpg" media="(max-width: 576px)">
                   <source srcset="/images/buyers-choice/droplet.jpg" media="(max-width: 1920px)">
                   <img src="/images/buyers-choice/droplet.jpg" alt="Теплица 3 метра 'Капелька'"
                     class="buyer-choice__img w100">
                 </picture>
               </div>
 
-
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
               <span class="buyer-choice__assessment">
                 <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
                 <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
@@ -532,14 +536,14 @@
 
               <div class="buyer-choice__inner-img w100">
                 <picture class="w100">
-                  <source srcset="/images/buyers-choice/set__320.jpg" media="(max-width: 480px)">
+                  <source srcset="/images/buyers-choice/set__320.jpg" media="(max-width: 576px)">
                   <source srcset="/images/buyers-choice/set.jpg" media="(max-width: 1920px)">
                   <img src="/images/buyers-choice/set.jpg" alt="Теплица 3 метра 'Капелька'"
                     class="buyer-choice__img w100">
                 </picture>
               </div>
 
-
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
               <span class="buyer-choice__assessment">
                 <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
                 <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
@@ -561,6 +565,7 @@
       </div>
     </section>
 
+    <!-- Секция преимущества -->
     <section class="benefits">
       <div class="container benefits__container">
         <h2 class="section-title benefits__title"><span class="section-title__green">преимущества</span> работы с
@@ -589,14 +594,1014 @@
       </div>
     </section>
 
+    <!-- Секция с видео -->
+    <section class="video">
+      <div class="container video__container">
+        <div class="video__wrapp-btn">
+          <div class="video__bg"></div>
+
+          <a href="https://www.youtube.com/watch?v=WOMgeb1TYo0&t=1s" class="video__link" target="_blank"></a>
+
+          <iframe class="video__video"
+            src="https://www.youtube.com/embed/WOMgeb1TYo0?autoplay=1&amp;loop=1&amp;&amp;controls=0&amp;mute=1&amp;showinfo=0&amp;playlist=WOMgeb1TYo0"
+            width="1000" height="700" data-role="frame"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция отзывы -->
     <section class="reviews">
-      <div class="container">
-        <h2 class="section-title"><span class="section-title__green">отзывы наших</span>
+      <div class="reviews__green-bg green-bg"></div>
+
+      <div class="container reviews__container">
+        <h2 class="section-title reviews__title"><span class="section-title__green">отзывы наших</span>
           клиентов
         </h2>
+
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Переписывается буквоград страна маленькая.</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Переписывается буквоград страна маленькая.</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Мир собрал текста использовало его вопроса выйти щеке ведущими даль?</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Строчка даль образ текста до!</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="swiper-reviews-button-prev"></div>
+        <div class="swiper-reviews-button-next"></div>
+
+        <!-- На разрешении ниже 1366px появляется слайдер -->
+        <div class="swiper-reviews">
+          <div class="swiper-wrapper">
+            <!-- Слайды -->
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1366px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Переписывается буквоград страна маленькая.</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1366px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Переписывается буквоград страна маленькая.</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1366px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Мир собрал текста использовало его вопроса выйти щеке ведущими даль?</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1366px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Мир собрал текста использовало его вопроса выйти щеке ведущими даль?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews__wrapp-btn">
+          <button class="reviews__feedback">Оставить отзыв</button>
+
+          <button class="reviews__all-feedback">Читать все отзывы</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Баннер с акцией -->
+    <section class="promotion-banner">
+      <div class="container promotion-banner__container">
+        <picture>
+          <source srcset="/images/promotion-banner/promotion-banner_320.jpg" media="(max-width: 576px)">
+          <source srcset="/images/promotion-banner/promotion-banner_768.jpg" media=" (max-width: 968px)">
+          <source srcset="/images/promotion-banner/promotion-banner_1024.jpg" media=" (max-width: 1366px)">
+          <source srcset="/images/promotion-banner/promotion-banner.jpg" media=" (max-width: 1920px)">
+          <img class="promotion-banner__img" src="/images/promotion-banner/promotion-banner.jpg" alt="Аватар клиента">
+        </picture>
+      </div>
+    </section>
+
+    <!-- Реализованные проекты -->
+    <section class="projects">
+      <div class="projects__green-bg green-bg"></div>
+
+      <!-- Модальное окно, оно сделано на JS, основная логика заключается в том что я беру src путь с картинки и рендерю картинку с таким же путем, в модалку. Должно сработать даже есть ты подставишь через php путь до картинки, что бы заказчик мог менять.  -->
+      <div class="projects__modal-wrapp">
+        <button class="projects__close"></button>
+
+        <div class="projects__modal"></div>
+      </div>
+
+      <div class="container projects__container">
+        <h2 class="section-title projects__title"><span class="section-title__green">реализованные</span>
+          проекты
+        </h2>
+
+
+        <ul class="projects__list">
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project1_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project1_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project1_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project1.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project1.jpg" alt="Проект №1">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project2_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project2_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project2_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project2.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project2.jpg" alt="Проект №2">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project3_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project3_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project3_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project3.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project3.jpg" alt="Проект №3">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project4_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project4_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project4_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project4.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project4.jpg" alt="Проект №4">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project5_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project5_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project5_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project5.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project5.jpg" alt="Проект №5">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project6_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project6_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project6_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project6.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project6.jpg" alt="Проект №6">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project7_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project7_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project7_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project7.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project7.jpg" alt="Проект №7">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project8_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project8_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project8_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project8.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project8.jpg" alt="Проект №8">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project9_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project9_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project9_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project9.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project9.jpg" alt="Проект №9">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project10_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project10_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project10_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project10.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project10.jpg" alt="Проект №10">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project11_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project11_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project11_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project11.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project11.jpg" alt="Проект №11">
+            </picture>
+          </li>
+          <li class="projects__item">
+            <picture>
+              <source srcset="/images/projects/project12_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/projects/project12_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/projects/project12_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/projects/project12.jpg" media=" (max-width: 1920px)">
+              <img class="projects__img" src="/images/projects/project12.jpg" alt="Проект №12">
+            </picture>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Форма -->
+    <section class="form-section">
+      <div class="container form-section__container">
+        <h2 class="section-title form-section__title">Остались вопросы?</h2>
+
+        <form class="form" action="/" autocomplete="on">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Оставьте заявку на консультацию со специалистом.</legend>
+            <div class="form__inner">
+              <input class="form__name" required name="Name" type="text" placeholder="Введите ваше имя">
+
+              <input class="form__tell" required name="tell" type="tel" placeholder="Введите ваш телефон">
+            </div>
+
+            <button class="form__btn" type="submit">получить консультацию</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <section class="articles">
+      <div class="container articles__container">
+        <h2 class="section-title articles__title"><span class="section-title__green">полезные</span>
+          статьи
+        </h2>
+
+        <div class="articles__green-bg green-bg"></div>
+
+        <ul class="articles__list">
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.
+                  Оцинкованный профиль против металлических труб.
+                </p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Сертификаты -->
+    <section class="quality-assurance">
+
+      <!-- Модалка такая же, как в проектах  -->
+      <div class="quality-assurance__modal-wrapp">
+        <button class="quality-assurance__close"></button>
+
+        <div class="quality-assurance__modal"></div>
+      </div>
+
+      <div class="container quality-assurance__container">
+        <h2 class="section-title quality-assurance__title"><span class="section-title__green">Гарантия</span>
+          качества
+        </h2>
+
+        <p class="quality-assurance__info quality-assurance__info_mb">Компания «Череповецкие теплицы» <span
+            class="green-text">более 12 лет
+            занимается
+            производством и продажей</span> теплиц, занимает уверенные позиции на
+          рынке Вологодской области и за ее пределами.</p>
+
+        <p class="quality-assurance__info">Продукция имеет необходимые <span class="green-text">СЕРТИФИКАТЫ и
+            ПАТЕНТЫ</span> и может использоваться во всех регионах России и Зарубежья, включая
+          Крайнийний Север и районы с повышенной влажностью и значительными ветровыминагрузками.</p>
+
+        <ul class="quality-assurance__list">
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+          <li class="quality-assurance__item">
+            <picture>
+              <source srcset="/images/quality-assurance/quality-assurance_img_320.jpg" media="(max-width: 576px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_768.jpg" media=" (max-width: 968px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img_1024.jpg" media=" (max-width: 1366px)">
+              <source srcset="/images/quality-assurance/quality-assurance_img.jpg" media=" (max-width: 1920px)">
+              <img class="quality-assurance__img" src="/images/quality-assurance/quality-assurance_img.jpg"
+                alt="Сертификат">
+            </picture>
+          </li>
+        </ul>
+
+        <button class="quality-assurance__btn">О компании</button>
+      </div>
+    </section>
+
+    <!-- Расположение -->
+    <section class="location">
+      <div class="container location__container">
+        <h2 class="section-title location__title">Мы находимся в <span class="section-title__green">г.Череповец</span>
+          Вологодской области
+        </h2>
+
+        <div class="location__wrapp">
+          <div id="map" class="location__map"></div>
+
+          <div class="location__info">
+            <p class="location__text">
+              Вы можете обратиться к нам по телефону, по электронной почте или договориться о встрече в нашем офисе.
+              Будем
+              рады
+              помочь вам и ответить на все ваши вопросы.
+            </p>
+
+            <p class="location__text location__text_phone">
+              Телефоны:
+            </p>
+
+            <ul class="location__phone-list">
+              <li class="location__phone-item">
+                <a href="tel:+78202525652" class="location__phone-link">+7 (8202) 52-56-52</a>
+              </li>
+              <li class="location__phone-item">
+                <a href="tel:+79216884777" class="location__phone-link">+7 (921) 688 47 77</a>
+              </li>
+              <li class="location__phone-item">
+                <a href="tel:+78202521052" class="location__phone-link">+7 (8202) 52-10-52</a>
+              </li>
+            </ul>
+
+            <p class="location__text">Email:
+              <a class="location__email" href="mailto:cherepovets.teplitsa@yandex.ru">cherepovets.teplitsa@yandex.ru</a>
+            </p>
+
+            <p class="location__text location__text_location">
+              Адресс:
+              <span class="location__address">
+                г. Череповец, ул.Городского Питомника м.&nbsp;1
+              </span>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <div class="footer__inner">
+          <div class="footer-menu">
+            <span class="footer-menu__title">Меню</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Теплицы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Парники</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Грядки</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Клумбы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Поликарбонат</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Беседки</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Душевые кабины</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Компостер</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Штакетник</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Атопроветриватель</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Дополнительные товары</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-menu">
+            <span class="footer-menu__title">О компании</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">О компании</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Наши работы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Отзывы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оптовое сотрудничество</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оплата и доставка</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-menu">
+            <span class="footer-menu__title">Помощь покупателю</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Полезные статьи</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Отзывы покупателей</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оплпта и доставка</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-mobile footer-menu-mobile">
+            <ul class="footer-menu-mobile__list">
+              <li class="footer-menu-mobile__item">
+                <button data-target="footerMenuDropdowTop"
+                  class="footer-menu-mobile__link footer-menu-mobile__btn">Меню</button>
+
+                <div class="footer-menu-mobile__dropdown-top footer-dropdown-top">
+                  <ul id="footerMenuDropdowTop" class="footer-dropdown-top__list">
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Теплицы</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Парники</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Грядки</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Клумбы</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Поликарбонат</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Беседки</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Душевые кабины</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Компостер</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Штакетник</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Автопроветриватель</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link footer-menu-mobile__btn">Дополнительные товары</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">О компании</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Видео</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Наши работы</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Отзывы</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Оптовое сотрудничество</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Оплата и доставка</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Контакты</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <button data-target="footerMenuDropdowBottom"
+                  class="footer-menu-mobile__link footer-menu-mobile__btn">Помощь покупателю</button>
+
+                <div class="footer-menu-mobile__dropdown-top footer-dropdown-top">
+                  <ul id="footerMenuDropdowBottom" class="footer-dropdown-top__list">
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Полезные статьи</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Отзывы покупателей</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Оплпта и доставка</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="footer__copy">&copy;Череповецкие теплицы, 2010-2022&nbsp;| Все права защищены</p>
+      </div>
+
+      <div class="footer__right">
+        <ul class="footer__socials socials">
+          <li class="footer__socials-item">
+            <a href="https://vk.com/cherteplica" class="footer__socials-link socials__link">
+              <svg class="footer__socials-icon socials__icon">
+                <use xlink:href="images/sprite.svg#vk_footer"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="https://wa.me/89216884777" class="footer__socials-link socials__link">
+              <svg class="footer__socials-icon socials__icon">
+                <use xlink:href="images/sprite.svg#watsap__footer"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer__info">
+          <a class="footer__logo logo" href="index.html">
+            <img class="footer__logo logo__img" src="/images/logo_footer.svg" alt="Логотип">
+          </a>
+
+          <ul class="footer__phones">
+            <li class="footer__phones-item">
+              <a href="tel:+78202525652" class="footer__phone">+7 (8202) 52-56-52</a>
+            </li>
+            <li class="footer__phones-item">
+              <a href="tel:+79216884777" class="footer__phone">+7 (921) 688-47-77</a>
+            </li>
+          </ul>
+
+          <button class="footer__request-call">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

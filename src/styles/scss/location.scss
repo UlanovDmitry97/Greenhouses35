@@ -1,0 +1,144 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.location {
+  margin-bottom: 90px;
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__container {
+    max-width: 1920px;
+    padding-left: 0;
+  }
+
+  &__map {
+    height: 556px;
+    width: 64%;
+    margin-right: 45px;
+    background-color: #909090;
+  }
+
+  &__wrapp {
+    display: flex;
+  }
+
+  &__info {
+    width: calc(36% - 45px);
+    font-size: 27px;
+    line-height: 1.25;
+    color: $darckText;
+  }
+
+  &__text {
+
+    &_phone {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__phone-list {
+    margin-bottom: 20px;
+  }
+
+  &__phone-link {
+    color: $darckText;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: $hoverGreenText;
+    }
+  }
+
+  &__email {
+    color: $darckText;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: $hoverGreenText;
+    }
+  }
+
+  &__text_location {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .location {
+    margin-bottom: 0;
+
+    &__title {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 650px;
+    }
+
+    &__container {
+      padding-right: 0;
+    }
+
+    &__wrapp {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__map {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    &__text {
+      text-align: center;
+    }
+
+    &__info {
+      width: 62.5%;
+      margin-bottom: 65px;
+    }
+
+    &__phone-item {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  .location {
+
+    &__info {
+      font-size: 21px;
+    }
+
+    &__phone-link {
+      font-weight: 700;
+    }
+
+    &__address {
+      font-weight: 700;
+    }
+
+    &__map {
+      height: 450px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .location {
+
+    &__info {
+      width: 90%;
+      font-size: 16px;
+    }
+
+    &__map {
+      height: 240px;
+    }
+  }
+}
+

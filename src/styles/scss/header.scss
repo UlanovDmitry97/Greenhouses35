@@ -472,7 +472,7 @@
 
     &__request-call {
       margin-right: 13px;
-      font-size: 7px;
+      font-size: 10px;
       line-height: 1;
     }
 
@@ -490,7 +490,7 @@
   .logo__info {
     max-width: 57px;
     padding-left: 7px;
-    font-size: 5px;
+    font-size: 8px;
     line-height: 1;
   }
 
@@ -515,17 +515,17 @@
   }
 
   .basket__icon {
-    width: 20px;
-    height: 20px;
+    width: 41px;
+    height: 36px;
   }
 
   .basket_full::after {
     top: -3px;
     right: -3px;
-    width: 11px;
-    height: 11px;
-    font-size: 7px;
-    line-height: 11px;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    line-height: 20px;
   }
 
   .menu {
@@ -547,6 +547,10 @@
     &__link {
       font-size: 12px;
     }
+
+    &__wrapp {
+      top: 100%;
+    }
   }
 
   .burger {
@@ -557,7 +561,7 @@
     border: 0.2px solid $darckText;
     background-size: 17px 8px;
     background-position: 7px center;
-    font-size: 7.5px;
+    font-size: 12px;
     line-height: 20px;
   }
 

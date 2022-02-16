@@ -1,0 +1,254 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.footer {
+  background-color: $darckText;
+
+  &__container {
+    position: relative;
+    display: flex;
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+
+  &__copy {
+    margin-top: 35px;
+    font-size: 20px;
+    color: $whiteText;
+  }
+
+   &__inner {
+    display: flex;
+  }
+
+  &__right {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    display: flex;
+  }
+
+  &__socials-icon {
+    fill: $whiteText;
+  }
+
+  &__socials {
+    align-items: end;
+    margin-right: 15px;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  &__phone {
+    color: $whiteText;
+  }
+
+  &__phones {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  &__request-call {
+    @include buttonReset();
+    padding: 10px 14px;
+    margin: 0 auto;
+    border: 1px solid $whiteText;
+    border-radius: 5px;
+    color: $whiteText;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+    &:hover {
+      border: 1px solid transparent;
+      color: $darckText;
+      background-color: $hoverYellowBg;
+    }
+
+    &:active {
+      border: 1px solid transparent;
+      color: $darckText;
+      background-color: $activeYellowBg;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__menu-mobile {
+    display: none;
+  }
+
+  &__phones-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__socials-item:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.footer-menu {
+  width: 240px;
+
+  &:not(:last-child) {
+    margin-right: 55px;
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $whiteText;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $whiteText;
+  }
+
+  &__list {
+    margin-top: 10px;
+  }
+
+  &__link {
+    font-size: 20px;
+    line-height: 28px;
+    color: $whiteText;
+  }
+}
+
+@media (max-width: 1366px) {
+  .footer {
+
+    &__socials-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__logo {
+      width: 100px;
+      height: 75px;
+    }
+
+    &__socials-link {
+      height: 51px;
+    }
+
+    &__copy {
+      max-width:  380px;
+      margin-top: 22px;
+      font-size: 18px;
+      font-weight: 800;
+    }
+  }
+}
+
+
+@media (max-width: 968px) {
+  .footer {
+
+    &__container {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__right {
+      position: inherit;
+      display: flex;
+      flex-direction: column-reverse;
+      top: 0;
+      right: 0;
+      margin-bottom: 50px;
+    }
+
+    &__socials {
+      margin-top: 30px;
+      margin-right: 0;
+      justify-content: center;
+    }
+
+    &__copy {
+      text-align: center;
+    }
+
+    &__request-call {
+      padding-left: 49px;
+      padding-right: 49px;
+    }
+
+    &__inner {
+      justify-content: center;
+      transform: translateX(50px);
+    }
+  }
+
+  .footer-menu {
+    display: none;
+  }
+
+  .footer-menu-mobile {
+    display: block;
+    margin-bottom: 20px;
+
+    &__btn {
+      @include buttonReset();
+    }
+
+    &__link {
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: $whiteText;
+    }
+  }
+
+  .footer-dropdown-top__link {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    color: $whiteText;
+  }
+
+  .footer-dropdown-top__list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease-in-out, margin .4s ease-in-out;
+
+    &_show {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      max-height: 500px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-menu-mobile__link {
+    font-size: 13px;
+  }
+
+  .footer__inner {
+    transform: none;
+  }
+
+  .footer__request-call {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .footer__socials-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .footer__copy {
+    font-size: 10px;
+  }
+}
