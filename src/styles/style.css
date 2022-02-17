@@ -1076,6 +1076,12 @@ html {
   font-size: 30px;
   line-height: 1.25;
 }
+.benefits .benefits__item_guarantee {
+  background-size: 88px 100px;
+}
+.benefits .benefits__item_warehouse {
+  background-size: 88px 100px;
+}
 
 @media (max-width: 1366px) {
   .benefits__info {
