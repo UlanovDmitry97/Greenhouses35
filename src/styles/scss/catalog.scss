@@ -29,10 +29,6 @@
   }
 }
 
-.bread-crumbs {
-  display: none;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -132,29 +128,9 @@
       grid-column: 6 span;
     }
   }
-
-  .bread-crumbs {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 300;
-    color: $darckText;
-    text-align: center;
-    line-height: 1;
-    text-transform: uppercase;
-  }
-
 }
 
-@media (max-width: 480px) {
-  .bread-crumbs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    font-size: 18px;
-    line-height: 1;
-  }
-
+@media (max-width: 576px) {
   .card {
     &__title {
       margin-bottom: 9px;
