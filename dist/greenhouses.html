@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Теплицы</title>
+  <link rel="preload" href="fonts/manrope-extralight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Это ↓ подключение js для слайдеров, очень важно его не пропустить -->
+  <script src="./swiper/swiper-bundle.min.js"></script>
+  <!-- Это ↓ подключение js для карты, очень важно его не пропустить, на деле там вроде еще надо будет подшаманить с ключем -->
+  <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" defer="defer">
+  </script>
+  <script src="app.js" defer="defer"></script>
+  <link rel="stylesheet" href="normalize.css">
+  <!-- Это ↓ подключение стилей для слайдеров, очень важно его не пропустить -->
+  <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- Это верхнаяя часть header -->
+      <div class="header__top">
+        <a class="header__logo logo" href="index.html">
+          <img class="logo__img" src="images/logo.svg" alt="Логотип">
+
+          <p class="logo__info">
+            <span class="logo__location">Вологда</span>
+            <span class="logo__name">завод&nbsp;по производству теплиц</span>
+          </p>
+        </a>
+
+        <ul class="header__socials socials">
+          <li class="socials__item">
+            <a href="https://vk.com/cherteplica" class="socials__link">
+              <svg class="socials__icon">
+                <use xlink:href="images/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="https://wa.me/89216884777" class="socials__link">
+              <svg class="socials__icon">
+                <use xlink:href="images/sprite.svg#watsap"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="header__phones phones">
+          <li class="phones__item">
+            <a href="tel:+78202525652" class="phones__phone">+7 (8202) 52-56-52</a>
+          </li>
+          <li class="phones__item">
+            <a href="tel:+79216884777" class="phones__phone">+7 (921) 688-47-77</a>
+          </li>
+        </ul>
+
+        <div class="header__inner">
+          <div class="menu menu-mobile">
+            <button id="burgerMobile" class="burger">Меню</button>
+
+            <div id="burgerMenuMobile" class="menu__wrapp">
+              <div class="menu__info">
+                <span class="menu__title">Меню</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Теплицы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Парники</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Грядки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Клумбы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Поликарбонат</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Беседки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Душевые кабины</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Компостер</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Штакетник</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Атопроветриватель</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Дополнительные товары</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <button class="header__request-call">Заказать звонок</button>
+
+          <button class="basket basket_full">
+            <!-- Класс basket_full, отвечает за отрисовку корзины с товаром внутри -->
+            <svg class="basket__icon">
+              <use xlink:href="images/sprite.svg#basket"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header__delimiter"></div>
+    <!-- Нижнаяя часть header -->
+    <div class="header__bottom">
+      <div class="container">
+        <nav class="header__nav nav">
+          <div class="menu">
+            <button id="burger" class="burger">Меню</button>
+
+            <div id="burgerMenu" class="menu__wrapp">
+              <div class="menu__info">
+                <span class="menu__title">Меню</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Теплицы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Парники</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Грядки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Клумбы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Поликарбонат</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Беседки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Душевые кабины</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Компостер</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Штакетник</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Атопроветриватель</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Дополнительные товары</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__info">
+                <span class="menu__title">О компании</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="./about-us.html" class="menu__link">О компании</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Видео</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="./projects.html" class="menu__link">Наши работы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Отзывы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оптовое сотрудничество</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оплата и доставка</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__info">
+                <span class="menu__title">Помощь покупателю</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Полезные статьи</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Отзывы покупателей</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оплапта и доставка</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./about-us.html" class="nav__link">о компании</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">видео</a>
+            </li>
+            <li class="nav__item">
+              <a href="./projects.html" class="nav__link">наши работы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">оптовое сотрудничество</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">отзывы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>

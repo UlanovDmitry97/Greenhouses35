@@ -22,23 +22,6 @@ projectsImgs.forEach(img => {
   })
 });
 
-qualityAssuranceImgs.forEach(img => {
-  img.addEventListener('click', () => {
-    const src = img.src;
-    const imgCreate = document.createElement('img');
-    imgCreate.src = src;
-    imgCreate.classList.add('quality-assurance__modal-img');
-
-    while (qualityAssuranceModal.firstChild) {
-      qualityAssuranceModal.removeChild(qualityAssuranceModal.firstChild);
-    }
-
-    qualityAssuranceModal.append(imgCreate);
-    qualityAssuranceModalWrapp.classList.add('quality-assurance__modal-wrapp_visapble');
-    document.body.classList.add('scroll-hidden');
-  })
-});
-
 projectsModalWrapp.addEventListener('click', e => {
   const target = e.target;
   if (!target.closest('.projects__modal')) {
@@ -47,10 +30,38 @@ projectsModalWrapp.addEventListener('click', e => {
   }
 });
 
-qualityAssuranceModalWrapp.addEventListener('click', e => {
-  const target = e.target;
-  if (!target.closest('.quality-assurance__modal')) {
-    qualityAssuranceModalWrapp.classList.remove('quality-assurance__modal-wrapp_visapble');
-    document.body.classList.remove('scroll-hidden');
-  }
-});
+if (qualityAssuranceModalWrapp) {
+  qualityAssuranceImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      const src = img.src;
+      const imgCreate = document.createElement('img');
+      imgCreate.src = src;
+      imgCreate.classList.add('quality-assurance__modal-img');
+
+      while (qualityAssuranceModal.firstChild) {
+        qualityAssuranceModal.removeChild(qualityAssuranceModal.firstChild);
+      }
+
+      qualityAssuranceModal.append(imgCreate);
+      qualityAssuranceModalWrapp.classList.add('quality-assurance__modal-wrapp_visapble');
+      document.body.classList.add('scroll-hidden');
+    })
+  });
+
+  projectsModalWrapp.addEventListener('click', e => {
+    const target = e.target;
+    if (!target.closest('.projects__modal')) {
+      projectsModalWrapp.classList.remove('projects__modal-wrapp_visapble');
+      document.body.classList.remove('scroll-hidden');
+    }
+  });
+
+  qualityAssuranceModalWrapp.addEventListener('click', e => {
+    const target = e.target;
+    if (!target.closest('.quality-assurance__modal')) {
+      qualityAssuranceModalWrapp.classList.remove('quality-assurance__modal-wrapp_visapble');
+      document.body.classList.remove('scroll-hidden');
+    }
+  });
+}
+
