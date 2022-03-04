@@ -2294,7 +2294,7 @@ html {
     padding: 15px 10px;
   }
   .about-us__bread-crumbs {
-    margin-bottom: 0;
+    margin-bottom: 20px;
     font-size: 10px;
   }
   .about-us__list {
@@ -2831,6 +2831,108 @@ html {
     max-height: 2000px;
   }
 }
+.greenhouse-product__container {
+  padding-top: 30px;
+  max-width: 1490px;
+}
+.greenhouse-product__bread-crumbs {
+  display: block;
+  margin-bottom: 55px;
+}
+.greenhouse-product__title {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.greenhouse-product__text {
+  max-width: 1430px;
+  margin: 0 auto 25px;
+  font-size: 21px;
+  line-height: 28px;
+  color: #2A2A2A;
+  text-align: center;
+}
+.greenhouse-product__info-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.greenhouse-product__inner {
+  display: flex;
+  margin-bottom: 55px;
+  gap: 55px;
+}
+.greenhouse-product__info-left {
+  display: block;
+  max-width: 40%;
+}
+.greenhouse-product__info-slider {
+  overflow: hidden;
+}
+.greenhouse-product__info-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+.greenhouse-product__info-pagination .swiper-pagination-bullet:not(:last-child) {
+  margin-right: 10px;
+}
+.greenhouse-product__info-right {
+  width: 60%;
+}
+.greenhouse-product__equipment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #2B2B2B;
+}
+.greenhouse-product__equipmen-title {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #2A2A2A;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.greenhouse-product__equipmen-list {
+  max-width: 250px;
+}
+.greenhouse-product__equipmen-item {
+  position: relative;
+  padding-left: 26px;
+  font-size: 21px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #2A2A2A;
+}
+.greenhouse-product__equipmen-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.greenhouse-product__equipmen-item::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #169B00;
+}
+.greenhouse-product__installation-cost-title {
+  margin-bottom: 10px;
+  font-size: 21px;
+  line-height: 1;
+  color: #2A2A2A;
+  text-decoration: underline;
+}
+.greenhouse-product__installation-cost-text {
+  font-size: 21px;
+  line-height: 1;
+  color: #2A2A2A;
+}
+
 .footer {
   background-color: #2A2A2A;
 }
