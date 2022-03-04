@@ -74,6 +74,11 @@ html {
 
 .bread-crumbs {
   display: none;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+  color: $darckText;
+  text-align: center;
 }
 
 @media (max-width:1366px) {

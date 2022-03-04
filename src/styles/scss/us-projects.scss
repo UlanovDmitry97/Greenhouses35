@@ -27,6 +27,11 @@
       margin-bottom: 20px;
     }
   }
+
+  &__bread-crumbs {
+    display: block;
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 1366px) {
@@ -41,7 +46,7 @@
 @media (max-width: 576px) {
   .us-ptojects {
     margin-bottom: 30px;
-    
+
     &__info {
       margin-bottom: 30px;
     }

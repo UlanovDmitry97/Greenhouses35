@@ -5,30 +5,32 @@ const qualityAssuranceImgs = document.querySelectorAll('.quality-assurance__img'
 const qualityAssuranceModalWrapp = document.querySelector('.quality-assurance__modal-wrapp');
 const qualityAssuranceModal = document.querySelector('.quality-assurance__modal');
 
-projectsImgs.forEach(img => {
-  img.addEventListener('click', () => {
-    const src = img.src;
-    const imgCreate = document.createElement('img');
-    imgCreate.src = src;
-    imgCreate.classList.add('projects__modal-img');
+if (projectsModalWrapp) {
+  projectsImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      const src = img.src;
+      const imgCreate = document.createElement('img');
+      imgCreate.src = src;
+      imgCreate.classList.add('projects__modal-img');
 
-    while (projectsModal.firstChild) {
-      projectsModal.removeChild(projectsModal.firstChild);
+      while (projectsModal.firstChild) {
+        projectsModal.removeChild(projectsModal.firstChild);
+      }
+
+      projectsModal.append(imgCreate);
+      projectsModalWrapp.classList.add('projects__modal-wrapp_visapble');
+      document.body.classList.add('scroll-hidden');
+    })
+  });
+
+  projectsModalWrapp.addEventListener('click', e => {
+    const target = e.target;
+    if (!target.closest('.projects__modal')) {
+      projectsModalWrapp.classList.remove('projects__modal-wrapp_visapble');
+      document.body.classList.remove('scroll-hidden');
     }
-
-    projectsModal.append(imgCreate);
-    projectsModalWrapp.classList.add('projects__modal-wrapp_visapble');
-    document.body.classList.add('scroll-hidden');
-  })
-});
-
-projectsModalWrapp.addEventListener('click', e => {
-  const target = e.target;
-  if (!target.closest('.projects__modal')) {
-    projectsModalWrapp.classList.remove('projects__modal-wrapp_visapble');
-    document.body.classList.remove('scroll-hidden');
-  }
-});
+  });
+}
 
 if (qualityAssuranceModalWrapp) {
   qualityAssuranceImgs.forEach(img => {

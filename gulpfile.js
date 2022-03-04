@@ -1,7 +1,7 @@
 const { src, dest, series, watch } = require('gulp');
 const concat = require('gulp-concat');
 const htmlMin = require('gulp-htmlmin');
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
 const cleanCss = require('gulp-clean-css');
 const svgSprite = require('gulp-svg-sprite');
 const image = require('gulp-image');
@@ -11,6 +11,8 @@ const notify = require('gulp-notify');
 const sourceMaps = require('gulp-sourcemaps');
 const del = require('del');
 const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const csswring = require('csswring');
 const browserSync = require('browser-sync').create();
 
 const clean = () => {
@@ -28,11 +30,13 @@ const buildStyles = () => {
 }
 
 const styles = () => {
+  let processors = [
+    autoprefixer({ browsers: ['last 4 version'] }),
+    csswring
+  ];
   return src('src/styles/**/*.css')
     .pipe(concat('main.css'))
-    .pipe(autoprefixer({
-      cascade: false
-    }))
+    .pipe(postcss(processors))
     .pipe(cleanCss({
       level: 2
     }))
@@ -40,15 +44,18 @@ const styles = () => {
 };
 
 const stylesDev = () => {
+  let processors = [
+    autoprefixer({ browsers: ['last 4 version'] }),
+    csswring
+  ];
+
   return src('src/styles/**/*.css')
     .pipe(sourceMaps.init())
-    .pipe(concat('main.css'))
-    .pipe(autoprefixer({
-      cascade: false
-    }))
+    .pipe(postcss(processors))
     .pipe(cleanCss({
       level: 2
     }))
+    .pipe(concat('main.css'))
     .pipe(sourceMaps.write())
     .pipe(dest('dist'))
     .pipe(browserSync.stream())

@@ -1,0 +1,264 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.advantages-greenhouses {
+  margin-bottom: 90px;
+
+  &__left,
+  &__right {
+    max-width: 365px;
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+   &__item:first-child {
+    margin-bottom: 50px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__more-wrapp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__picture {
+    width: 50%;
+  }
+
+  &__more {
+    @include buttonReset();
+    margin-top: 50px;
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__more-icon {
+    width: 57px;
+    height: 57px;
+    fill: #2A2A2A;
+    transition: fill .2s ease-in-out, opacity .2s ease-in-out;
+    opacity: .1;
+
+    &:hover {
+      fill: $hoverGreenText;
+      opacity: .5;
+    }
+  }
+}
+
+.advantage-greenhouse {
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    color: $darckText;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: end;
+    padding-top: 15px;
+    padding-left: 55px;
+    background-image: url("images/reviews_btn-icon.svg");
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+
+  &__info {
+    display: block;
+    max-width: 265px;
+    padding: 12px 26px;
+    background-color: #C4E3C2;
+    border-radius: 10px;
+    font-size: 22px;
+    line-height: 28px;
+    color: $darckText;
+    text-align: center;
+  }
+}
+
+.greenhouse-more-info {
+  visibility: hidden;
+  max-height: 0;
+  background-color: #3F3F3F;
+  transition: max-height 1s ease-in-out;
+
+  &_visable {
+    visibility: visible;
+    margin-top: 30px;
+    max-height: 800px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    color: $whiteText;
+    max-width: 560px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 28px;
+
+    & span {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .advantages-greenhouses {
+
+    &__left {
+      order: 1;
+    }
+
+    &__right {
+      order: 2;
+    }
+
+    &__picture {
+      width: 100%;
+      order: 0;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__more-wrapp {
+      order: 5;
+    }
+  }
+
+  .greenhouse-more-info {
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 20px;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  .advantage-greenhouse {
+    min-height: 207px;
+  }
+}
+
+@media (max-width: 978px) {
+  .advantage-greenhouse {
+    min-height: 175px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      margin-bottom: auto;
+      font-size: 21px;
+      line-height: 24px;
+    }
+
+    &__info {
+      font-size: 17px;
+      line-height: 18px;
+    }
+  }
+
+  .advantages-greenhouses {
+
+    &__left,
+    &__right {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .advantages-greenhouses {
+    margin-bottom: 30px;
+
+    &__more {
+      margin-top: 20px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &__more-icon {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .advantages-greenhouses__title {
+    font-size: 15px;
+  }
+
+  .advantage-greenhouse {
+    min-height: 85px;
+
+    &__title {
+      font-size: 8px;
+      line-height: 10px;
+    }
+
+    &__info {
+      padding: 4px 9px;
+      font-size: 8px;
+      line-height: 10px;
+      min-width: 100px;
+      border-radius: 5px  ;
+    }
+
+    &__inner {
+      background-size: 10px 10px;
+    }
+  }
+
+  .advantages-greenhouses {
+
+    &__left,
+    &__right {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 130px;
+    }
+  }
+
+  .greenhouse-more-info_visable {
+    max-height: 2000px;
+  }
+}
