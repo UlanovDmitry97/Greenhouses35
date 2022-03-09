@@ -2470,6 +2470,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: contain;
   background-image: url("./images/greenhouses/old-price.png");
   background-repeat: no-repeat;
 }
@@ -2595,6 +2596,7 @@ html {
   }
   .greenhouse__text {
     font-size: 10px;
+    line-height: 15px;
   }
   .greenhouse__price-old, .greenhouse__price-text {
     font-size: 7px;
@@ -2830,6 +2832,13 @@ html {
   .greenhouse-more-info_visable {
     max-height: 2000px;
   }
+
+  .advantages-greenhouses__item:first-child {
+    margin-bottom: 20px;
+  }
+}
+.greenhouse-product {
+  margin-bottom: 90px;
 }
 .greenhouse-product__container {
   padding-top: 30px;
@@ -2838,6 +2847,9 @@ html {
 .greenhouse-product__bread-crumbs {
   display: block;
   margin-bottom: 55px;
+}
+.greenhouse-product__slide-img {
+  width: 100%;
 }
 .greenhouse-product__title {
   width: 100%;
@@ -2850,6 +2862,10 @@ html {
   line-height: 28px;
   color: #2A2A2A;
   text-align: center;
+}
+.greenhouse-product__info {
+  display: flex;
+  flex-direction: column;
 }
 .greenhouse-product__info-title {
   margin-bottom: 30px;
@@ -2897,7 +2913,13 @@ html {
   text-transform: uppercase;
 }
 .greenhouse-product__equipmen-list {
+  width: 30%;
   max-width: 250px;
+}
+.greenhouse-product__equipmen-list_width {
+  display: flex;
+  max-width: 100%;
+  width: 70%;
 }
 .greenhouse-product__equipmen-item {
   position: relative;
@@ -2920,6 +2942,9 @@ html {
   border-radius: 50%;
   background-color: #169B00;
 }
+.greenhouse-product__installation-cost {
+  margin-bottom: 25px;
+}
 .greenhouse-product__installation-cost-title {
   margin-bottom: 10px;
   font-size: 21px;
@@ -2932,7 +2957,732 @@ html {
   line-height: 1;
   color: #2A2A2A;
 }
+.greenhouse-product__constructor-title {
+  margin-bottom: 10px;
+  font-size: 21px;
+  line-height: 1;
+  color: #169B00;
+  text-transform: uppercase;
+}
+.greenhouse-product__constructor-btns {
+  display: flex;
+  gap: 20px;
+}
+.greenhouse-product__constructor-btn-long {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  padding: 8px 25px;
+  border: 1px solid #169B00;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 300;
+  color: #169B00;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.greenhouse-product__constructor-btn-long:hover {
+  color: #2A2A2A;
+  background-color: #C4E3C2;
+}
+.greenhouse-product__constructor-btn-long_active {
+  color: #2A2A2A;
+  background-color: #C4E3C2;
+}
+.greenhouse-product__constructor-btn-step {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  padding: 8px 25px;
+  border: 1px solid #169B00;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 300;
+  color: #169B00;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.greenhouse-product__constructor-btn-step:hover {
+  color: #2A2A2A;
+  background-color: #C4E3C2;
+}
+.greenhouse-product__constructor-btn-step_active {
+  color: #2A2A2A;
+  background-color: #C4E3C2;
+}
+.greenhouse-product__constructor-long {
+  margin-bottom: 25px;
+}
+.greenhouse-product__price-inner {
+  margin-bottom: 50px;
+}
+.greenhouse-product__price {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 200;
+  color: #2a2a2a;
+}
+.greenhouse-product__price-old {
+  position: relative;
+}
+.greenhouse-product__price-old:after {
+  position: absolute;
+  content: "";
+  top: 22%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/greenhouses/old-price.png");
+  background-repeat: no-repeat;
+}
+.greenhouse-product__price-new {
+  margin-left: 20px;
+  margin-right: 5px;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  color: #c50000;
+}
+.greenhouse-product__price-currency {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 400;
+  color: #2a2a2a;
+}
+.greenhouse-product__control {
+  display: flex;
+  gap: 2px;
+}
+.greenhouse-product__control-btn {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 52px;
+  height: 42px;
+  border: 1px solid #2A2A2A;
+  font-size: 28px;
+  line-height: 1;
+  color: #2A2A2A;
+  text-align: right;
+}
+.greenhouse-product__control-btn_plus {
+  text-align: left;
+}
+.greenhouse-product__counter {
+  display: block;
+  min-width: 62px;
+  height: 42px;
+  border: 1px solid #2A2A2A;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 600;
+  color: #2A2A2A;
+  text-align: center;
+}
+.greenhouse-product__add-basket {
+  display: flex;
+  align-items: flex-end;
+}
+.greenhouse-product__basket {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  margin-left: 60px;
+  padding: 15px 60px;
+  border-radius: 8px;
+  background-color: #FF0000;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 800;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.greenhouse-product__basket:hover {
+  background-color: #FFD200;
+  color: #2A2A2A;
+}
+.greenhouse-product__basket:active {
+  background-color: #f57070;
+  color: #ffffff;
+}
+.greenhouse-product__more {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.greenhouse-product__more_hidden {
+  display: none;
+}
+.greenhouse-product__more-icon {
+  width: 57px;
+  height: 57px;
+  margin-bottom: 10px;
+  fill: #2a2a2a;
+  transition: fill 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  opacity: 0.1;
+}
+.greenhouse-product__more-icon:hover {
+  fill: #169B00;
+  opacity: 0.5;
+}
+.greenhouse-product__more-info {
+  visibility: hidden;
+  max-height: 0;
+  background-color: #3F3F3F;
+  transition: max-height 1s ease-in-out;
+}
+.greenhouse-product__more-info_visable {
+  visibility: visible;
+  max-height: 2000px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
 
+.greenhouse-product-more-info__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+.greenhouse-product-more-info__item {
+  grid-column: 1 span;
+  max-width: 560px;
+}
+.greenhouse-product-more-info__item_fastening {
+  grid-column: 2 span;
+  max-width: 1000px;
+}
+.greenhouse-product-more-info__title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.greenhouse-product-more-info__title span {
+  display: block;
+}
+.greenhouse-product-more-info__text {
+  font-size: 13px;
+  line-height: 28px;
+  color: #ffffff;
+}
+.greenhouse-product-more-info__management {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: #FFD200;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 700;
+  color: #2A2A2A;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.greenhouse-product-more-info__management:hover {
+  background-color: #FF0000;
+  color: #ffffff;
+}
+.greenhouse-product-more-info__management:active {
+  background-color: #f57070;
+  color: #ffffff;
+}
+
+@media (max-width: 1366px) {
+  .greenhouse-product__text {
+    font-size: 19px;
+  }
+  .greenhouse-product__equipment {
+    flex-direction: row;
+    justify-content: start;
+  }
+  .greenhouse-product__equipmen-list_width {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 100%;
+  }
+  .greenhouse-product__equipmen-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .greenhouse-product__equipmen-item {
+    font-size: 18px;
+  }
+  .greenhouse-product__constructor-title {
+    font-size: 16px;
+  }
+  .greenhouse-product__constructor-btn-long, .greenhouse-product__constructor-btn-step {
+    font-size: 20px;
+    padding: 7px 20px;
+  }
+  .greenhouse-product__constructor-btns {
+    gap: 15px;
+  }
+}
+@media (max-width: 968px) {
+  .greenhouse-product__bread-crumbs {
+    font-size: 15px;
+  }
+  .greenhouse-product__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .greenhouse-product__info-left {
+    max-width: 60%;
+  }
+  .greenhouse-product__info-pagination {
+    margin-top: 40px;
+  }
+  .greenhouse-product__info-right {
+    width: 100%;
+  }
+  .greenhouse-product__equipmen-item:before {
+    width: 10px;
+    height: 10px;
+  }
+  .greenhouse-product__equipmen-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .greenhouse-product__equipmen-item {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .greenhouse-product__equipmen-list {
+    width: 20%;
+  }
+  .greenhouse-product__equipmen-list_width {
+    flex-direction: row;
+    width: 80%;
+  }
+  .greenhouse-product__installation-cost-title, .greenhouse-product__installation-cost-text {
+    text-align: center;
+  }
+  .greenhouse-product__constructor-title {
+    text-align: center;
+  }
+  .greenhouse-product__constructor-btns {
+    justify-content: center;
+  }
+  .greenhouse-product__price {
+    text-align: center;
+    font-size: 15px;
+  }
+  .greenhouse-product__price-new, .greenhouse-product__price-currency {
+    font-size: 25px;
+  }
+  .greenhouse-product__add-basket {
+    justify-content: center;
+  }
+  .greenhouse-product__control-btn, .greenhouse-product__counter {
+    width: 42px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 21px;
+  }
+  .greenhouse-product__basket {
+    font-size: 15px;
+  }
+
+  .greenhouse-product-more-info__item {
+    grid-column: 3 span;
+  }
+
+  .greenhouse-product-more-info__title {
+    font-size: 21px;
+  }
+
+  .greenhouse-product-more-info__management {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .greenhouse-product {
+    margin-bottom: 30px;
+  }
+  .greenhouse-product__bread-crumbs {
+    margin-bottom: 20px;
+    font-size: 8px;
+    line-height: 10px;
+  }
+  .greenhouse-product__text {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .greenhouse-product__info-title {
+    margin-bottom: 15px;
+    font-size: 10px;
+    line-height: 1;
+  }
+  .greenhouse-product__info-pagination {
+    margin-top: 20px;
+  }
+  .greenhouse-product__equipmen-item {
+    padding-left: 8px;
+    font-size: 7px;
+    line-height: 10px;
+  }
+  .greenhouse-product__equipmen-item:before {
+    width: 6px;
+    height: 6px;
+    top: 2px;
+  }
+  .greenhouse-product__equipmen-title {
+    margin-bottom: 10px;
+    font-size: 7px;
+    line-height: 1;
+  }
+  .greenhouse-product__installation-cost-title, .greenhouse-product__installation-cost-text {
+    font-size: 10px;
+  }
+  .greenhouse-product__constructor-title {
+    font-size: 7px;
+  }
+  .greenhouse-product__info-left {
+    max-width: 80%;
+  }
+  .greenhouse-product__constructor-btn-long, .greenhouse-product__constructor-btn-step {
+    padding: 5px 8.5px;
+    border-radius: 5px;
+    font-size: 9px;
+  }
+  .greenhouse-product__constructor-btns {
+    gap: 6px;
+  }
+  .greenhouse-product__price {
+    font-size: 9px;
+  }
+  .greenhouse-product__price-inner {
+    margin-bottom: 15px;
+  }
+  .greenhouse-product__price-old:after {
+    top: 22%;
+    background-size: contain;
+  }
+  .greenhouse-product__price-new, .greenhouse-product__price-currency {
+    font-size: 15px;
+  }
+  .greenhouse-product__control-btn {
+    width: 20px;
+    height: 15px;
+    padding: 0 2px;
+    line-height: 15px;
+    font-size: 10px;
+  }
+  .greenhouse-product__inner {
+    margin-bottom: 17px;
+  }
+  .greenhouse-product__counter {
+    width: 20px;
+    min-width: 20px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .greenhouse-product__basket {
+    margin-left: 20px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    font-size: 8px;
+  }
+  .greenhouse-product__more-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .greenhouse-product-more-info__text {
+    font-size: 10px;
+  }
+
+  .greenhouse-product-more-info__title {
+    font-size: 15px;
+  }
+
+  .greenhouse-product-more-info__management {
+    padding: 10px 15px;
+    font-size: 10px;
+  }
+}
+.additional-goods {
+  padding-top: 35px;
+  padding-bottom: 90px;
+  background-color: rgba(201, 229, 255, 0.1);
+}
+.additional-goods__title {
+  width: 100%;
+  margin-bottom: 65px;
+}
+.additional-goods__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.additional-goods__left {
+  width: 31.5%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 70px;
+}
+.additional-goods__right {
+  width: calc(68.5% - 70px);
+}
+.additional-goods__beds {
+  max-height: 485px;
+  max-width: 100%;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+.additional-goods__beds-title {
+  margin-bottom: 45px;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  color: #2A2A2A;
+  text-transform: uppercase;
+  text-align: center;
+}
+.additional-goods__beds-text {
+  max-width: 480px;
+  margin: 0 auto auto;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #2A2A2A;
+}
+.additional-goods__price {
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 200;
+  color: #2a2a2a;
+}
+.additional-goods__price-old {
+  position: relative;
+}
+.additional-goods__price-old:after {
+  position: absolute;
+  content: "";
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-image: url("images/greenhouses/old-price.png");
+  background-repeat: no-repeat;
+}
+.additional-goods__price-new {
+  margin-left: 6px;
+  margin-right: 5px;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 700;
+  color: #c50000;
+}
+.additional-goods__price-currency {
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 400;
+  color: #2a2a2a;
+}
+.additional-goods__price-inner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.additional-goods__beds-more {
+  display: block;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 13px 55px;
+  border-radius: 10px;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 800;
+  color: #2A2A2A;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.additional-goods__beds-more:hover {
+  background-color: #FFD200;
+}
+.additional-goods__beds-more:active {
+  background-color: red;
+  color: #ffffff;
+}
+.additional-goods__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 45px 30px;
+}
+.additional-goods__item {
+  grid-column: 1 span;
+}
+
+.good {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.good__img {
+  width: 100%;
+  display: block;
+  margin-bottom: auto;
+}
+.good__title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 700;
+  color: #2A2A2A;
+  text-align: center;
+  text-transform: uppercase;
+}
+.good__more {
+  display: block;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto 25px;
+  width: 100%;
+  padding: 13px 10px;
+  border-radius: 8px;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 800;
+  color: #2A2A2A;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  text-align: center;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.good__more:hover {
+  background-color: #FFD200;
+}
+.good__more:active {
+  background-color: red;
+  color: #ffffff;
+}
+.good__add-basket {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 13px 10px;
+  background-color: #FFD200;
+  border-radius: 8px;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 800;
+  color: #2A2A2A;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.good__add-basket:hover {
+  background-color: red;
+  color: #ffffff;
+}
+.good__add-basket:active {
+  background-color: #f57070;
+}
+
+@media (max-width: 1366px) {
+  .additional-goods__container {
+    flex-direction: column;
+  }
+  .additional-goods__left {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .additional-goods__right {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .additional-goods__beds-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .additional-goods__beds-more {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 968px) {
+  .additional-goods__item {
+    grid-column: 2 span;
+  }
+}
+@media (max-width: 600px) {
+  .additional-goods {
+    padding-bottom: 30px;
+  }
+  .additional-goods__beds-title {
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+  .additional-goods__beds-text {
+    margin-bottom: 8px;
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .additional-goods__price {
+    font-size: 10px;
+  }
+  .additional-goods__price-new, .additional-goods__price-currency {
+    font-size: 16px;
+  }
+  .additional-goods__beds-more {
+    margin-top: 20px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    font-size: 8px;
+  }
+  .additional-goods__right {
+    margin-top: 20px;
+  }
+
+  .good__title {
+    font-size: 8px;
+  }
+  .good__more {
+    margin-bottom: 10px;
+  }
+  .good__more, .good__add-basket {
+    border-radius: 5px;
+    font-size: 10px;
+  }
+}
 .footer {
   background-color: #2A2A2A;
 }

@@ -1,0 +1,687 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.greenhouse-product {
+  margin-bottom: 90px;
+
+  &__container {
+    padding-top: 30px;
+    max-width: 1490px;
+  }
+
+  &__bread-crumbs {
+    display: block;
+    margin-bottom: 55px;
+  }
+
+  &__slide-img {
+    width: 100%;
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    max-width: 1430px;
+    margin: 0 auto 25px;
+    font-size: 21px;
+    line-height: 28px;
+    color: $darckText;
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info-title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    margin-bottom: 55px;
+    gap: 55px;
+  }
+
+  &__info-left {
+    display: block;
+    max-width: 40%;
+  }
+
+  &__info-slider {
+    overflow: hidden;
+  }
+
+  &__info-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+
+    & .swiper-pagination-bullet:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__info-right {
+    width: 60%;
+  }
+
+  &__equipment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #2B2B2B;
+  }
+
+  &__equipmen-title {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $darckText;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  &__equipmen-list {
+    width: 30%;
+    max-width: 250px;
+
+    &_width {
+      display: flex;
+      max-width: 100%;
+      width: 70%;
+    }
+  }
+
+  &__equipmen-item {
+    position: relative;
+    padding-left: 26px;
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $darckText;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: $hoverGreenText;
+    }
+  }
+
+  &__installation-cost {
+    margin-bottom: 25px;
+  }
+
+  &__installation-cost-title {
+    margin-bottom: 10px;
+    font-size: 21px;
+    line-height: 1;
+    color: $darckText;
+    text-decoration: underline;
+  }
+
+  &__installation-cost-text {
+    font-size: 21px;
+    line-height: 1;
+    color: $darckText;
+  }
+
+  &__constructor-title {
+    margin-bottom: 10px;
+    font-size: 21px;
+    line-height: 1;
+    color: $hoverGreenText;
+    text-transform: uppercase;
+  }
+
+  &__constructor-btns {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__constructor-btn-long {
+    @include buttonReset();
+    padding: 8px 25px;
+    border: 1px solid #169B00;
+    border-radius: 10px;
+    background-color: $whiteText;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 300;
+    color: $hoverGreenText;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+    &:hover {
+      color: $darckText;
+      background-color: #C4E3C2;
+    }
+
+    &_active {
+      color: $darckText;
+      background-color: #C4E3C2;
+    }
+  }
+
+  &__constructor-btn-step {
+    @include buttonReset();
+    padding: 8px 25px;
+    border: 1px solid #169B00;
+    border-radius: 10px;
+    background-color: $whiteText;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 300;
+    color: $hoverGreenText;
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+    &:hover {
+      color: $darckText;
+      background-color: #C4E3C2;
+    }
+
+    &_active {
+      color: $darckText;
+      background-color: #C4E3C2;
+    }
+  }
+
+  &__constructor-long {
+    margin-bottom: 25px;
+  }
+
+  &__price-inner {
+    margin-bottom: 50px;
+  }
+
+  &__price {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 200;
+    color: #2a2a2a;
+  }
+
+  &__price-old {
+    position: relative;
+  }
+
+  &__price-old:after {
+    position: absolute;
+    content: "";
+    top: 22%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/greenhouses/old-price.png");
+    background-repeat: no-repeat;
+  }
+
+  &__price-new {
+    margin-left: 20px;
+    margin-right: 5px;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    color: #c50000;
+  }
+
+  &__price-currency {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 400;
+    color: #2a2a2a;
+  }
+
+  &__control {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__control-btn {
+    @include buttonReset();
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 52px;
+    height: 42px;
+    border: 1px solid #2A2A2A;
+    font-size: 28px;
+    line-height: 1;
+    color: $darckText;
+    text-align: right;
+
+    &_plus {
+      text-align: left;
+    }
+  }
+
+  &__counter {
+    display: block;
+    min-width: 62px;
+    height: 42px;
+    border: 1px solid #2A2A2A;
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600;
+    color: $darckText;
+    text-align: center;
+  }
+
+  &__add-basket {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__basket {
+    @include buttonReset();
+    margin-left: 60px;
+    padding: 15px 60px;
+    border-radius: 8px;
+    background-color: #FF0000;
+    color: $whiteText;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 800;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    &:hover {
+      background-color: $hoverYellowBg;
+      color: $darckText;
+    }
+
+    &:active {
+      background-color: $activeRedBg;
+      color: $whiteText;
+    }
+  }
+
+  &__more {
+    @include buttonReset();
+    margin: 0 auto;
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__more-icon {
+    width: 57px;
+    height: 57px;
+    margin-bottom: 10px;
+    fill: #2a2a2a;
+    transition: fill .2s ease-in-out, opacity .2s ease-in-out;
+    opacity: .1;
+
+    &:hover {
+      fill: $hoverGreenText;
+      opacity: .5;
+    }
+  }
+
+  &__more-info {
+    visibility: hidden;
+    max-height: 0;
+    background-color: #3F3F3F;
+    transition: max-height 1s ease-in-out;
+
+    &_visable {
+      visibility: visible;
+      max-height: 2000px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.greenhouse-product-more-info {
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    grid-column: 1 span;
+    max-width: 560px;
+
+    &_fastening {
+      grid-column: 2 span;
+      max-width: 1000px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    color: $whiteText;
+
+    & span {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 28px;
+    color: $whiteText;
+  }
+
+  &__management {
+    @include buttonReset();
+    padding: 14px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: $hoverYellowBg;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 700;
+    color: $darckText;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    &:hover {
+      background-color: #FF0000;
+      color: $whiteText;
+    }
+
+    &:active {
+      background-color: $activeRedBg;
+      color: $whiteText;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .greenhouse-product {
+
+    &__text {
+      font-size: 19px;
+    }
+
+    &__equipment {
+      flex-direction: row;
+      justify-content: start;
+    }
+
+    &__equipmen-list_width {
+      flex-direction: column;
+      justify-content: space-between;
+      width: 70%;
+      max-width: 100%;
+    }
+
+    &__equipmen-item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &__equipmen-item {
+      font-size: 18px;
+    }
+
+    &__constructor-title {
+      font-size: 16px;
+    }
+
+    &__constructor-btn-long,
+    &__constructor-btn-step {
+      font-size: 20px;
+      padding: 7px 20px;
+    }
+
+    &__constructor-btns {
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  .greenhouse-product {
+
+    &__bread-crumbs {
+      font-size: 15px;
+    }
+
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__info-left {
+      max-width: 60%;
+    }
+
+    &__info-pagination {
+      margin-top: 40px;
+    }
+
+    &__info-right {
+      width: 100%;
+    }
+
+    &__equipmen-item:before {
+      width: 10px;
+      height: 10px;
+    }
+
+    &__equipmen-item:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &__equipmen-item {
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    &__equipmen-list {
+      width: 20%;
+    }
+
+    &__equipmen-list_width {
+      flex-direction: row;
+      width: 80%;
+    }
+
+    &__installation-cost-title,
+    &__installation-cost-text {
+      text-align: center;
+    }
+
+    &__constructor-title {
+      text-align: center;
+    }
+
+    &__constructor-btns {
+      justify-content: center;
+    }
+
+    &__price {
+      text-align: center;
+      font-size: 15px;
+    }
+
+    &__price-new,
+    &__price-currency {
+      font-size: 25px;
+    }
+
+    &__add-basket {
+      justify-content: center;
+    }
+
+    &__control-btn,
+    &__counter {
+      width: 42px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 21px;
+    }
+
+    &__basket {
+      font-size: 15px;
+    }
+  }
+
+  .greenhouse-product-more-info__item {
+    grid-column: 3 span;
+  }
+
+  .greenhouse-product-more-info__title {
+    font-size: 21px;
+  }
+
+  .greenhouse-product-more-info__management {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .greenhouse-product {
+    margin-bottom: 30px;
+
+    &__bread-crumbs {
+      margin-bottom: 20px;
+      font-size: 8px;
+      line-height: 10px;
+    }
+
+    &__text {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    &__info-title {
+      margin-bottom: 15px;
+      font-size: 10px;
+      line-height: 1;
+    }
+
+    &__info-pagination {
+      margin-top: 20px;
+    }
+
+    &__equipmen-item {
+      padding-left: 8px;
+      font-size: 7px;
+      line-height: 10px;
+    }
+
+    &__equipmen-item:before {
+      width: 6px;
+      height: 6px;
+      top: 2px;
+    }
+
+    &__equipmen-title {
+      margin-bottom: 10px;
+      font-size: 7px;
+      line-height: 1;
+    }
+
+    &__installation-cost-title,
+    &__installation-cost-text {
+      font-size: 10px;
+    }
+
+    &__constructor-title {
+      font-size: 7px;
+    }
+
+    &__info-left {
+      max-width: 80%;
+    }
+
+    &__constructor-btn-long,
+    &__constructor-btn-step {
+      padding: 5px 8.5px;
+      border-radius: 5px;
+      font-size: 9px;
+    }
+
+    &__constructor-btns {
+      gap: 6px;
+    }
+
+    &__price {
+      font-size: 9px;
+    }
+
+    &__price-inner {
+      margin-bottom: 15px;
+    }
+
+    &__price-old:after {
+      top: 22%;
+      background-size: contain;
+    }
+
+    &__price-new,
+    &__price-currency {
+      font-size: 15px;
+    }
+
+    &__control-btn {
+      width: 20px;
+      height: 15px;
+      padding: 0 2px;
+      line-height: 15px;
+      font-size: 10px;
+    }
+
+    &__inner {
+      margin-bottom: 17px;
+    }
+
+    &__counter {
+      width: 20px;
+      min-width: 20px;
+      height: 15px;
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    &__basket {
+      margin-left: 20px;
+      padding: 6px 20px;
+      border-radius: 5px;
+      font-size: 8px;
+    }
+
+    &__more-icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .greenhouse-product-more-info__text {
+    font-size: 10px;
+  }
+
+  .greenhouse-product-more-info__title {
+    font-size: 15px;
+  }
+
+  .greenhouse-product-more-info__management {
+    padding: 10px 15px;
+    font-size: 10px;
+  }
+}

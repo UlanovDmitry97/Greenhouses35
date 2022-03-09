@@ -1,0 +1,303 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.additional-goods {
+  padding-top: 35px;
+  padding-bottom: 90px;
+  background-color: rgba(#C9E5FF, .1);
+
+  &__title {
+    width: 100%;
+    margin-bottom: 65px;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__left {
+    width: 31.5%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+  }
+
+  &__right {
+    width: calc(68.5% - 70px);
+  }
+
+  &__beds {
+    max-height: 485px;
+    max-width: 100%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+  }
+
+  &__beds-title {
+    margin-bottom: 45px;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+    color: $darckText;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__beds-text {
+    max-width: 480px;
+    margin: 0 auto auto;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    color: $darckText;
+  }
+
+  &__price {
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 200;
+    color: #2a2a2a;
+  }
+
+  &__price-old {
+    position: relative;
+  }
+
+  &__price-old:after {
+    position: absolute;
+    content: "";
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-image: url("images/greenhouses/old-price.png");
+    background-repeat: no-repeat;
+  }
+
+  &__price-new {
+    margin-left: 6px;
+    margin-right: 5px;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 700;
+    color: #c50000;
+  }
+
+  &__price-currency {
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 400;
+    color: #2a2a2a;
+  }
+
+  &__price-inner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  &__beds-more {
+    display: block;
+    @include buttonReset();
+    margin: 0 auto;
+    padding: 13px 55px;
+    border-radius: 10px;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 800;
+    color: $darckText;
+    background-color: $whiteText;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    &:hover {
+      background-color: $hoverYellowBg;
+    }
+
+    &:active {
+      background-color: red;
+      color: $whiteText;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 45px 30px;
+  }
+
+  &__item {
+    grid-column: 1 span;
+  }
+}
+
+.good {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__img {
+    width: 100%;
+    display: block;
+    margin-bottom: auto;
+  }
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 700;
+    color: $darckText;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__more {
+    display: block;
+    @include buttonReset();
+    margin: 0 auto 25px;
+    width: 100%;
+    padding: 13px 10px;
+    border-radius: 8px;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 800;
+    color: $darckText;
+    text-transform: uppercase;
+    background-color: $whiteText;
+    text-align: center;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    &:hover {
+      background-color: $hoverYellowBg;
+    }
+
+    &:active {
+      background-color: red;
+      color: $whiteText;
+    }
+  }
+
+  &__add-basket {
+    @include buttonReset();
+    width: 100%;
+    padding: 13px 10px;
+    background-color: $hoverYellowBg;
+    border-radius: 8px;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 800;
+    color: $darckText;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    &:hover {
+      background-color: red;
+      color: $whiteText;
+    }
+
+    &:active {
+      background-color: $activeRedBg;
+    }
+  }
+}
+
+@media (max-width: 1366px) {
+  .additional-goods {
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__left {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__right {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    &__beds-text {
+      max-width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    &__beds-more {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 968px) {
+  .additional-goods {
+
+    &__item {
+      grid-column: 2 span;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .additional-goods {
+    padding-bottom: 30px;
+
+    &__beds-title {
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    &__beds-text {
+      margin-bottom: 8px;
+      font-size: 8px;
+      line-height: 12px;
+    }
+
+    &__price {
+      font-size: 10px;
+    }
+
+    &__price-new,
+    &__price-currency {
+      font-size: 16px;
+    }
+
+    &__beds-more {
+      margin-top: 20px;
+      padding: 6px 20px;
+      border-radius: 5px;
+      font-size: 8px;
+    }
+
+    &__right {
+      margin-top: 20px;
+    }
+  }
+
+  .good {
+
+    &__title {
+      font-size: 8px;
+    }
+
+    &__more {
+      margin-bottom: 10px;
+    }
+
+    &__more,
+    &__add-basket {
+      border-radius: 5px;
+      font-size: 10px;
+    }
+  }
+}
