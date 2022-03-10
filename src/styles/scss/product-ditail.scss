@@ -14,6 +14,14 @@
     margin-bottom: 55px;
   }
 
+  &__price-hotebed {
+    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    color: $darckText;
+  }
+
   &__slide-img {
     width: 100%;
   }
@@ -30,6 +38,11 @@
     line-height: 28px;
     color: $darckText;
     text-align: center;
+
+    &_hotebed {
+      margin-bottom: 50px;
+      text-align: left;
+    }
   }
 
   &__info {
@@ -69,6 +82,11 @@
 
   &__info-right {
     width: 60%;
+
+    &_hotebed {
+        display: flex;
+        flex-direction: column;
+      }
   }
 
   &__equipment {
@@ -209,6 +227,10 @@
 
   &__price-inner {
     margin-bottom: 50px;
+
+    &_hotebed {
+      margin-top: auto;
+    }
   }
 
   &__price {
@@ -418,6 +440,11 @@
       font-size: 19px;
     }
 
+    &__price-hotebed {
+      margin-bottom: 20px;
+      font-size: 21px;
+    }
+
     &__equipment {
       flex-direction: row;
       justify-content: start;
@@ -456,6 +483,14 @@
 
 @media (max-width: 968px) {
   .greenhouse-product {
+
+    &__text_hotebed {
+      text-align: center;
+    }
+
+    &__price-hotebed {
+      text-align: center;
+    }
 
     &__bread-crumbs {
       font-size: 15px;
@@ -564,9 +599,17 @@
       line-height: 10px;
     }
 
+    &__price-hotebed {
+      font-size: 15px;
+    }
+
     &__text {
       font-size: 10px;
       line-height: 12px;
+
+      &_hotebed {
+        margin-bottom: 10px;
+      }
     }
 
     &__info-title {

@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Теплицы</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Парник «махаон»</title>
   <link rel="preload" href="fonts/manrope-extralight.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/manrope-light.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -23,9 +23,9 @@
   <!-- Это ↓ подключение js для слайдеров, очень важно его не пропустить -->
   <script src="./swiper/swiper-bundle.min.js"></script>
   <!-- Это ↓ подключение js для карты, очень важно его не пропустить, на деле там вроде еще надо будет подшаманить с ключем -->
-  <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" defer="defer">
+  <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" defer>
   </script>
-  <script src="app.js" defer="defer"></script>
+  <script src="app.js" defer></script>
   <link rel="stylesheet" href="normalize.css">
   <!-- Это ↓ подключение стилей для слайдеров, очень важно его не пропустить -->
   <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
@@ -82,10 +82,10 @@
 
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a href="greenhouses.html" class="menu__link">Теплицы</a>
+                    <a href="./greenhouses.html" class="menu__link">Теплицы</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Парники</a>
+                    <a href="hotbed.html" class="menu__link">Парники</a>
                   </li>
                   <li class="menu__item">
                     <a href="#" class="menu__link">Грядки</a>
@@ -146,10 +146,10 @@
 
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a href="greenhouses.html" class="menu__link">Теплицы</a>
+                    <a href="./greenhouses.html" class="menu__link">Теплицы</a>
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Парники</a>
+                    <a href="hotbed.html" class="menu__link">Парники</a>
                   </li>
                   <li class="menu__item">
                     <a href="#" class="menu__link">Грядки</a>
@@ -253,334 +253,108 @@
   </header>
 
   <main class="main">
-    <!-- SLIDER -->
-    <section class="slider-stock">
-      <div class="container slider-stock__container">
-        <div class="slider-stock__btn">Подробнее</div>
-        <div class="swiper-stock">
-          <div class="swiper-wrapper">
-            <!-- Слайды -->
-            <div class="swiper-slide swiper-slide-stock">
-              <picture>
-                <source srcset="/images/slider-stock/slide1_320.jpg" media="(max-width: 576px)">
-                <source srcset="/images/slider-stock/slide1_968.jpg" media=" (max-width: 968px)">
-                <source srcset="/images/slider-stock/slide1.jpg" media=" (max-width: 1920px)">
-                <img src="/images/slider-stock/slide1.jpg" alt="Акция" class="swiper-slide-stock__img">
-              </picture>
+    <section class="greenhouse-product">
+      <div class="container greenhouse-product__container">
+        <div class="bread-crumbs greenhouse-product__bread-crumbs">
+          <span class="bread-crumbs__bread-crumb ">главная / теплицы из поликарбоната главная / парник “махаон”
+          </span>
+        </div>
+
+        <h1 class="section-title greenhouse-product__title">Парник <span class="section-title__green">«махаон»</span>
+        </h1>
+
+        <div class="greenhouse-product__info">
+          <h2 class="greenhouse-product__info-title">Ширина 3,00х1,50.</h2>
+
+          <div class="greenhouse-product__inner">
+            <div class="greenhouse-product__info-left">
+              <div class="greenhouse-product__info-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide-stock">
+                    <picture>
+                      <source srcset="/images/hotebed-product/hotebed3.jpg" media="(max-width: 576px)">
+                      <source srcset="/images/hotebed-product/hotebed3.jpg" media=" (max-width: 1366px)">
+                      <source srcset="/images/hotebed-product/hotebed3.jpg" media=" (max-width: 1920px)">
+                      <img src="/images/hotebed-product/hotebed3.jpg" alt="Парник «махаон»"
+                        class="greenhouse-product__slide-img">
+                    </picture>
+                  </div>
+
+                  <div class="swiper-slide swiper-slide-stock">
+                    <picture>
+                      <source srcset="/images/hotebed-product/hotebed3.jpg" media="(max-width: 576px)">
+                      <source srcset="/images/hotebed-product/hotebed3.jpg" media=" (max-width: 1366px)">
+                      <source srcset="/images/hotebed-product/hotebed3.jpg" media=" (max-width: 1920px)">
+                      <img src="/images/hotebed-product/hotebed3.jpg" alt="Парник «махаон»"
+                        class="greenhouse-product__slide-img">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+
+              <div class="greenhouse-product__info-pagination"></div>
             </div>
 
-            <div class="swiper-slide swiper-slide-stock">
-              <picture>
-                <source srcset="/images/slider-stock/slide2.jpg" media="(max-width: 576px)">
-                <source srcset="/images/slider-stock/slide2.jpg" media=" (max-width: 1920px)">
-                <img src="/images/slider-stock/slide2.jpg" alt="Акция" class="swiper-slide-stock__img">
-              </picture>
-            </div>
+            <div class="greenhouse-product__info-right greenhouse-product__info-right_hotebed">
+              <p class="greenhouse-product__text greenhouse-product__text_hotebed">
+                Парник является идеальным решением для садоводов.
+                Лучше всего
+                использовать парник для рассады в&nbsp;весенне время
+                года. На&nbsp;нашем
+                сайте представлено два основных вида
+                парников для Ваших садовых
+                участков. Мы&nbsp;предлагаем купить
+                парник у&nbsp;нас с&nbsp;доставкой до
+                конкретного места его установки.
+                Позвоните по&nbsp;вышеуказанным
+                телефонам и&nbsp;получите
+                профессиональную консультацию наших
+                специалистов по
+                выбору парника.
+              </p>
 
-            <div class="swiper-slide swiper-slide-stock">
-              <picture>
-                <source srcset="/images/slider-stock/slide3.jpg" media="(max-width: 576px)">
-                <source srcset="/images/slider-stock/slide3.jpg" media=" (max-width: 1920px)">
-                <img src="/images/slider-stock/slide3.jpg" alt="Акция" class="swiper-slide-stock__img">
-              </picture>
+              <div class="greenhouse-product__price-inner greenhouse-product__price-inner_hotebed">
+                <p class="greenhouse-product__price-hotebed">Цена одного модуля :</p>
+                <p class="greenhouse-product__price">
+                  <span class="greenhouse-product__price-text">
+                    от
+                  </span>
+
+                  <span class="greenhouse-product__price-old"> 38000 &#8381;</span>
+
+                  <span class="greenhouse-product__price-new">30 000</span>
+
+                  <span class="greenhouse-product__price-currency">&#8381;</span>
+                </p>
+              </div>
+
+              <div class="greenhouse-product__add-basket">
+                <div class="greenhouse-product__control">
+                  <button class="greenhouse-product__control-btn">-</button>
+                  <span class="greenhouse-product__counter">1</span>
+                  <button class="greenhouse-product__control-btn greenhouse-product__control-btn_plus">+</button>
+                </div>
+
+                <button class="greenhouse-product__basket">В корзину</button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-    <!-- SLIDER END -->
-
-    <!-- CATALOG -->
-    <section class="catalog">
-      <div class="container">
-        <div class="bread-crumbs catalog__bread-crumbs">
-          <span class="bread-crumbs__bread-crumb">главная / парники</span>
-        </div>
-
-        <h1 class="section-title catalog__title">парники</h1>
-
-        <ul class="catalog__list">
-          <li class="catalog__item">
-            <article class="catalog__card product">
-              <h3 class="product__title">бабочка</h3>
-
-              <picture>
-                <source srcset="/images/hotebed/hotebed1_768.jpg" media=" (max-width: 968px)">
-                <source srcset="/images/hotebed/hotebed1.jpg" media=" (max-width: 1920px)">
-                <img class="product__img" src="/images/hotebed/hotebed1.jpg" alt="Парник 'бабочка'">
-              </picture>
-
-              <div class="product__info">
-                <p class="product__text">
-                  <span>
-                    Ширина 1,1м.
-                  </span>
-
-                  <span>
-                    Длина 2 м, 4 м, 6 м.
-                  </span>
-                </p>
-
-                <div class="product__inner">
-                  <p class="product__price">
-                    <span class="product__price-text">
-                      от
-                    </span>
-
-                    <span class="product__price-old"> 38000 &#8381;</span>
-
-                    <span class="product__price-new">30 000</span>
-
-                    <span class="product__currency">&#8381;</span>
-                  </p>
-
-                  <button class="product__basket">
-                    <svg class="product__basket-icon product__basket-icon_active">
-                      <use xlink:href="images/sprite.svg#basket-greenhouses"></use>
-                    </svg>
-                  </button>
-                </div>
-
-                <a href="./hootbed-butterfly.html" class="product__more">Подробнее</a>
-              </div>
-            </article>
-          </li>
-          <li class="catalog__item">
-            <article class="catalog__card product">
-              <h3 class="product__title">Сундучок</h3>
-
-              <picture>
-                <source srcset="/images/hotebed/hotebed2_768.jpg" media=" (max-width: 968px)">
-                <source srcset="/images/hotebed/hotebed2.jpg" media=" (max-width: 1920px)">
-                <img class="product__img" src="/images/hotebed/hotebed2.jpg" alt="Парник 'Сундучок'">
-              </picture>
-
-              <div class="product__info">
-                <p class="product__text">
-                  <span>
-                    Ширина 1,1 м.
-                  </span>
-
-                  <span>
-                    Длина 2 м, 4 м.
-                  </span>
-                </p>
-
-                <div class="product__inner">
-                  <p class="product__price">
-                    <span class="product__price-text">
-                      от
-                    </span>
-
-                    <span class="product__price-old"> 38000 &#8381;</span>
-
-                    <span class="product__price-new">30 000</span>
-
-                    <span class="product__currency">&#8381;</span>
-                  </p>
-
-                  <button class="product__basket">
-                    <svg class="product__basket-icon product__basket-icon_active">
-                      <use xlink:href="images/sprite.svg#basket-greenhouses"></use>
-                    </svg>
-                  </button>
-                </div>
-
-                <a href="./hotebed-box.html" class="product__more">Подробнее</a>
-              </div>
-            </article>
-          </li>
-          <li class="catalog__item">
-            <article class="catalog__card product">
-              <h3 class="product__title">Махаон</h3>
-
-              <picture>
-                <source srcset="/images/hotebed/hotebed3_768.jpg" media=" (max-width: 968px)">
-                <source srcset="/images/hotebed/hotebed3.jpg" media=" (max-width: 1920px)">
-                <img class="product__img" src="/images/hotebed/hotebed3.jpg" alt="Парник 'Махаон'">
-              </picture>
-
-              <div class="product__info">
-                <p class="product__text">
-                  <span>
-                    Ширина 1,5 м.
-                  </span>
-
-                  <span>
-                    Длина 3 м.
-                  </span>
-                </p>
-
-                <div class="product__inner">
-                  <p class="product__price">
-                    <span class="product__price-text">
-                      от
-                    </span>
-
-                    <span class="product__price-old">38000 &#8381;</span>
-
-                    <span class="product__price-new">30 000</span>
-
-                    <span class="product__currency">&#8381;</span>
-                  </p>
-
-                  <button class="product__basket">
-                    <svg class="product__basket-icon product__basket-icon_active">
-                      <use xlink:href="images/sprite.svg#basket-greenhouses"></use>
-                    </svg>
-                  </button>
-                </div>
-
-                <a href="./hotebed-swallowtail.html" class="product__more">Подробнее</a>
-              </div>
-            </article>
-          </li>
-          <li class="catalog__item">
-            <article class="catalog__card product">
-              <h3 class="product__title">хлебница</h3>
-
-              <picture>
-                <source srcset="/images/hotebed/hotebed4_768.jpg" media=" (max-width: 968px)">
-                <source srcset="/images/hotebed/hotebed4.jpg" media=" (max-width: 1920px)">
-                <img class="product__img" src="/images/hotebed/hotebed4.jpg" alt="Парник 'хлеебница'">
-              </picture>
-
-              <div class="product__info">
-                <p class="product__text">
-                  <span>
-                    Ширина 1,1 м.
-                  </span>
-
-                  <span>
-                    Длина 2 м.
-                  </span>
-                </p>
-
-                <div class="product__inner">
-                  <p class="product__price">
-                    <span class="product__price-text">
-                      от
-                    </span>
-
-                    <span class="product__price-old">38000 &#8381;</span>
-
-                    <span class="product__price-new">30 000</span>
-
-                    <span class="product__currency">&#8381;</span>
-                  </p>
-
-                  <button class="product__basket">
-                    <svg class="product__basket-icon product__basket-icon_active">
-                      <use xlink:href="images/sprite.svg#basket-greenhouses"></use>
-                    </svg>
-                  </button>
-                </div>
-
-                <a href="./hotebed-box.html" class="product__more">Подробнее</a>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- CATALOG END -->
-
-    <!-- PRODUCT ADVANTAGES -->
-    <section class="advantages-product">
-      <div class="container advantages-product__container">
-        <h2 class="section-title advantages-product__title"><span class="section-title__green">преимущества
-            наших</span> теплиц</h2>
-
-        <div class="advantages-product__left">
-          <ul class="advantages-product__list">
-            <li class="advantages-product__item">
-              <article class="advantage-product">
-                <h3 class="advantage-product__title">Высокопрочный сварной каркас из замкнутого оцинкованного профиля
-                </h3>
-
-                <div class="advantage-product__inner">
-                  <p class="advantage-product__info">обеспечивает
-                    долговечность
-                    Вашей теплице
-                  </p>
-                </div>
-              </article>
-            </li>
-            <li class="advantages-product__item">
-              <article class="advantage-product">
-                <h3 class="advantage-product__title">Цельносварные торцы и цельногнутые дуги
-                </h3>
-
-                <div class="advantage-product__inner">
-                  <p class="advantage-product__info">позволяют теплице
-                    переносить любые
-                    снеговые нагрузки
-                  </p>
-                </div>
-              </article>
-            </li>
-          </ul>
-        </div>
-
-        <picture class="advantages-product__picture">
-          <source srcset="images/advantages-greenhouses/greenhouse_320.jpg" media="(max-width: 576px)">
-          <source srcset="images/advantages-greenhouses/greenhouse_768.jpg" media=" (max-width: 968px)">
-          <source srcset="images/advantages-greenhouses/greenhouse_1024.jpg" media=" (max-width: 1600px)">
-          <source srcset="images/advantages-greenhouses/greenhouse.jpg" media=" (max-width: 1920px)">
-          <img class="advantages-product__img" src="images/advantages-greenhouses/greenhouse.jpg" alt="Макет теплицы">
-        </picture>
-
-        <div class="advantages-product__right">
-          <ul class="advantages-product__list">
-            <li class="advantages-product__item">
-              <article class="advantage-product">
-                <h3 class="advantage-product__title">Продольное усиление
-                  в соответствии с ГОСТом
-                </h3>
-
-                <div class="advantage-product__inner">
-                  <p class="advantage-product__info">позволяют теплице
-                    переносить любые
-                    снеговые нагрузки
-                  </p>
-                </div>
-              </article>
-            </li>
-            <li class="advantages-product__item">
-              <article class="advantage-product">
-                <h3 class="advantage-product__title">Поликарбонат ПРЕМИУМ-4мм
-                  с УФ-защитой
-                </h3>
-
-                <div class="advantage-product__inner">
-                  <p class="advantage-product__info">позволяют теплице
-                    переносить любые
-                    снеговые нагрузки
-                  </p>
-                </div>
-              </article>
-            </li>
-          </ul>
-        </div>
-
-        <div class="advantages-product__more-wrapp">
-          <button class="advantages-product__more">
-            <svg class="advantages-product__more-icon">
+          <button class="greenhouse-product__more">
+            <svg class="greenhouse-product__more-icon">
               <use xlink:href="images/sprite.svg#advantages-greenhouses_icon"></use>
             </svg>
           </button>
         </div>
       </div>
 
-      <div class="advantages-product__more-info product-more-info">
+      <div class="greenhouse-product__more-info greenhouse-product-more-info">
         <div class="container">
-          <ul class="product-more-info__list">
-            <li class="product-more-info__item">
-              <h3 class="product-more-info__title">Каркас</h3>
+          <ul class="greenhouse-product-more-info__list">
+            <li class="greenhouse-product-more-info__item">
+              <h3 class="greenhouse-product-more-info__title">Каркас</h3>
 
-              <p class="product-more-info__text">
+              <p class="greenhouse-product-more-info__text">
                 Теплица имеет две двери и&nbsp;две форточки в&nbsp;противоположных
                 торцах.
                 Каркас выполнен из&nbsp;оцинкованной квадратной
@@ -593,10 +367,32 @@
                 теплиц, покрашенных грунт-эмалью).
               </p>
             </li>
-            <li class="product-more-info__item">
-              <h3 class="product-more-info__title">Крепление поликарбоната</h3>
+            <li class="greenhouse-product-more-info__item">
+              <h3 class="greenhouse-product-more-info__title">Комплектация</h3>
 
-              <p class="product-more-info__text">
+              <p class="greenhouse-product-more-info__text">
+                Теплица имеет две форточки и&nbsp;две двери в&nbsp;противоположных торцах.
+                Дополнительно Вы&nbsp;можете приобрести самооткрывающиеся (в&nbsp;зависимости от&nbsp;температуры)
+                автоматические
+                форточки.
+                Вся необходимая фурнитура для сборки каркаса теплицы и&nbsp;крепления поликарбоната в&nbsp;комплекте.
+              </p>
+            </li>
+            <li class="greenhouse-product-more-info__item">
+              <h3 class="greenhouse-product-more-info__title">Монтаж</h3>
+
+              <p class="greenhouse-product-more-info__text">
+                Минимальное количество разборных элементов обеспечивает
+                легкость сборки, поэтому&nbsp;95% покупателей устанавливают
+                теплицу самостоятельно.
+
+                Ориентировочное время монтажа теплицы&nbsp;&mdash; 3&nbsp;часа.
+              </p>
+            </li>
+            <li class="greenhouse-product-more-info__item greenhouse-product-more-info__item_fastening">
+              <h3 class="greenhouse-product-more-info__title">Крепление поликарбоната</h3>
+
+              <p class="greenhouse-product-more-info__text">
                 <span>Усиленное крепление поликарбоната, кровельными саморезами с
                   резиновой пресс шайбой через оцинкованную ленту. Такое крепление:</span>
 
@@ -615,22 +411,263 @@
                   саморезами.</span>
               </p>
             </li>
-            <li class="product-more-info__item">
-              <h3 class="product-more-info__title">Монтаж</h3>
+            <li class="greenhouse-product-more-info__item">
+              <h3 class="greenhouse-product-more-info__title">
+                <span>Гарантия 1год срок</span>
+                <span>эксплуатации 10 лет</span>
+              </h3>
 
-              <p class="product-more-info__text">
-                Минимальное количество разборных элементов обеспечивает
-                легкость сборки, поэтому&nbsp;95% покупателей устанавливают
-                теплицу самостоятельно.
-
-                Ориентировочное время монтажа теплицы&nbsp;&mdash; 3&nbsp;часа.
-              </p>
+              <button class="greenhouse-product-more-info__management">скачать руководство</button>
             </li>
           </ul>
         </div>
       </div>
     </section>
-    <!-- PRODUCT ADVANTAGES END -->
+
+    <section class="additional-goods">
+      <div class="container additional-goods__container">
+        <div class="section-title additional-goods__title"><span class="section-title__green">Дополнительные</span>
+          товары</div>
+
+        <div class="additional-goods__left">
+          <img class="additional-goods__beds" src="./images/additional-goods/set.jpg" alt="Комплект грядок">
+
+          <h3 class="additional-goods__beds-title">комплекты грядок в теплицу</h3>
+
+          <p class="additional-goods__beds-text">
+            Бортики выполнены из&nbsp;оцинкованного металла толщи-
+            ной 0,5&nbsp;мм, каждая панель усилена 12&nbsp;ребрами жест-
+            кости, которые исключают ее&nbsp;деформацию при давле-
+            нии грунта, а&nbsp;завальцовка всех краев обеспечивает бе-
+            зопасное использование. Оцинкованная сталь устой-
+            чива к&nbsp;коррозии и&nbsp;не&nbsp;требует специального ухода.
+            Бортики выполнены из&nbsp;оцинкованного металла толщи-
+            ной 0,5&nbsp;мм, каждая панель усилена 12&nbsp;ребрами жесткости
+          </p>
+
+          <div class="additional-goods__price-inner">
+            <p class="additional-goods__price">
+              <span class="additional-goods__price-text">
+                от
+              </span>
+
+              <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+              <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+              <span class="additional-goods__price-currency">&#8381;</span>
+            </p>
+          </div>
+
+          <a href="#" class="additional-goods__beds-more">Подробнее</a>
+        </div>
+
+        <div class="additional-goods__right">
+          <ul class="additional-goods__list">
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good1.jpg" alt="Автопроветриватель">
+
+                <h3 class="good__title">Автопроветриватель</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good2.jpg" alt="Подвязки для растений">
+
+                <h3 class="good__title">Подвязки для растений</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good3.jpg" alt="Перфорированная лента">
+
+                <h3 class="good__title">Перфорированная лента</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good4.jpg" alt="Профиль торцевой">
+
+                <h3 class="good__title">Профиль торцевой</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good5.jpg" alt="Термошайба">
+
+                <h3 class="good__title">Термошайба</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good6.jpg" alt="Оцинкованная лента">
+
+                <h3 class="good__title">Оцинкованная лента</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good7.jpg" alt="Боковые форточки">
+
+                <h3 class="good__title">Боковые форточки</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good8.jpg" alt="Аккумулятор тепла">
+
+                <h3 class="good__title">Аккумулятор тепла</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <!-- BANNER -->
     <section class="promotion-banner">
@@ -909,154 +946,166 @@
     </section>
     <!-- FORM END -->
 
-    <!-- BUYERS-CHOICE -->
-    <section class="buyers-choice">
-      <div class="container buyers-choice__container">
-        <h2 class="section-title buyers-choice__title"><span class="section-title__green">выбор</span> покупателей
+    <!-- ARTICLES -->
+    <section class="articles">
+      <div class="container articles__container">
+        <h2 class="section-title articles__title"><span class="section-title__green">полезные</span>
+          статьи
         </h2>
 
-        <ul class="buyers-choice__list">
-          <li class="buyers-choice__item">
-            <article class="buyers-choice__card buyer-choice">
-              <h3 class="buyer-choice__title">
-                <span class="buyer-choice__title-name">“Крепость”</span>
-                теплица из поликарбоната
-              </h3>
+        <div class="articles__green-bg green-bg"></div>
 
-              <div class="buyer-choice__inner-img w100">
-                <!-- Это ↓ флаг акций. Можно просто менять здесь цифры  -->
-                <span class="buyer-choice__promotion">-10%</span>
+        <ul class="articles__list">
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
 
-                <picture class="w100">
-                  <source srcset="/images/buyers-choice/fortress_320.jpg" media="(max-width: 576px)">
-                  <source srcset="/images/buyers-choice/fortress.jpg" media="(max-width: 1920px)">
-                  <img src="/images/buyers-choice/fortress.jpg" alt="Теплица из поликарбоната 'Крепость'" class="buyer-choice__img w100">
-                </picture>
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.
+                  Оцинкованный профиль против металлических труб.
+                </p>
+
+                <a class="article__link" href="#">читать статью</a>
               </div>
-
-              <span class="buyer-choice__assessment">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-              </span>
-
-              <div class="buyer-choice__comments-wrapp">
-                <span class="buyer-choice__comments">75</span>
-
-                <span class="buyer-choice__likes">26</span>
-              </div>
-
-              <button class="buyer-choice__btn">В корзину</button>
             </article>
           </li>
-          <li class="buyers-choice__item">
-            <article class="buyers-choice__card buyer-choice">
-              <h3 class="buyer-choice__title">
-                <span class="buyer-choice__title-name">“Бабочка”</span>
-                парник из поликарбоната
-              </h3>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
 
-              <div class="buyer-choice__inner-img w100">
-                <picture class="w100">
-                  <source srcset="/images/buyers-choice/butterfly__320.jpg" media="(max-width: 576px)">
-                  <source srcset="/images/buyers-choice/butterfly.jpg" media="(max-width: 1920px)">
-                  <img src="/images/buyers-choice/butterfly.jpg" alt="Парник из поликарбоната 'Бабочка'" class="buyer-choice__img w100">
-                </picture>
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
               </div>
-
-              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
-              <span class="buyer-choice__assessment">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-              </span>
-
-              <div class="buyer-choice__comments-wrapp">
-                <span class="buyer-choice__comments">75</span>
-
-                <span class="buyer-choice__likes">26</span>
-              </div>
-
-              <button class="buyer-choice__btn">В корзину</button>
             </article>
           </li>
-          <li class="buyers-choice__item">
-            <article class="buyers-choice__card buyer-choice">
-              <h3 class="buyer-choice__title">
-                <span class="buyer-choice__title-name">“Капелька”</span>
-                теплица 3 метра
-              </h3>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
 
-              <div class="buyer-choice__inner-img w100">
-                <!-- Это ↓ флаг акций. Можно просто менять здесь цифры  -->
-                <span class="buyer-choice__promotion">ХИТ</span>
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
 
-                <picture class="w100">
-                  <source srcset="/images/buyers-choice/droplet__320.jpg" media="(max-width: 576px)">
-                  <source srcset="/images/buyers-choice/droplet.jpg" media="(max-width: 1920px)">
-                  <img src="/images/buyers-choice/droplet.jpg" alt="Теплица 3 метра 'Капелька'" class="buyer-choice__img w100">
-                </picture>
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
               </div>
-
-              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
-              <span class="buyer-choice__assessment">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-              </span>
-
-              <div class="buyer-choice__comments-wrapp">
-                <span class="buyer-choice__comments">75</span>
-
-                <span class="buyer-choice__likes">26</span>
-              </div>
-
-              <button class="buyer-choice__btn">В корзину</button>
             </article>
           </li>
-          <li class="buyers-choice__item">
-            <article class="buyers-choice__card buyer-choice">
-              <h3 class="buyer-choice__title">
-                <span class="buyer-choice__title-name">комплект грядок</span>
-                в теплицу
-              </h3>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
 
-              <div class="buyer-choice__inner-img w100">
-                <picture class="w100">
-                  <source srcset="/images/buyers-choice/set__320.jpg" media="(max-width: 576px)">
-                  <source srcset="/images/buyers-choice/set.jpg" media="(max-width: 1920px)">
-                  <img src="/images/buyers-choice/set.jpg" alt="Теплица 3 метра 'Капелька'" class="buyer-choice__img w100">
-                </picture>
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
               </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
 
-              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
-              <span class="buyer-choice__assessment">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
-              </span>
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
 
-              <div class="buyer-choice__comments-wrapp">
-                <span class="buyer-choice__comments">75</span>
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
 
-                <span class="buyer-choice__likes">26</span>
+                <a class="article__link" href="#">читать статью</a>
               </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
 
-              <button class="buyer-choice__btn">В корзину</button>
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
             </article>
           </li>
         </ul>
       </div>
     </section>
-    <!-- BUYERS-CHOICE END -->
+    <!-- ARTICLES END -->
+
+    <!-- JUST WATCHED -->
+    <section class="just-watched">
+      <div class="container">
+        <h2 class="section-title just-watched__title"><span class="section-title__green">толькочто</span> смотрели</h2>
+        <!-- Как дойдешь до этого пиши мне, решим как сделать секцию. Если будет нужно сверстаю по другму -->
+        <ul class="just-watched__list">
+          <li class="just-watched__li">
+            <a href="" class="just-watched__link">
+              <img src="images/just-watched/plug.jpg" alt="Ранее смотрели" class="just-watched__img">
+            </a>
+          </li>
+          <li class="just-watched__li">
+            <a href="" class="just-watched__link">
+              <img src="images/just-watched/plug.jpg" alt="Ранее смотрели" class="just-watched__img">
+            </a>
+          </li>
+          <li class="just-watched__li">
+            <a href="" class="just-watched__link">
+              <img src="images/just-watched/plug.jpg" alt="Ранее смотрели" class="just-watched__img">
+            </a>
+          </li>
+          <li class="just-watched__li">
+            <a href="" class="just-watched__link">
+              <img src="images/just-watched/plug.jpg" alt="Ранее смотрели" class="just-watched__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- LOCATION -->
     <section class="location">
@@ -1119,10 +1168,10 @@
 
             <ul class="footer-menu__list">
               <li class="footer-menu__item">
-                <a href="greenhouses.html" class="footer-menu__link">Теплицы</a>
+                <a href="./greenhouses.html" class="footer-menu__link">Теплицы</a>
               </li>
               <li class="footer-menu__item">
-                <a href="#" class="footer-menu__link">Парники</a>
+                <a href="hotbed.html" class="footer-menu__link">Парники</a>
               </li>
               <li class="footer-menu__item">
                 <a href="#" class="footer-menu__link">Грядки</a>
@@ -1198,15 +1247,16 @@
           <div class="footer__menu-mobile footer-menu-mobile">
             <ul class="footer-menu-mobile__list">
               <li class="footer-menu-mobile__item">
-                <button data-target="footerMenuDropdowTop" class="footer-menu-mobile__link footer-menu-mobile__btn">Меню</button>
+                <button data-target="footerMenuDropdowTop"
+                  class="footer-menu-mobile__link footer-menu-mobile__btn">Меню</button>
 
                 <div class="footer-menu-mobile__dropdown-top footer-dropdown-top">
                   <ul id="footerMenuDropdowTop" class="footer-dropdown-top__list">
                     <li class="footer-dropdown-top__item">
-                      <a href="greenhouses.html" class="footer-dropdown-top__link">Теплицы</a>
+                      <a href="./greenhouses.html" class="footer-dropdown-top__link">Теплицы</a>
                     </li>
                     <li class="footer-dropdown-top__item">
-                      <a href="#" class="footer-dropdown-top__link">Парники</a>
+                      <a href="hotbed.html" class="footer-dropdown-top__link">Парники</a>
                     </li>
                     <li class="footer-dropdown-top__item">
                       <a href="#" class="footer-dropdown-top__link">Грядки</a>
@@ -1260,7 +1310,8 @@
                 <a href="#" class="footer-menu-mobile__link">Контакты</a>
               </li>
               <li class="footer-menu-mobile__item">
-                <button data-target="footerMenuDropdowBottom" class="footer-menu-mobile__link footer-menu-mobile__btn">Помощь покупателю</button>
+                <button data-target="footerMenuDropdowBottom"
+                  class="footer-menu-mobile__link footer-menu-mobile__btn">Помощь покупателю</button>
 
                 <div class="footer-menu-mobile__dropdown-top footer-dropdown-top">
                   <ul id="footerMenuDropdowBottom" class="footer-dropdown-top__list">
@@ -1321,6 +1372,7 @@
     </div>
   </footer>
   <!-- FOOTER END -->
+
 </body>
 
 </html>
