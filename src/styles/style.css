@@ -3683,6 +3683,43 @@ html {
     font-size: 10px;
   }
 }
+.just-watched {
+  margin-bottom: 90px;
+}
+.just-watched__title {
+  margin-bottom: 40px;
+}
+.just-watched__list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.just-watched__img {
+  border-radius: 10px;
+}
+.just-watched__img:hover {
+  box-shadow: 0 0 20px 5px #000;
+}
+
+@media (max-width: 968px) {
+  .just-watched__list {
+    gap: 20px;
+  }
+  .just-watched__title {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .just-watched {
+    margin-bottom: 30px;
+  }
+  .just-watched__list {
+    gap: 10px;
+  }
+  .just-watched__img {
+    border-radius: 5px;
+  }
+}
 .footer {
   background-color: #2A2A2A;
 }

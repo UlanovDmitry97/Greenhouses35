@@ -1,0 +1,50 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.just-watched {
+  margin-bottom: 90px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &__img {
+      border-radius: 10px;
+
+      &:hover {
+        box-shadow: 0 0 20px 5px #000;
+      }
+  }
+}
+
+@media (max-width: 968px) {
+  .just-watched {
+    &__list {
+      gap: 20px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .just-watched {
+    margin-bottom: 30px;
+
+    &__list {
+      gap: 10px;
+    }
+
+    &__img {
+      border-radius: 5px;
+    }
+  }
+}
