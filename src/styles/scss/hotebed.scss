@@ -1,0 +1,31 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.hotebed-catalog {
+
+  &__bread-crumbs {
+    margin-bottom: 75px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 45px;
+  }
+
+  &__item {
+    grid-column: 1 span;
+  }
+}
+
+.hotebed {
+
+  &__title {
+
+  }
+}

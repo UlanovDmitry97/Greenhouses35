@@ -1,13 +1,17 @@
 @import '_variables.scss';
 @import '_mixin.scss';
 
-.greenhouses-catalog {
+.catalog {
   margin-bottom: 90px;
 
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 85px 40px;
+  }
+
+  &__item {
+    grid-column: 1 span;
   }
 
   &__bread-crumbs {
@@ -27,7 +31,7 @@
   }
 }
 
-.greenhouse {
+.product {
 
   &__title {
     margin-bottom: 35px;
@@ -147,14 +151,14 @@
 }
 
 @media (max-width: 1366px) {
-  .greenhouses-catalog {
+  .catalog {
 
     &__item {
       grid-column: span 2;
     }
   }
 
-  .greenhouse {
+  .product {
 
     &__img {
       width: 100%;
@@ -167,7 +171,7 @@
 }
 
 @media (max-width: 968px) {
-  .greenhouse {
+  .product {
 
     &__title {
       font-size: 21px;
@@ -211,7 +215,7 @@
 
 @media (max-width: 600px) {
 
-  .greenhouses-catalog {
+  .catalog {
     margin-bottom: 30px;
 
     &__title {
@@ -232,7 +236,7 @@
     }
   }
 
-  .greenhouse {
+  .product {
 
     &__img {
       margin-bottom: 15px;

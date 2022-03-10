@@ -1,7 +1,7 @@
 @import '_variables.scss';
 @import '_mixin.scss';
 
-.advantages-greenhouses {
+.advantages-product {
   margin-bottom: 90px;
 
   &__left,
@@ -61,7 +61,7 @@
   }
 }
 
-.advantage-greenhouse {
+.advantage-product {
 
   &__title {
     font-size: 24px;
@@ -93,7 +93,7 @@
   }
 }
 
-.greenhouse-more-info {
+.product-more-info {
   visibility: hidden;
   max-height: 0;
   background-color: #3F3F3F;
@@ -137,7 +137,7 @@
 }
 
 @media (max-width: 1600px) {
-  .advantages-greenhouses {
+  .advantages-product {
 
     &__left {
       order: 1;
@@ -161,7 +161,7 @@
     }
   }
 
-  .greenhouse-more-info {
+  .product-more-info {
     &__list {
       flex-direction: column;
     }
@@ -173,13 +173,13 @@
     }
   }
 
-  .advantage-greenhouse {
+  .advantage-product {
     min-height: 207px;
   }
 }
 
 @media (max-width: 978px) {
-  .advantage-greenhouse {
+  .advantage-product {
     min-height: 175px;
     display: flex;
     flex-direction: column;
@@ -196,7 +196,7 @@
     }
   }
 
-  .advantages-greenhouses {
+  .advantages-product {
 
     &__left,
     &__right {
@@ -208,7 +208,7 @@
 }
 
 @media (max-width: 576px) {
-  .advantages-greenhouses {
+  .advantages-product {
     margin-bottom: 30px;
 
     &__more {
@@ -223,11 +223,11 @@
     }
   }
 
-  .advantages-greenhouses__title {
+  .advantages-product__title {
     font-size: 15px;
   }
 
-  .advantage-greenhouse {
+  .advantage-product {
     min-height: 85px;
 
     &__title {
@@ -248,7 +248,7 @@
     }
   }
 
-  .advantages-greenhouses {
+  .advantages-product {
 
     &__left,
     &__right {
@@ -258,11 +258,11 @@
     }
   }
 
-  .greenhouse-more-info_visable {
+  .product-more-info_visable {
     max-height: 2000px;
   }
 
-   .advantages-greenhouses__item:first-child {
+   .advantages-product__item:first-child {
     margin-bottom: 20px;
   }
 }

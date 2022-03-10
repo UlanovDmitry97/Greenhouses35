@@ -1,17 +1,17 @@
-const btnVisable = document.querySelector('.advantages-greenhouses__more');
-const hiddenInfo = document.querySelector('.greenhouse-more-info');
+const btnVisable = document.querySelector('.advantages-product__more');
+const hiddenInfo = document.querySelector('.product-more-info');
 const btnVisableProduct = document.querySelector('.greenhouse-product__more');
 const hiddenInfoProduct = document.querySelector('.greenhouse-product__more-info');
 
 if (btnVisable) {
   btnVisable.addEventListener('mouseover', () => {
-    hiddenInfo.classList.add('greenhouse-more-info_visable');
-    btnVisable.classList.add('advantages-greenhouses__more_hidden');
+    hiddenInfo.classList.add('product-more-info_visable');
+    btnVisable.classList.add('advantages-product__more_hidden');
   });
 
   btnVisable.addEventListener('click', () => {
-    hiddenInfo.classList.add('greenhouse-more-info_visable');
-    btnVisable.classList.add('advantages-greenhouses__more_hidden');
+    hiddenInfo.classList.add('product-more-info_visable');
+    btnVisable.classList.add('advantages-product__more_hidden');
   });
 }
 
