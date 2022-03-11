@@ -45,9 +45,105 @@
     }
   }
 
+  &__color-selection-title {
+    margin-right: 20px;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 400;
+    color: $hoverGreenText;
+  }
+
+  &__color-selection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+
+  &__color {
+    @include buttonReset();
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: background-color .2s ease-in-out;
+
+    &_green {
+      background-color: #449141;
+    }
+
+    &_brick {
+      background-color: #A36048;
+    }
+
+    &_red {
+      background-color: #E01616;
+    }
+
+    &_active {
+      border-color: #000;
+    }
+  }
+
+  &__color-selection-list {
+    display: flex;
+    gap: 20px;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
+  }
+
+  &__info-construct {
+    margin-bottom: 65px;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    color: $darckText;
+
+    &_green {
+      color: $hoverGreenText;
+    }
+
+    & p {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__equipment-flower-bed {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 28px;
+    color: $darckText;
+  }
+
+  &__equipment-flower-bed-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    color: $darckText;
+  }
+
+  &__equipment-flower-bed-item {
+    max-width: 270px;
+    & span {
+      display: block;
+    }
+  }
+
+  &__equipment-flower-bed-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-height: 270px;
+    max-width: 600px;
   }
 
   &__info-title {
@@ -64,6 +160,11 @@
   &__info-left {
     display: block;
     max-width: 40%;
+
+    &_flower-bed {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__info-slider {
@@ -173,6 +274,11 @@
   &__constructor-btns {
     display: flex;
     gap: 20px;
+
+    &_flower-bed {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
   }
 
   &__constructor-btn-long {
@@ -230,6 +336,10 @@
 
     &_hotebed {
       margin-top: auto;
+    }
+
+    &_flower-bed {
+      margin-top: 140px;
     }
   }
 
@@ -370,6 +480,17 @@
       padding-bottom: 20px;
     }
   }
+
+  &__flower-bed-text {
+    max-width: 1440px;
+    font-size: 21px;
+    line-height: 28px;
+    color: $darckText;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .greenhouse-product-more-info {
@@ -433,6 +554,14 @@
   }
 }
 
+.greenhouse-product__info-construct_modile {
+  display: none;
+}
+
+.greenhouse-product-more-info_flower-bed {
+  margin-top: 30px;
+}
+
 @media (max-width: 1366px) {
   .greenhouse-product {
 
@@ -478,6 +607,31 @@
     &__constructor-btns {
       gap: 15px;
     }
+  }
+
+  .greenhouse-product__info-construct {
+    font-size: 21px;
+  }
+
+  .greenhouse-product__info-construct p:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  .greenhouse-product__equipment-flower-bed {
+    font-size: 21px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-title {
+    font-size: 21px;
+  }
+
+  .greenhouse-product__price-inner_flower-bed {
+    margin-top: 58px;
+    margin-bottom: 30px;
+  }
+
+  .greenhouse-product__info-construct {
+    margin-bottom: 30px;
   }
 }
 
@@ -586,6 +740,49 @@
 
   .greenhouse-product-more-info__management {
     font-size: 15px;
+  }
+
+  .greenhouse-product__info-construct {
+    text-align: center;
+  }
+
+  .greenhouse-product__equipment-flower-bed {
+    font-size: 17px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-title {
+    font-size: 17px;
+  }
+
+  .greenhouse-product__constructor-btn-long_flower-bed {
+    font-size: 14px;
+    border-radius: 5px;
+  }
+
+  .greenhouse-product__flower-bed-text {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .greenhouse-product__info-construct {
+    display: none;
+  }
+
+  .greenhouse-product__info-construct_modile {
+    display: block;
+  }
+
+  .greenhouse-product__price-inner_flower-bed {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-list_flower-bed {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
 
@@ -726,5 +923,65 @@
   .greenhouse-product-more-info__management {
     padding: 10px 15px;
     font-size: 10px;
+  }
+
+  .greenhouse-product__equipment-flower-bed {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-title {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-list {
+    max-width: 200px;
+    max-height: 100px;
+    gap: 10px;
+  }
+
+  .greenhouse-product__flower-bed-text {
+    font-size: 10px;
+  }
+
+  .section-title_flower-bed {
+    font-size: 15px;
+  }
+
+  .greenhouse-product__constructor-btn-long_flower-bed {
+    font-size: 5px;
+    border-radius: 3px;
+  }
+
+  .greenhouse-product__info-construct {
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-list_flower-bed {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .greenhouse-product__equipment-flower-bed {
+    margin-bottom: 20px;
+  }
+
+  .greenhouse-product__color {
+    width: 20px;
+    height: 20px;
+  }
+
+  .greenhouse-product__color-selection-list {
+    gap: 10px;
+  }
+
+  .greenhouse-product__color-selection-title {
+    margin-right: 10px;
+    font-size: 15px;
   }
 }

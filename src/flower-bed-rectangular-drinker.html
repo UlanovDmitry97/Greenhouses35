@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Клумба трехъярусная прямоугольная с полимерным покрытием</title>
+  <link rel="preload" href="fonts/manrope-extralight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Это ↓ подключение js для слайдеров, очень важно его не пропустить -->
+  <script src="./swiper/swiper-bundle.min.js"></script>
+  <!-- Это ↓ подключение js для карты, очень важно его не пропустить, на деле там вроде еще надо будет подшаманить с ключем -->
+  <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" defer>
+  </script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="normalize.css">
+  <!-- Это ↓ подключение стилей для слайдеров, очень важно его не пропустить -->
+  <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- Это верхнаяя часть header -->
+      <div class="header__top">
+        <a class="header__logo logo" href="index.html">
+          <img class="logo__img" src="images/logo.svg" alt="Логотип">
+
+          <p class="logo__info">
+            <span class="logo__location">Вологда</span>
+            <span class="logo__name">завод&nbsp;по производству теплиц</span>
+          </p>
+        </a>
+
+        <ul class="header__socials socials">
+          <li class="socials__item">
+            <a href="https://vk.com/cherteplica" class="socials__link">
+              <svg class="socials__icon">
+                <use xlink:href="images/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="https://wa.me/89216884777" class="socials__link">
+              <svg class="socials__icon">
+                <use xlink:href="images/sprite.svg#watsap"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="header__phones phones">
+          <li class="phones__item">
+            <a href="tel:+78202525652" class="phones__phone">+7 (8202) 52-56-52</a>
+          </li>
+          <li class="phones__item">
+            <a href="tel:+79216884777" class="phones__phone">+7 (921) 688-47-77</a>
+          </li>
+        </ul>
+
+        <div class="header__inner">
+          <div class="menu menu-mobile">
+            <button id="burgerMobile" class="burger">Меню</button>
+
+            <div id="burgerMenuMobile" class="menu__wrapp">
+              <div class="menu__info">
+                <span class="menu__title">Меню</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="./greenhouses.html" class="menu__link">Теплицы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="hotbed.html" class="menu__link">Парники</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Грядки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="flower-beds.html" class="menu__link">Клумбы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Поликарбонат</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Беседки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Душевые кабины</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Компостер</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Штакетник</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Атопроветриватель</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Дополнительные товары</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <button class="header__request-call">Заказать звонок</button>
+
+          <button class="basket basket_full">
+            <!-- Класс basket_full, отвечает за отрисовку корзины с товаром внутри -->
+            <svg class="basket__icon">
+              <use xlink:href="images/sprite.svg#basket"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header__delimiter"></div>
+    <!-- Нижнаяя часть header -->
+    <div class="header__bottom">
+      <div class="container">
+        <nav class="header__nav nav">
+          <div class="menu">
+            <button id="burger" class="burger">Меню</button>
+
+            <div id="burgerMenu" class="menu__wrapp">
+              <div class="menu__info">
+                <span class="menu__title">Меню</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="./greenhouses.html" class="menu__link">Теплицы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="hotbed.html" class="menu__link">Парники</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Грядки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="flower-beds.html" class="menu__link">Клумбы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Поликарбонат</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Беседки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Душевые кабины</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Компостер</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Штакетник</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Атопроветриватель</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Дополнительные товары</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__info">
+                <span class="menu__title">О компании</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="./about-us.html" class="menu__link">О компании</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Видео</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="./projects.html" class="menu__link">Наши работы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Отзывы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оптовое сотрудничество</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оплата и доставка</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__info">
+                <span class="menu__title">Помощь покупателю</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Полезные статьи</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Отзывы покупателей</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оплапта и доставка</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./about-us.html" class="nav__link">о компании</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">видео</a>
+            </li>
+            <li class="nav__item">
+              <a href="./projects.html" class="nav__link">наши работы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">оптовое сотрудничество</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">отзывы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="greenhouse-product">
+      <div class="container greenhouse-product__container">
+        <div class="bread-crumbs greenhouse-product__bread-crumbs">
+          <span class="bread-crumbs__bread-crumb ">главная / клумбы / клумба трехъярусная прямоугольная с полимерным
+            покрытием
+          </span>
+        </div>
+
+        <ul class="greenhouse-product__constructor-btns greenhouse-product__constructor-btns_flower-bed">
+          <li class="greenhouse-product__constructor-btn">
+            <button
+              class="greenhouse-product__constructor-btn-long greenhouse-product__constructor-btn-long_flower-bed">клумбы
+              3 яруса</button>
+          </li>
+          <li class="greenhouse-product__constructor-btn">
+            <button
+              class="greenhouse-product__constructor-btn-long greenhouse-product__constructor-btn-long_flower-bed">клумбы
+              4 яруса</button>
+          </li>
+          <li class="greenhouse-product__constructor-btn">
+            <button
+              class="greenhouse-product__constructor-btn-long greenhouse-product__constructor-btn-long_flower-bed">клумба
+              квадратная</button>
+          </li>
+          <li class="greenhouse-product__constructor-btn">
+            <button
+              class="greenhouse-product__constructor-btn-long greenhouse-product__constructor-btn-long_flower-bed">клумба
+              прямоугольная</button>
+          </li>
+        </ul>
+
+        <h1 class="section-title section-title_flower-bed greenhouse-product__title">Клумба <span
+            class="section-title__green">трехъярусная
+            прямоугольная с полимерным покрытием</span>
+        </h1>
+
+        <h3 class="greenhouse-product__info-construct greenhouse-product__info-construct_modile">
+          <p><span class="greenhouse-product__info-construct_green">3</span> Яруса | <span
+              class="greenhouse-product__info-construct_green">12</span> Рёбер жёсткости</p>
+
+          <p>Толщина металла <span class="greenhouse-product__info-construct_green">0,5мм</span></p>
+        </h3>
+
+        <div class="greenhouse-product__info">
+          <div class="greenhouse-product__inner">
+            <div class="greenhouse-product__info-left greenhouse-product__info-left_flower-bed">
+              <div class="greenhouse-product__info-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide-stock">
+                    <picture>
+                      <source srcset="/images/flower-bed-product/flower-bed3-drinker.jpg" media=" (max-width: 1920px)">
+                      <img src="/images/flower-bed-product/flower-bed3-drinker.jpg" alt="Клумба «квадратная»"
+                        class="greenhouse-product__slide-img">
+                    </picture>
+                  </div>
+
+                  <div class="swiper-slide swiper-slide-stock">
+                    <picture>
+                      <source srcset="/images/flower-bed-product/flower-bed3-drinker.jpg" media=" (max-width: 1920px)">
+                      <img src="/images/flower-bed-product/flower-bed3-drinker.jpg" alt="Клумба «квадратная»"
+                        class="greenhouse-product__slide-img">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+
+              <div class="greenhouse-product__info-pagination greenhouse-product__info-pagination_flower-bed"></div>
+            </div>
+
+            <div class="greenhouse-product__info-right greenhouse-product__info-right">
+              <h3 class="greenhouse-product__info-construct">
+                <p><span class="greenhouse-product__info-construct_green">3</span> Яруса | <span
+                    class="greenhouse-product__info-construct_green">12</span> Рёбер жёсткости</p>
+
+                <p>Толщина металла <span class="greenhouse-product__info-construct_green">0,5мм</span></p>
+              </h3>
+
+              <div class="greenhouse-product__equipment-flower-bed">
+                <ul
+                  class="greenhouse-product__equipment-flower-bed-list greenhouse-product__equipment-flower-bed-list_flower-bed">
+                  <li class="greenhouse-product__equipment-flower-bed-item">
+                    1-й ярус: 2х1,5 м
+                  </li>
+                  <li class="greenhouse-product__equipment-flower-bed-item">
+                    2-й ярус: 1,6х1,1 м
+                  </li>
+                  <li class="greenhouse-product__equipment-flower-bed-item">
+                    3-й ярус: 1,2х0,7 м
+                  </li>
+                </ul>
+              </div>
+
+              <div class="greenhouse-product__color-selection">
+                <h3 class="greenhouse-product__color-selection-title">выберите цвет</h3>
+
+                <ul class="greenhouse-product__color-selection-list">
+                  <li class="greenhouse-product__color-selection-item">
+                    <button
+                      class="greenhouse-product__color greenhouse-product__color_green greenhouse-product__color_active"></button>
+                  </li>
+                  <li class="greenhouse-product__color-selection-item">
+                    <button class="greenhouse-product__color greenhouse-product__color_brick"></button>
+                  </li>
+                  <li class="greenhouse-product__color-selection-item">
+                    <button class="greenhouse-product__color greenhouse-product__color_red"></button>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="greenhouse-product__price-inner">
+                <p class="greenhouse-product__price">
+                  <span class="greenhouse-product__price-text">
+                    от
+                  </span>
+
+                  <span class="greenhouse-product__price-old"> 38000 &#8381;</span>
+
+                  <span class="greenhouse-product__price-new">30 000</span>
+
+                  <span class="greenhouse-product__price-currency">&#8381;</span>
+                </p>
+              </div>
+
+              <div class="greenhouse-product__add-basket">
+                <div class="greenhouse-product__control">
+                  <button class="greenhouse-product__control-btn">-</button>
+                  <span class="greenhouse-product__counter">1</span>
+                  <button class="greenhouse-product__control-btn greenhouse-product__control-btn_plus">+</button>
+                </div>
+
+                <button class="greenhouse-product__basket">В корзину</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="greenhouse-product__flower-bed-text">
+            Яркая, красивая клумба может стать центральным элементом ландшафтного дизайна и&nbsp;поможет создать
+            оригинальную
+            цветочную композицию на&nbsp;вашем участке.
+            озможно изготовление клумб по&nbsp;индивидуальным размерам. Для расчета стоимости необходимо
+            обратиться к&nbsp;менеджерам нашей компании.
+          </p>
+
+          <p class="greenhouse-product__flower-bed-text">
+            Клумбы упакованы в&nbsp;компактные картонные коробки, что позволяет перевезти их&nbsp;в&nbsp;любом легковом
+            автомобиле.
+            Габариты
+            коробки: длина 70&nbsp;см, ширина 20&nbsp;см, высота 7&nbsp;см.
+          </p>
+
+          <p class="greenhouse-product__flower-bed-text">
+            Гарантия производителя 1&nbsp;год, срок эксплуатации более 10&nbsp;лет.
+          </p>
+
+          <button class="greenhouse-product__more">
+            <svg class="greenhouse-product__more-icon">
+              <use xlink:href="images/sprite.svg#advantages-greenhouses_icon"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="greenhouse-product__more-info greenhouse-product-more-info greenhouse-product-more-info_flower-bed">
+        <div class="container">
+          <ul class="greenhouse-product-more-info__list">
+            <li class="greenhouse-product-more-info__item">
+              <h3 class="greenhouse-product-more-info__title">Каркас</h3>
+
+              <p class="greenhouse-product-more-info__text">
+                Теплица имеет две двери и&nbsp;две форточки в&nbsp;противоположных
+                торцах.
+                Каркас выполнен из&nbsp;оцинкованной квадратной
+                трубы 20&times;20, расстояниемежду дугами&nbsp;&mdash; 1&nbsp;м или 0,65 м.Благодаря оцинкованному
+                каркасу
+                теплица
+                крайне
+                устойчива к&nbsp;ржавчине
+                и&nbsp;не&nbsp;требует подкрасов во&nbsp;время эксплуатации (в&nbsp;отличие от
+                теплиц, покрашенных грунт-эмалью).
+              </p>
+            </li>
+            <li class="greenhouse-product-more-info__item">
+              <h3 class="greenhouse-product-more-info__title">Комплектация</h3>
+
+              <p class="greenhouse-product-more-info__text">
+                Теплица имеет две форточки и&nbsp;две двери в&nbsp;противоположных торцах.
+                Дополнительно Вы&nbsp;можете приобрести самооткрывающиеся (в&nbsp;зависимости от&nbsp;температуры)
+                автоматические
+                форточки.
+                Вся необходимая фурнитура для сборки каркаса теплицы и&nbsp;крепления поликарбоната в&nbsp;комплекте.
+              </p>
+            </li>
+            <li class="greenhouse-product-more-info__item">
+              <h3 class="greenhouse-product-more-info__title">Монтаж</h3>
+
+              <p class="greenhouse-product-more-info__text">
+                Минимальное количество разборных элементов обеспечивает
+                легкость сборки, поэтому&nbsp;95% покупателей устанавливают
+                теплицу самостоятельно.
+
+                Ориентировочное время монтажа теплицы&nbsp;&mdash; 3&nbsp;часа.
+              </p>
+            </li>
+            <li class="greenhouse-product-more-info__item greenhouse-product-more-info__item_fastening">
+              <h3 class="greenhouse-product-more-info__title">Крепление поликарбоната</h3>
+
+              <p class="greenhouse-product-more-info__text">
+                <span>Усиленное крепление поликарбоната, кровельными саморезами с
+                  резиновой пресс шайбой через оцинкованную ленту. Такое крепление:</span>
+
+                <sapn>1) Предотвращает отрыв и&nbsp;повреждение поликарбоната под действием сильного ветра
+                  и&nbsp;снеговой
+                  шапки;</sapn>
+
+                <span>2) Надежно прижимает поликарбонат по&nbsp;всей длине дуги теплицы оцинкованной лентой. Ваш
+                  поликарбонат
+                  не&nbsp;будет
+                  летать по&nbsp;огороду соседей;</span>
+
+                <span>3) Позволяет избегать случайного перетягивания и&nbsp;продавливания поликарбоната саморезом при
+                  монтаже.
+                  Для теплицы с&nbsp;шагом дуг 1&nbsp;м крепление поликарбоната&nbsp;&mdash; кровельными
+                  саморезами.</span>
+              </p>
+            </li>
+            <li class="greenhouse-product-more-info__item">
+              <h3 class="greenhouse-product-more-info__title">
+                <span>Гарантия 1год срок</span>
+                <span>эксплуатации 10 лет</span>
+              </h3>
+
+              <button class="greenhouse-product-more-info__management">скачать руководство</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="additional-goods">
+      <div class="container additional-goods__container">
+        <div class="section-title additional-goods__title"><span class="section-title__green">Дополнительные</span>
+          товары</div>
+
+        <div class="additional-goods__left">
+          <img class="additional-goods__beds" src="./images/additional-goods/set.jpg" alt="Комплект грядок">
+
+          <h3 class="additional-goods__beds-title">комплекты грядок в теплицу</h3>
+
+          <p class="additional-goods__beds-text">
+            Бортики выполнены из&nbsp;оцинкованного металла толщи-
+            ной 0,5&nbsp;мм, каждая панель усилена 12&nbsp;ребрами жест-
+            кости, которые исключают ее&nbsp;деформацию при давле-
+            нии грунта, а&nbsp;завальцовка всех краев обеспечивает бе-
+            зопасное использование. Оцинкованная сталь устой-
+            чива к&nbsp;коррозии и&nbsp;не&nbsp;требует специального ухода.
+            Бортики выполнены из&nbsp;оцинкованного металла толщи-
+            ной 0,5&nbsp;мм, каждая панель усилена 12&nbsp;ребрами жесткости
+          </p>
+
+          <div class="additional-goods__price-inner">
+            <p class="additional-goods__price">
+              <span class="additional-goods__price-text">
+                от
+              </span>
+
+              <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+              <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+              <span class="additional-goods__price-currency">&#8381;</span>
+            </p>
+          </div>
+
+          <a href="#" class="additional-goods__beds-more">Подробнее</a>
+        </div>
+
+        <div class="additional-goods__right">
+          <ul class="additional-goods__list">
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good1.jpg" alt="Автопроветриватель">
+
+                <h3 class="good__title">Автопроветриватель</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good2.jpg" alt="Подвязки для растений">
+
+                <h3 class="good__title">Подвязки для растений</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good3.jpg" alt="Перфорированная лента">
+
+                <h3 class="good__title">Перфорированная лента</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good4.jpg" alt="Профиль торцевой">
+
+                <h3 class="good__title">Профиль торцевой</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good5.jpg" alt="Термошайба">
+
+                <h3 class="good__title">Термошайба</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good6.jpg" alt="Оцинкованная лента">
+
+                <h3 class="good__title">Оцинкованная лента</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good7.jpg" alt="Боковые форточки">
+
+                <h3 class="good__title">Боковые форточки</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+            <li class="additional-goods__item">
+              <article class="additional-goods__card good">
+                <img class="good__img" src="images/additional-goods/good8.jpg" alt="Аккумулятор тепла">
+
+                <h3 class="good__title">Аккумулятор тепла</h3>
+
+                <div class="additional-goods__price-inner">
+                  <p class="additional-goods__price">
+                    <span class="additional-goods__price-text">
+                      от
+                    </span>
+
+                    <span class="additional-goods__price-old"> 38000 &#8381;</span>
+
+                    <span class="additional-goods__price-new additional-goods__price-new_good">30 000</span>
+
+                    <span class="additional-goods__price-currency">&#8381;</span>
+                  </p>
+                </div>
+
+                <a href="#" class="good__more">Подробнее</a>
+
+                <button class="good__add-basket">в корзину</button>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER -->
+    <section class="promotion-banner">
+      <div class="container promotion-banner__container">
+        <picture>
+          <source srcset="/images/promotion-banner/promotion-banner_320.jpg" media="(max-width: 576px)">
+          <source srcset="/images/promotion-banner/promotion-banner_768.jpg" media=" (max-width: 968px)">
+          <source srcset="/images/promotion-banner/promotion-banner.jpg" media=" (max-width: 1920px)">
+          <img class="promotion-banner__img" src="/images/promotion-banner/promotion-banner.jpg" alt="Аватар клиента">
+        </picture>
+      </div>
+    </section>
+    <!-- BANNER END -->
+
+    <!-- REVIEWS -->
+    <section class="reviews">
+      <div class="reviews__green-bg green-bg"></div>
+
+      <div class="container reviews__container">
+        <h2 class="section-title reviews__title"><span class="section-title__green">отзывы наших</span>
+          клиентов
+        </h2>
+
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Переписывается буквоград страна маленькая.</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Переписывается буквоград страна маленькая.</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Мир собрал текста использовало его вопроса выйти щеке ведущими даль?</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Строчка даль образ текста до!</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="swiper-reviews-button-prev"></div>
+        <div class="swiper-reviews-button-next"></div>
+
+        <!-- На разрешении ниже 1366px появляется слайдер -->
+        <div class="swiper-reviews">
+          <div class="swiper-wrapper">
+            <!-- Слайды -->
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Переписывается буквоград страна маленькая.</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Переписывается буквоград страна маленькая.</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Мир собрал текста использовало его вопроса выйти щеке ведущими даль?</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Мир собрал текста использовало его вопроса выйти щеке ведущими даль?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews__wrapp-btn">
+          <button class="reviews__feedback">Оставить отзыв</button>
+
+          <button class="reviews__all-feedback">Читать все отзывы</button>
+        </div>
+      </div>
+    </section>
+    <!-- REVIEWS END -->
+
+    <!-- FORM -->
+    <section class="form-section">
+      <div class="container form-section__container">
+        <h2 class="section-title form-section__title">Остались вопросы?</h2>
+
+        <form class="form" action="/" autocomplete="on">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Оставьте заявку на консультацию со специалистом.</legend>
+            <div class="form__inner">
+              <input class="form__name" required name="Name" type="text" placeholder="Введите ваше имя">
+
+              <input class="form__tell" required name="tell" type="tel" placeholder="Введите ваш телефон">
+            </div>
+
+            <button class="form__btn" type="submit">получить консультацию</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <!-- FORM END -->
+
+    <!-- ARTICLES -->
+    <section class="articles">
+      <div class="container articles__container">
+        <h2 class="section-title articles__title"><span class="section-title__green">полезные</span>
+          статьи
+        </h2>
+
+        <div class="articles__green-bg green-bg"></div>
+
+        <ul class="articles__list">
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.
+                  Оцинкованный профиль против металлических труб.
+                </p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+          <li class="articles__item">
+            <article class="article">
+              <picture>
+                <source srcset="/images/articles/article-img_1024.jpg" media="(max-width: 576px)">
+                <source srcset="/images/articles/article-img_768.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/articles/article-img_1024.jpg" media=" (max-width: 1366px)">
+                <source srcset="/images/articles/article-img.jpg" media=" (max-width: 1920px)">
+                <img class="article__img" src="/images/articles/article-img.jpg" alt="Фото">
+              </picture>
+
+              <div class="article__info">
+                <h3 class="article__title">Каркас для теплицы. Какой выбрать?</h3>
+
+                <p class="article__text">Оцинкованный профиль против металлических труб.</p>
+
+                <a class="article__link" href="#">читать статью</a>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- ARTICLES END -->
+
+    <!-- JUST WATCHED -->
+    <section class="just-watched">
+      <div class="container">
+        <h2 class="section-title just-watched__title"><span class="section-title__green">толькочто</span> смотрели</h2>
+        <!-- Как дойдешь до этого пиши мне, решим как сделать секцию. Если будет нужно сверстаю по другму -->
+        <ul class="just-watched__list">
+          <li class="just-watched__li">
+            <a href="" class="just-watched__link">
+              <img src="images/just-watched/plug.jpg" alt="Ранее смотрели" class="just-watched__img">
+            </a>
+          </li>
+          <li class="just-watched__li">
+            <a href="" class="just-watched__link">
+              <img src="images/just-watched/plug.jpg" alt="Ранее смотрели" class="just-watched__img">
+            </a>
+          </li>
+          <li class="just-watched__li">
+            <a href="" class="just-watched__link">
+              <img src="images/just-watched/plug.jpg" alt="Ранее смотрели" class="just-watched__img">
+            </a>
+          </li>
+          <li class="just-watched__li">
+            <a href="" class="just-watched__link">
+              <img src="images/just-watched/plug.jpg" alt="Ранее смотрели" class="just-watched__img">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="location">
+      <div class="container location__container">
+        <h2 class="section-title location__title">Мы находимся в <span class="section-title__green">г.Череповец</span>
+          Вологодской области
+        </h2>
+
+        <div class="location__wrapp">
+          <div id="map" class="location__map"></div>
+
+          <div class="location__info">
+            <p class="location__text">
+              Вы можете обратиться к нам по телефону, по электронной почте или договориться о встрече в нашем офисе.
+              Будем
+              рады
+              помочь вам и ответить на все ваши вопросы.
+            </p>
+
+            <p class="location__text location__text_phone">
+              Телефоны:
+            </p>
+
+            <ul class="location__phone-list">
+              <li class="location__phone-item">
+                <a href="tel:+78202525652" class="location__phone-link">+7 (8202) 52-56-52</a>
+              </li>
+              <li class="location__phone-item">
+                <a href="tel:+79216884777" class="location__phone-link">+7 (921) 688 47 77</a>
+              </li>
+              <li class="location__phone-item">
+                <a href="tel:+78202521052" class="location__phone-link">+7 (8202) 52-10-52</a>
+              </li>
+            </ul>
+
+            <p class="location__text">Email:
+              <a class="location__email" href="mailto:cherepovets.teplitsa@yandex.ru">cherepovets.teplitsa@yandex.ru</a>
+            </p>
+
+            <p class="location__text location__text_location">
+              Адресс:
+              <span class="location__address">
+                г. Череповец, ул.Городского Питомника м.&nbsp;1
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- LOCATION END -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <div class="footer__inner">
+          <div class="footer-menu">
+            <span class="footer-menu__title">Меню</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="./greenhouses.html" class="footer-menu__link">Теплицы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="hotbed.html" class="footer-menu__link">Парники</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Грядки</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="flower-beds.html" class="footer-menu__link">Клумбы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Поликарбонат</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Беседки</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Душевые кабины</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Компостер</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Штакетник</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Атопроветриватель</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Дополнительные товары</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-menu">
+            <span class="footer-menu__title">О компании</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="./about-us.html" class="footer-menu__link">О компании</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="./projects.html" class="footer-menu__link">Наши работы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Отзывы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оптовое сотрудничество</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оплата и доставка</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-menu">
+            <span class="footer-menu__title">Помощь покупателю</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Полезные статьи</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Отзывы покупателей</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оплпта и доставка</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-mobile footer-menu-mobile">
+            <ul class="footer-menu-mobile__list">
+              <li class="footer-menu-mobile__item">
+                <button data-target="footerMenuDropdowTop"
+                  class="footer-menu-mobile__link footer-menu-mobile__btn">Меню</button>
+
+                <div class="footer-menu-mobile__dropdown-top footer-dropdown-top">
+                  <ul id="footerMenuDropdowTop" class="footer-dropdown-top__list">
+                    <li class="footer-dropdown-top__item">
+                      <a href="./greenhouses.html" class="footer-dropdown-top__link">Теплицы</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="hotbed.html" class="footer-dropdown-top__link">Парники</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="flower-beds.html" class="footer-dropdown-top__link">Грядки</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Клумбы</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Поликарбонат</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Беседки</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Душевые кабины</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Компостер</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Штакетник</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Автопроветриватель</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link footer-menu-mobile__btn">Дополнительные товары</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="./about-us.html" class="footer-menu-mobile__link">О компании</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Видео</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="./projects.html" class="footer-menu-mobile__link">Наши работы</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Отзывы</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Оптовое сотрудничество</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Оплата и доставка</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Контакты</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <button data-target="footerMenuDropdowBottom"
+                  class="footer-menu-mobile__link footer-menu-mobile__btn">Помощь покупателю</button>
+
+                <div class="footer-menu-mobile__dropdown-top footer-dropdown-top">
+                  <ul id="footerMenuDropdowBottom" class="footer-dropdown-top__list">
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Полезные статьи</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Отзывы покупателей</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Оплпта и доставка</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="footer__copy">&copy;Череповецкие теплицы, 2010-2022&nbsp;| Все права защищены</p>
+      </div>
+
+      <div class="footer__right">
+        <ul class="footer__socials socials">
+          <li class="footer__socials-item">
+            <a href="https://vk.com/cherteplica" class="footer__socials-link socials__link">
+              <svg class="footer__socials-icon socials__icon">
+                <use xlink:href="images/sprite.svg#vk_footer"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="https://wa.me/89216884777" class="footer__socials-link socials__link">
+              <svg class="footer__socials-icon socials__icon">
+                <use xlink:href="images/sprite.svg#watsap__footer"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer__info">
+          <a class="footer__logo logo" href="index.html">
+            <img class="footer__logo logo__img" src="/images/logo_footer.svg" alt="Логотип">
+          </a>
+
+          <ul class="footer__phones">
+            <li class="footer__phones-item">
+              <a href="tel:+78202525652" class="footer__phone">+7 (8202) 52-56-52</a>
+            </li>
+            <li class="footer__phones-item">
+              <a href="tel:+79216884777" class="footer__phone">+7 (921) 688-47-77</a>
+            </li>
+          </ul>
+
+          <button class="footer__request-call">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+
+</body>
+
+</html>

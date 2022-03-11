@@ -2431,6 +2431,9 @@ html {
   text-align: center;
   text-transform: uppercase;
 }
+.product__title-green {
+  color: #169B00;
+}
 .product__img {
   margin-bottom: 20px;
   border-radius: 10px;
@@ -2877,9 +2880,92 @@ html {
   margin-bottom: 50px;
   text-align: left;
 }
+.greenhouse-product__color-selection-title {
+  margin-right: 20px;
+  font-size: 21px;
+  line-height: 1;
+  font-weight: 400;
+  color: #169B00;
+}
+.greenhouse-product__color-selection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.greenhouse-product__color {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+.greenhouse-product__color_green {
+  background-color: #449141;
+}
+.greenhouse-product__color_brick {
+  background-color: #A36048;
+}
+.greenhouse-product__color_red {
+  background-color: #E01616;
+}
+.greenhouse-product__color_active {
+  border-color: #000;
+}
+.greenhouse-product__color-selection-list {
+  display: flex;
+  gap: 20px;
+}
 .greenhouse-product__info {
   display: flex;
   flex-direction: column;
+}
+.greenhouse-product__info-construct {
+  margin-bottom: 65px;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+  color: #2A2A2A;
+}
+.greenhouse-product__info-construct_green {
+  color: #169B00;
+}
+.greenhouse-product__info-construct p {
+  display: block;
+}
+.greenhouse-product__info-construct p:not(:last-child) {
+  margin-bottom: 25px;
+}
+.greenhouse-product__equipment-flower-bed {
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 28px;
+  color: #2A2A2A;
+}
+.greenhouse-product__equipment-flower-bed-title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #2A2A2A;
+}
+.greenhouse-product__equipment-flower-bed-item {
+  max-width: 270px;
+}
+.greenhouse-product__equipment-flower-bed-item span {
+  display: block;
+}
+.greenhouse-product__equipment-flower-bed-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-height: 270px;
+  max-width: 600px;
 }
 .greenhouse-product__info-title {
   margin-bottom: 30px;
@@ -2893,6 +2979,10 @@ html {
 .greenhouse-product__info-left {
   display: block;
   max-width: 40%;
+}
+.greenhouse-product__info-left_flower-bed {
+  display: flex;
+  flex-direction: column;
 }
 .greenhouse-product__info-slider {
   overflow: hidden;
@@ -2986,6 +3076,10 @@ html {
   display: flex;
   gap: 20px;
 }
+.greenhouse-product__constructor-btns_flower-bed {
+  justify-content: center;
+  margin-bottom: 30px;
+}
 .greenhouse-product__constructor-btn-long {
   background-color: transparent;
   padding: 0;
@@ -3042,6 +3136,9 @@ html {
 }
 .greenhouse-product__price-inner_hotebed {
   margin-top: auto;
+}
+.greenhouse-product__price-inner_flower-bed {
+  margin-top: 140px;
 }
 .greenhouse-product__price {
   font-size: 18px;
@@ -3174,6 +3271,15 @@ html {
   padding-top: 30px;
   padding-bottom: 20px;
 }
+.greenhouse-product__flower-bed-text {
+  max-width: 1440px;
+  font-size: 21px;
+  line-height: 28px;
+  color: #2A2A2A;
+}
+.greenhouse-product__flower-bed-text:not(:last-child) {
+  margin-bottom: 10px;
+}
 
 .greenhouse-product-more-info__list {
   display: grid;
@@ -3229,6 +3335,14 @@ html {
   color: #ffffff;
 }
 
+.greenhouse-product__info-construct_modile {
+  display: none;
+}
+
+.greenhouse-product-more-info_flower-bed {
+  margin-top: 30px;
+}
+
 @media (max-width: 1366px) {
   .greenhouse-product__text {
     font-size: 19px;
@@ -3262,6 +3376,31 @@ html {
   }
   .greenhouse-product__constructor-btns {
     gap: 15px;
+  }
+
+  .greenhouse-product__info-construct {
+    font-size: 21px;
+  }
+
+  .greenhouse-product__info-construct p:not(:last-child) {
+    margin-bottom: 7px;
+  }
+
+  .greenhouse-product__equipment-flower-bed {
+    font-size: 21px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-title {
+    font-size: 21px;
+  }
+
+  .greenhouse-product__price-inner_flower-bed {
+    margin-top: 58px;
+    margin-bottom: 30px;
+  }
+
+  .greenhouse-product__info-construct {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 968px) {
@@ -3344,6 +3483,49 @@ html {
 
   .greenhouse-product-more-info__management {
     font-size: 15px;
+  }
+
+  .greenhouse-product__info-construct {
+    text-align: center;
+  }
+
+  .greenhouse-product__equipment-flower-bed {
+    font-size: 17px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-title {
+    font-size: 17px;
+  }
+
+  .greenhouse-product__constructor-btn-long_flower-bed {
+    font-size: 14px;
+    border-radius: 5px;
+  }
+
+  .greenhouse-product__flower-bed-text {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .greenhouse-product__info-construct {
+    display: none;
+  }
+
+  .greenhouse-product__info-construct_modile {
+    display: block;
+  }
+
+  .greenhouse-product__price-inner_flower-bed {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-list_flower-bed {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
 @media (max-width: 600px) {
@@ -3457,6 +3639,66 @@ html {
   .greenhouse-product-more-info__management {
     padding: 10px 15px;
     font-size: 10px;
+  }
+
+  .greenhouse-product__equipment-flower-bed {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-title {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-list {
+    max-width: 200px;
+    max-height: 100px;
+    gap: 10px;
+  }
+
+  .greenhouse-product__flower-bed-text {
+    font-size: 10px;
+  }
+
+  .section-title_flower-bed {
+    font-size: 15px;
+  }
+
+  .greenhouse-product__constructor-btn-long_flower-bed {
+    font-size: 5px;
+    border-radius: 3px;
+  }
+
+  .greenhouse-product__info-construct {
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+
+  .greenhouse-product__equipment-flower-bed-list_flower-bed {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .greenhouse-product__equipment-flower-bed {
+    margin-bottom: 20px;
+  }
+
+  .greenhouse-product__color {
+    width: 20px;
+    height: 20px;
+  }
+
+  .greenhouse-product__color-selection-list {
+    gap: 10px;
+  }
+
+  .greenhouse-product__color-selection-title {
+    margin-right: 10px;
+    font-size: 15px;
   }
 }
 .additional-goods {

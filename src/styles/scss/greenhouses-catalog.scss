@@ -41,6 +41,10 @@
     color: $darckText;
     text-align: center;
     text-transform: uppercase;
+
+    &-green {
+      color: $hoverGreenText;
+    }
   }
 
   &__img {
