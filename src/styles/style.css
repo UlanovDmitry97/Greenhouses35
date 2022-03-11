@@ -2408,6 +2408,9 @@ html {
 .catalog__item {
   grid-column: 1 span;
 }
+.catalog__item_garden-bed {
+  grid-column-start: 2;
+}
 .catalog__bread-crumbs {
   display: block;
   margin-bottom: 75px;
