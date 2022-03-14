@@ -2405,6 +2405,9 @@ html {
   grid-template-columns: repeat(4, 1fr);
   gap: 85px 40px;
 }
+.catalog__list_gazebos {
+  grid-template-columns: repeat(3, 1fr);
+}
 .catalog__item {
   grid-column: 1 span;
 }
@@ -2434,11 +2437,18 @@ html {
   text-align: center;
   text-transform: uppercase;
 }
+.product__title_gazebos span {
+  display: block;
+}
 .product__title-green {
   color: #169B00;
 }
 .product__img {
   margin-bottom: 20px;
+  border-radius: 10px;
+}
+.product__img_gazebos {
+  width: 100%;
   border-radius: 10px;
 }
 .product__text {
@@ -2540,6 +2550,12 @@ html {
 @media (max-width: 1366px) {
   .catalog__item {
     grid-column: span 2;
+  }
+  .catalog__item_gazebos {
+    grid-column: span 1;
+  }
+  .catalog__list_gazebos {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .product__img {
@@ -2857,6 +2873,12 @@ html {
   display: block;
   margin-bottom: 55px;
 }
+.greenhouse-product__gazebo-text {
+  margin-bottom: 30px;
+  font-size: 21px;
+  line-height: 28px;
+  color: #2A2A2A;
+}
 .greenhouse-product__price-hotebed {
   margin-bottom: 50px;
   font-size: 30px;
@@ -3005,6 +3027,10 @@ html {
   display: flex;
   flex-direction: column;
 }
+.greenhouse-product__info-right_gazebo {
+  display: flex;
+  flex-direction: column;
+}
 .greenhouse-product__equipment {
   display: flex;
   flex-wrap: wrap;
@@ -3142,6 +3168,9 @@ html {
 }
 .greenhouse-product__price-inner_flower-bed {
   margin-top: 140px;
+}
+.greenhouse-product__price-inner_gazebo {
+  margin-top: auto;
 }
 .greenhouse-product__price {
   font-size: 18px;
@@ -3392,6 +3421,9 @@ html {
   .greenhouse-product__text {
     font-size: 19px;
   }
+  .greenhouse-product__gazebo-text {
+    font-size: 17px;
+  }
   .greenhouse-product__price-hotebed {
     margin-bottom: 20px;
     font-size: 21px;
@@ -3617,6 +3649,10 @@ html {
   }
   .greenhouse-product__price-hotebed {
     font-size: 15px;
+  }
+  .greenhouse-product__gazebo-text {
+    font-size: 10px;
+    line-height: 15px;
   }
   .greenhouse-product__text {
     font-size: 10px;

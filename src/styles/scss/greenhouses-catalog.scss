@@ -8,6 +8,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 85px 40px;
+
+    &_gazebos {
+      grid-template-columns: repeat(3, 1fr)
+    }
   }
 
   &__item {
@@ -46,6 +50,12 @@
     text-align: center;
     text-transform: uppercase;
 
+    &_gazebos {
+      & span {
+        display: block;
+      }
+    }
+
     &-green {
       color: $hoverGreenText;
     }
@@ -54,6 +64,11 @@
   &__img {
     margin-bottom: 20px;
     border-radius: 10px;
+
+    &_gazebos {
+      width: 100%;
+      border-radius: 10px;
+    }
   }
 
   &__text {
@@ -163,6 +178,17 @@
 
     &__item {
       grid-column: span 2;
+
+      &_gazebos {
+        grid-column: span 1;
+      }
+    }
+
+    &__list {
+
+      &_gazebos {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
 

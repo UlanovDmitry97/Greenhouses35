@@ -14,6 +14,13 @@
     margin-bottom: 55px;
   }
 
+  &__gazebo-text {
+    margin-bottom: 30px;
+    font-size: 21px;
+    line-height: 28px;
+    color: $darckText;
+  }
+
   &__price-hotebed {
     margin-bottom: 50px;
     font-size: 30px;
@@ -185,9 +192,14 @@
     width: 60%;
 
     &_hotebed {
-        display: flex;
-        flex-direction: column;
-      }
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_gazebo {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__equipment {
@@ -340,6 +352,10 @@
 
     &_flower-bed {
       margin-top: 140px;
+    }
+
+    &_gazebo {
+      margin-top: auto;
     }
   }
 
@@ -613,6 +629,10 @@
       font-size: 19px;
     }
 
+    &__gazebo-text {
+      font-size: 17px;
+    }
+
     &__price-hotebed {
       margin-bottom: 20px;
       font-size: 21px;
@@ -876,6 +896,11 @@
 
     &__price-hotebed {
       font-size: 15px;
+    }
+
+    &__gazebo-text {
+      font-size: 10px;
+      line-height: 15px;
     }
 
     &__text {
