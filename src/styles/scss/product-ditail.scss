@@ -491,6 +491,50 @@
       margin-bottom: 10px;
     }
   }
+
+  &__constructor-width {
+    margin-bottom: 30px;
+  }
+}
+
+.greenhouse-product__constructor-btns_garden-bed {
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+.greenhouse-product__inner-rcomplete-set {
+  display: flex;
+  justify-content: space-between;
+  gap: 55px;
+  margin-bottom: 30px;
+}
+
+.greenhouse-product__price-inner_garden-bed {
+  margin-top: 50px;
+}
+
+.greenhouse-product__equipment_garden-bed {
+  max-width: 40%;
+}
+
+.greenhouse-product__equipmen-list_garden-bed {
+  width: 100%;
+  max-width: 100%;
+  columns: 2;
+}
+
+.greenhouse-product__garden-bed-text {
+  font-size: 21px;
+  line-height: 1;
+  color: $darckText;
+
+  &:not(:last-child) {
+    margin-bottom: 27px;
+  }
+}
+
+.greenhouse-product__garden-bed-info {
+  width: 60%;
 }
 
 .greenhouse-product-more-info {
@@ -633,6 +677,24 @@
   .greenhouse-product__info-construct {
     margin-bottom: 30px;
   }
+
+  .greenhouse-product__constructor-btns_garden-bed {
+    max-width: 400px;
+  }
+
+  .greenhouse-product__inner-rcomplete-set {
+    flex-direction: column;
+  }
+
+  .greenhouse-product__garden-bed-info {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .greenhouse-product__equipment_garden-bed {
+    max-width: 100%;
+  }
+
 }
 
 @media (max-width: 968px) {
@@ -728,6 +790,22 @@
     &__basket {
       font-size: 15px;
     }
+  }
+
+  .greenhouse-product__constructor-btns_garden-bed {
+    max-width: 100%;
+  }
+
+  .greenhouse-product__equipmen-list_garden-bed {
+    width: 100%;
+  }
+
+  .greenhouse-product__garden-bed-text {
+    font-size: 17px;
+  }
+
+  .greenhouse-product__garden-bed-text:not(:last-child) {
+    margin-bottom: 15px;
   }
 
   .greenhouse-product-more-info__item {
@@ -983,5 +1061,9 @@
   .greenhouse-product__color-selection-title {
     margin-right: 10px;
     font-size: 15px;
+  }
+
+  .greenhouse-product__garden-bed-text {
+    font-size: 10px;
   }
 }
