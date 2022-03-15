@@ -4226,6 +4226,31 @@ html {
   grid-column: 1 span;
 }
 
+.wholesale {
+  margin-bottom: 90px;
+}
+.wholesale__info {
+  font-size: 24px;
+  line-height: 28px;
+  color: #2A2A2A;
+  text-align: center;
+}
+
+@media (max-width: 968px) {
+  .wholesale__info {
+    font-size: 15px;
+    line-height: 17px;
+  }
+}
+@media (max-width: 600px) {
+  .wholesale {
+    margin-bottom: 30px;
+  }
+  .wholesale__info {
+    font-size: 7px;
+    line-height: 10px;
+  }
+}
 .footer {
   background-color: #2A2A2A;
 }
