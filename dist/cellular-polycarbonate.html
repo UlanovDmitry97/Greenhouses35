@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Сотовый поликарбонат</title>
+  <link rel="preload" href="fonts/manrope-extralight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Это ↓ подключение js для слайдеров, очень важно его не пропустить -->
+  <script src="./swiper/swiper-bundle.min.js"></script>
+  <!-- Это ↓ подключение js для карты, очень важно его не пропустить, на деле там вроде еще надо будет подшаманить с ключем -->
+  <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" defer="defer">
+  </script>
+  <script src="app.js" defer="defer"></script>
+  <link rel="stylesheet" href="normalize.css">
+  <!-- Это ↓ подключение стилей для слайдеров, очень важно его не пропустить -->
+  <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- Это верхнаяя часть header -->
+      <div class="header__top">
+        <a class="header__logo logo" href="index.html">
+          <img class="logo__img" src="images/logo.svg" alt="Логотип">
+
+          <p class="logo__info">
+            <span class="logo__location">Вологда</span>
+            <span class="logo__name">завод&nbsp;по производству теплиц</span>
+          </p>
+        </a>
+
+        <ul class="header__socials socials">
+          <li class="socials__item">
+            <a href="https://vk.com/cherteplica" class="socials__link">
+              <svg class="socials__icon">
+                <use xlink:href="images/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="https://wa.me/89216884777" class="socials__link">
+              <svg class="socials__icon">
+                <use xlink:href="images/sprite.svg#watsap"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="header__phones phones">
+          <li class="phones__item">
+            <a href="tel:+78202525652" class="phones__phone">+7 (8202) 52-56-52</a>
+          </li>
+          <li class="phones__item">
+            <a href="tel:+79216884777" class="phones__phone">+7 (921) 688-47-77</a>
+          </li>
+        </ul>
+
+        <div class="header__inner">
+          <div class="menu menu-mobile">
+            <button id="burgerMobile" class="burger">Меню</button>
+
+            <div id="burgerMenuMobile" class="menu__wrapp">
+              <div class="menu__info">
+                <span class="menu__title">Меню</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="greenhouses.html" class="menu__link">Теплицы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Парники</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Грядки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="flower-beds.html" class="menu__link">Клумбы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Поликарбонат</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Беседки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Душевые кабины</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Компостер</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Штакетник</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Атопроветриватель</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Дополнительные товары</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <button class="header__request-call">Заказать звонок</button>
+
+          <button class="basket basket_full">
+            <!-- Класс basket_full, отвечает за отрисовку корзины с товаром внутри -->
+            <svg class="basket__icon">
+              <use xlink:href="images/sprite.svg#basket"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header__delimiter"></div>
+    <!-- Нижнаяя часть header -->
+    <div class="header__bottom">
+      <div class="container">
+        <nav class="header__nav nav">
+          <div class="menu">
+            <button id="burger" class="burger">Меню</button>
+
+            <div id="burgerMenu" class="menu__wrapp">
+              <div class="menu__info">
+                <span class="menu__title">Меню</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="greenhouses.html" class="menu__link">Теплицы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Парники</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Грядки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="flower-beds.html" class="menu__link">Клумбы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Поликарбонат</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Беседки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Душевые кабины</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Компостер</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Штакетник</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Атопроветриватель</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Дополнительные товары</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__info">
+                <span class="menu__title">О компании</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="./about-us.html" class="menu__link">О компании</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Видео</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="./projects.html" class="menu__link">Наши работы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Отзывы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оптовое сотрудничество</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оплата и доставка</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__info">
+                <span class="menu__title">Помощь покупателю</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Полезные статьи</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Отзывы покупателей</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оплапта и доставка</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./about-us.html" class="nav__link">о компании</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">видео</a>
+            </li>
+            <li class="nav__item">
+              <a href="./projects.html" class="nav__link">наши работы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">оптовое сотрудничество</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">отзывы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- SLIDER -->
+    <section class="slider-stock">
+      <div class="container slider-stock__container">
+        <div class="slider-stock__btn">Подробнее</div>
+        <div class="swiper-stock">
+          <div class="swiper-wrapper">
+            <!-- Слайды -->
+            <div class="swiper-slide swiper-slide-stock">
+              <picture>
+                <source srcset="/images/slider-stock/slide1_320.jpg" media="(max-width: 576px)">
+                <source srcset="/images/slider-stock/slide1_968.jpg" media=" (max-width: 968px)">
+                <source srcset="/images/slider-stock/slide1.jpg" media=" (max-width: 1920px)">
+                <img src="/images/slider-stock/slide1.jpg" alt="Акция" class="swiper-slide-stock__img">
+              </picture>
+            </div>
+
+            <div class="swiper-slide swiper-slide-stock">
+              <picture>
+                <source srcset="/images/slider-stock/slide2.jpg" media="(max-width: 576px)">
+                <source srcset="/images/slider-stock/slide2.jpg" media=" (max-width: 1920px)">
+                <img src="/images/slider-stock/slide2.jpg" alt="Акция" class="swiper-slide-stock__img">
+              </picture>
+            </div>
+
+            <div class="swiper-slide swiper-slide-stock">
+              <picture>
+                <source srcset="/images/slider-stock/slide3.jpg" media="(max-width: 576px)">
+                <source srcset="/images/slider-stock/slide3.jpg" media=" (max-width: 1920px)">
+                <img src="/images/slider-stock/slide3.jpg" alt="Акция" class="swiper-slide-stock__img">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- SLIDER END -->
+
+    <!-- CATALOG -->
+    <section class="catalog">
+      <div class="container">
+        <div class="bread-crumbs catalog__bread-crumbs">
+          <span class="bread-crumbs__bread-crumb">главная / сотовый поликарбонат</span>
+        </div>
+
+        <h1 class="section-title catalog__title">поликарбонат</h1>
+
+        <ul class="catalog__list catalog__list_poly">
+          <li class="catalog__item catalog__item_poly">
+            <article class="catalog__card product">
+              <h3 class="product__title product__title_gazebos">прозрачный «Премиум»
+                <span class="product__title-green">4 мм</span>
+              </h3>
+
+              <picture>
+                <source srcset="/images/polycarbonate/polycarbonate1.jpg" media=" (max-width: 1920px)">
+                <img class="product__img" src="/images/polycarbonate/polycarbonate1.jpg" alt="Поликарбанат '4мм'">
+              </picture>
+
+              <div class="product__info">
+                <p class="product__text">
+                  <span>
+                    Ширина 2,1м.
+                  </span>
+
+                  <span>
+                    Длина 6 м.
+                  </span>
+                </p>
+
+                <div class="product__inner">
+                  <p class="product__price">
+                    <span class="product__price-text">
+                      от
+                    </span>
+
+                    <span class="product__price-old"> 38000 &#8381;</span>
+
+                    <span class="product__price-new">30 000</span>
+
+                    <span class="product__currency">&#8381;</span>
+                  </p>
+
+                  <button class="product__basket">
+                    <svg class="product__basket-icon product__basket-icon_active">
+                      <use xlink:href="images/sprite.svg#basket-greenhouses"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <a href="./transparent-polycarbonate.html" class="product__more">Подробнее</a>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item catalog__item_poly">
+            <article class="catalog__card product">
+              <h3 class="product__title product__title_gazebos">прозрачный «НАНО»
+                <span class="product__title-green">4 мм</span>
+              </h3>
+
+              <picture>
+                <source srcset="/images/polycarbonate/polycarbonate1.jpg" media=" (max-width: 1920px)">
+                <img class="product__img" src="/images/polycarbonate/polycarbonate1.jpg" alt="Поликарбанат '4мм'">
+              </picture>
+
+              <div class="product__info">
+                <p class="product__text">
+                  <span>
+                    Ширина 2,1 м.
+                  </span>
+
+                  <span>
+                    Длина 6 м.
+                  </span>
+                </p>
+
+                <div class="product__inner">
+                  <p class="product__price">
+                    <span class="product__price-text">
+                      от
+                    </span>
+
+                    <span class="product__price-old"> 38000 &#8381;</span>
+
+                    <span class="product__price-new">30 000</span>
+
+                    <span class="product__currency">&#8381;</span>
+                  </p>
+
+                  <button class="product__basket">
+                    <svg class="product__basket-icon product__basket-icon_active">
+                      <use xlink:href="images/sprite.svg#basket-greenhouses"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <a href="./hotebed-box.html" class="product__more">Подробнее</a>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item catalog__item_poly">
+            <article class="catalog__card product">
+              <h3 class="product__title product__title_gazebos">прозрачный
+                <span class="product__title-green">6 мм</span>
+              </h3>
+
+              <picture>
+                <source srcset="/images/polycarbonate/polycarbonate1.jpg" media=" (max-width: 1920px)">
+                <img class="product__img" src="/images/polycarbonate/polycarbonate1.jpg" alt="Поликарбанат '6мм'">
+              </picture>
+
+              <div class="product__info">
+                <p class="product__text">
+                  <span>
+                    Ширина 2,1 м.
+                  </span>
+
+                  <span>
+                    Длина 6 м.
+                  </span>
+                </p>
+
+                <div class="product__inner">
+                  <p class="product__price">
+                    <span class="product__price-text">
+                      от
+                    </span>
+
+                    <span class="product__price-old">38000 &#8381;</span>
+
+                    <span class="product__price-new">30 000</span>
+
+                    <span class="product__currency">&#8381;</span>
+                  </p>
+
+                  <button class="product__basket">
+                    <svg class="product__basket-icon product__basket-icon_active">
+                      <use xlink:href="images/sprite.svg#basket-greenhouses"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <a href="./hotebed-swallowtail.html" class="product__more">Подробнее</a>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item catalog__item_poly">
+            <article class="catalog__card product">
+              <h3 class="product__title product__title_gazebos">прозрачный
+                <span class="product__title-green">8 мм</span>
+              </h3>
+
+              <picture>
+                <source srcset="/images/polycarbonate/polycarbonate1.jpg" media=" (max-width: 1920px)">
+                <img class="product__img" src="/images/polycarbonate/polycarbonate1.jpg" alt="Поликарбанат '8 мм'">
+              </picture>
+
+              <div class="product__info">
+                <p class="product__text">
+                  <span>
+                    Ширина 2,1 м.
+                  </span>
+
+                  <span>
+                    Длина 6 м.
+                  </span>
+                </p>
+
+                <div class="product__inner">
+                  <p class="product__price">
+                    <span class="product__price-text">
+                      от
+                    </span>
+
+                    <span class="product__price-old">38000 &#8381;</span>
+
+                    <span class="product__price-new">30 000</span>
+
+                    <span class="product__currency">&#8381;</span>
+                  </p>
+
+                  <button class="product__basket">
+                    <svg class="product__basket-icon product__basket-icon_active">
+                      <use xlink:href="images/sprite.svg#basket-greenhouses"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <a href="./hotebed-box.html" class="product__more">Подробнее</a>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item catalog__item_poly">
+            <article class="catalog__card product">
+              <h3 class="product__title product__title_gazebos">прозрачный
+                <span class="product__title-green">10 мм</span>
+              </h3>
+
+              <picture>
+                <source srcset="/images/polycarbonate/polycarbonate1.jpg" media=" (max-width: 1920px)">
+                <img class="product__img" src="/images/polycarbonate/polycarbonate1.jpg" alt="Поликарбанат '10 мм'">
+              </picture>
+
+              <div class="product__info">
+                <p class="product__text">
+                  <span>
+                    Ширина 2,1 м.
+                  </span>
+
+                  <span>
+                    Длина 6 м.
+                  </span>
+                </p>
+
+                <div class="product__inner">
+                  <p class="product__price">
+                    <span class="product__price-text">
+                      от
+                    </span>
+
+                    <span class="product__price-old">38000 &#8381;</span>
+
+                    <span class="product__price-new">30 000</span>
+
+                    <span class="product__currency">&#8381;</span>
+                  </p>
+
+                  <button class="product__basket">
+                    <svg class="product__basket-icon product__basket-icon_active">
+                      <use xlink:href="images/sprite.svg#basket-greenhouses"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <a href="./hotebed-box.html" class="product__more">Подробнее</a>
+              </div>
+            </article>
+          </li>
+          <li class="catalog__item catalog__item_poly">
+            <article class="catalog__card product">
+              <h3 class="product__title product__title_gazebos">цветной
+                <span class="product__title-green">4 мм</span>
+              </h3>
+
+              <picture>
+                <source srcset="/images/polycarbonate/polycarbonate2.jpg" media=" (max-width: 1920px)">
+                <img class="product__img" src="/images/polycarbonate/polycarbonate2.jpg" alt="Поликарбанат цветной '4 мм'">
+              </picture>
+
+              <div class="product__info">
+                <p class="product__text">
+                  <span>
+                    Ширина 1,1 м.
+                  </span>
+
+                  <span>
+                    Длина 2 м.
+                  </span>
+                </p>
+
+                <div class="product__inner">
+                  <p class="product__price">
+                    <span class="product__price-text">
+                      от
+                    </span>
+
+                    <span class="product__price-old">38000 &#8381;</span>
+
+                    <span class="product__price-new">30 000</span>
+
+                    <span class="product__currency">&#8381;</span>
+                  </p>
+
+                  <button class="product__basket">
+                    <svg class="product__basket-icon product__basket-icon_active">
+                      <use xlink:href="images/sprite.svg#basket-greenhouses"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <a href="./color-polycatbonate.html" class="product__more">Подробнее</a>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- CATALOG END -->
+
+    <!-- BANNER -->
+    <section class="promotion-banner">
+      <div class="container promotion-banner__container">
+        <picture>
+          <source srcset="/images/promotion-banner/promotion-banner_320.jpg" media="(max-width: 576px)">
+          <source srcset="/images/promotion-banner/promotion-banner_768.jpg" media=" (max-width: 968px)">
+          <source srcset="/images/promotion-banner/promotion-banner.jpg" media=" (max-width: 1920px)">
+          <img class="promotion-banner__img" src="/images/promotion-banner/promotion-banner.jpg" alt="Аватар клиента">
+        </picture>
+      </div>
+    </section>
+    <!-- BANNER END -->
+
+    <!-- REVIEWS -->
+    <section class="reviews">
+      <div class="reviews__green-bg green-bg"></div>
+
+      <div class="container reviews__container">
+        <h2 class="section-title reviews__title"><span class="section-title__green">отзывы наших</span>
+          клиентов
+        </h2>
+
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Переписывается буквоград страна маленькая.</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Переписывается буквоград страна маленькая.</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Мир собрал текста использовало его вопроса выйти щеке ведущими даль?</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__card">
+              <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="reviews__assessment">
+                <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+                <img class="reviews__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <p class="reviews__info">
+                <span class="reviews__name">Мария Смирнова</span>
+
+                <span class="reviews__town">г.Москва</span>
+              </p>
+
+              <p class="reviews__comment">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные
+                тексты. Строчка даль образ текста до!</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="swiper-reviews-button-prev"></div>
+        <div class="swiper-reviews-button-next"></div>
+
+        <!-- На разрешении ниже 1366px появляется слайдер -->
+        <div class="swiper-reviews">
+          <div class="swiper-wrapper">
+            <!-- Слайды -->
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Переписывается буквоград страна маленькая.</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Переписывается буквоград страна маленькая.</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Мир собрал текста использовало его вопроса выйти щеке ведущими даль?</p>
+              </div>
+            </div>
+
+            <div class="swiper-slide reviews-slide">
+              <div class="reviews__card">
+                <picture>
+                  <source srcset="/images/reviews/client-avatar_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 968px)">
+                  <source srcset="/images/reviews/client-avatar.jpg" media=" (max-width: 1920px)">
+                  <img class="reviews__img" src="/images/reviews/client-avatar.jpg" alt="Аватар клиента">
+                </picture>
+
+                <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+                <span class="reviews__assessment">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                  <img class="reviews__star-img" src="images/star+.svg" alt="">
+                </span>
+
+                <p class="reviews__info">
+                  <span class="reviews__name">Мария Смирнова</span>
+
+                  <span class="reviews__town">г.Москва</span>
+                </p>
+
+                <p class="reviews__comment">Далеко-далеко, за словесными горами в стране гласных и согласных живут
+                  рыбные
+                  тексты. Мир собрал текста использовало его вопроса выйти щеке ведущими даль?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews__wrapp-btn">
+          <button class="reviews__feedback">Оставить отзыв</button>
+
+          <button class="reviews__all-feedback">Читать все отзывы</button>
+        </div>
+      </div>
+    </section>
+    <!-- REVIEWS END -->
+
+    <!-- FORM -->
+    <section class="form-section">
+      <div class="container form-section__container">
+        <h2 class="section-title form-section__title">Остались вопросы?</h2>
+
+        <form class="form" action="/" autocomplete="on">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Оставьте заявку на консультацию со специалистом.</legend>
+            <div class="form__inner">
+              <input class="form__name" required name="Name" type="text" placeholder="Введите ваше имя">
+
+              <input class="form__tell" required name="tell" type="tel" placeholder="Введите ваш телефон">
+            </div>
+
+            <button class="form__btn" type="submit">получить консультацию</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <!-- FORM END -->
+
+    <!-- BUYERS-CHOICE -->
+    <section class="buyers-choice">
+      <div class="container buyers-choice__container">
+        <h2 class="section-title buyers-choice__title"><span class="section-title__green">выбор</span> покупателей
+        </h2>
+
+        <ul class="buyers-choice__list">
+          <li class="buyers-choice__item">
+            <article class="buyers-choice__card buyer-choice">
+              <h3 class="buyer-choice__title">
+                <span class="buyer-choice__title-name">“Крепость”</span>
+                теплица из поликарбоната
+              </h3>
+
+              <div class="buyer-choice__inner-img w100">
+                <!-- Это ↓ флаг акций. Можно просто менять здесь цифры  -->
+                <span class="buyer-choice__promotion">-10%</span>
+
+                <picture class="w100">
+                  <source srcset="/images/buyers-choice/fortress_320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/buyers-choice/fortress.jpg" media="(max-width: 1920px)">
+                  <img src="/images/buyers-choice/fortress.jpg" alt="Теплица из поликарбоната 'Крепость'" class="buyer-choice__img w100">
+                </picture>
+              </div>
+
+              <span class="buyer-choice__assessment">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <div class="buyer-choice__comments-wrapp">
+                <span class="buyer-choice__comments">75</span>
+
+                <span class="buyer-choice__likes">26</span>
+              </div>
+
+              <button class="buyer-choice__btn">В корзину</button>
+            </article>
+          </li>
+          <li class="buyers-choice__item">
+            <article class="buyers-choice__card buyer-choice">
+              <h3 class="buyer-choice__title">
+                <span class="buyer-choice__title-name">“Бабочка”</span>
+                парник из поликарбоната
+              </h3>
+
+              <div class="buyer-choice__inner-img w100">
+                <picture class="w100">
+                  <source srcset="/images/buyers-choice/butterfly__320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/buyers-choice/butterfly.jpg" media="(max-width: 1920px)">
+                  <img src="/images/buyers-choice/butterfly.jpg" alt="Парник из поликарбоната 'Бабочка'" class="buyer-choice__img w100">
+                </picture>
+              </div>
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="buyer-choice__assessment">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <div class="buyer-choice__comments-wrapp">
+                <span class="buyer-choice__comments">75</span>
+
+                <span class="buyer-choice__likes">26</span>
+              </div>
+
+              <button class="buyer-choice__btn">В корзину</button>
+            </article>
+          </li>
+          <li class="buyers-choice__item">
+            <article class="buyers-choice__card buyer-choice">
+              <h3 class="buyer-choice__title">
+                <span class="buyer-choice__title-name">“Капелька”</span>
+                теплица 3 метра
+              </h3>
+
+              <div class="buyer-choice__inner-img w100">
+                <!-- Это ↓ флаг акций. Можно просто менять здесь цифры  -->
+                <span class="buyer-choice__promotion">ХИТ</span>
+
+                <picture class="w100">
+                  <source srcset="/images/buyers-choice/droplet__320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/buyers-choice/droplet.jpg" media="(max-width: 1920px)">
+                  <img src="/images/buyers-choice/droplet.jpg" alt="Теплица 3 метра 'Капелька'" class="buyer-choice__img w100">
+                </picture>
+              </div>
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="buyer-choice__assessment">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <div class="buyer-choice__comments-wrapp">
+                <span class="buyer-choice__comments">75</span>
+
+                <span class="buyer-choice__likes">26</span>
+              </div>
+
+              <button class="buyer-choice__btn">В корзину</button>
+            </article>
+          </li>
+          <li class="buyers-choice__item">
+            <article class="buyers-choice__card buyer-choice">
+              <h3 class="buyer-choice__title">
+                <span class="buyer-choice__title-name">комплект грядок</span>
+                в теплицу
+              </h3>
+
+              <div class="buyer-choice__inner-img w100">
+                <picture class="w100">
+                  <source srcset="/images/buyers-choice/set__320.jpg" media="(max-width: 576px)">
+                  <source srcset="/images/buyers-choice/set.jpg" media="(max-width: 1920px)">
+                  <img src="/images/buyers-choice/set.jpg" alt="Теплица 3 метра 'Капелька'" class="buyer-choice__img w100">
+                </picture>
+              </div>
+
+              <!-- Это ↓ звезды, дизайнер сказала всегда будет 5 звезд. -->
+              <span class="buyer-choice__assessment">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="Оценка 5 звезд">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+                <img class="buyer-choice__star-img" src="images/star+.svg" alt="">
+              </span>
+
+              <div class="buyer-choice__comments-wrapp">
+                <span class="buyer-choice__comments">75</span>
+
+                <span class="buyer-choice__likes">26</span>
+              </div>
+
+              <button class="buyer-choice__btn">В корзину</button>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- BUYERS-CHOICE END -->
+
+    <!-- LOCATION -->
+    <section class="location">
+      <div class="container location__container">
+        <h2 class="section-title location__title">Мы находимся в <span class="section-title__green">г.Череповец</span>
+          Вологодской области
+        </h2>
+
+        <div class="location__wrapp">
+          <div id="map" class="location__map"></div>
+
+          <div class="location__info">
+            <p class="location__text">
+              Вы можете обратиться к нам по телефону, по электронной почте или договориться о встрече в нашем офисе.
+              Будем
+              рады
+              помочь вам и ответить на все ваши вопросы.
+            </p>
+
+            <p class="location__text location__text_phone">
+              Телефоны:
+            </p>
+
+            <ul class="location__phone-list">
+              <li class="location__phone-item">
+                <a href="tel:+78202525652" class="location__phone-link">+7 (8202) 52-56-52</a>
+              </li>
+              <li class="location__phone-item">
+                <a href="tel:+79216884777" class="location__phone-link">+7 (921) 688 47 77</a>
+              </li>
+              <li class="location__phone-item">
+                <a href="tel:+78202521052" class="location__phone-link">+7 (8202) 52-10-52</a>
+              </li>
+            </ul>
+
+            <p class="location__text">Email:
+              <a class="location__email" href="mailto:cherepovets.teplitsa@yandex.ru">cherepovets.teplitsa@yandex.ru</a>
+            </p>
+
+            <p class="location__text location__text_location">
+              Адресс:
+              <span class="location__address">
+                г. Череповец, ул.Городского Питомника м.&nbsp;1
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- LOCATION END -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <div class="footer__inner">
+          <div class="footer-menu">
+            <span class="footer-menu__title">Меню</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="greenhouses.html" class="footer-menu__link">Теплицы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Парники</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Грядки</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="flower-beds.html" class="footer-menu__link">Клумбы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Поликарбонат</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Беседки</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Душевые кабины</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Компостер</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Штакетник</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Атопроветриватель</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Дополнительные товары</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-menu">
+            <span class="footer-menu__title">О компании</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="./about-us.html" class="footer-menu__link">О компании</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="./projects.html" class="footer-menu__link">Наши работы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Отзывы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оптовое сотрудничество</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оплата и доставка</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-menu">
+            <span class="footer-menu__title">Помощь покупателю</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Полезные статьи</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Отзывы покупателей</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оплпта и доставка</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-mobile footer-menu-mobile">
+            <ul class="footer-menu-mobile__list">
+              <li class="footer-menu-mobile__item">
+                <button data-target="footerMenuDropdowTop" class="footer-menu-mobile__link footer-menu-mobile__btn">Меню</button>
+
+                <div class="footer-menu-mobile__dropdown-top footer-dropdown-top">
+                  <ul id="footerMenuDropdowTop" class="footer-dropdown-top__list">
+                    <li class="footer-dropdown-top__item">
+                      <a href="greenhouses.html" class="footer-dropdown-top__link">Теплицы</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Парники</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="flower-beds.html" class="footer-dropdown-top__link">Грядки</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Клумбы</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Поликарбонат</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Беседки</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Душевые кабины</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Компостер</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Штакетник</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Автопроветриватель</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link footer-menu-mobile__btn">Дополнительные товары</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="./about-us.html" class="footer-menu-mobile__link">О компании</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Видео</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="./projects.html" class="footer-menu-mobile__link">Наши работы</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Отзывы</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Оптовое сотрудничество</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Оплата и доставка</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Контакты</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <button data-target="footerMenuDropdowBottom" class="footer-menu-mobile__link footer-menu-mobile__btn">Помощь покупателю</button>
+
+                <div class="footer-menu-mobile__dropdown-top footer-dropdown-top">
+                  <ul id="footerMenuDropdowBottom" class="footer-dropdown-top__list">
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Полезные статьи</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Отзывы покупателей</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Оплпта и доставка</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="footer__copy">&copy;Череповецкие теплицы, 2010-2022&nbsp;| Все права защищены</p>
+      </div>
+
+      <div class="footer__right">
+        <ul class="footer__socials socials">
+          <li class="footer__socials-item">
+            <a href="https://vk.com/cherteplica" class="footer__socials-link socials__link">
+              <svg class="footer__socials-icon socials__icon">
+                <use xlink:href="images/sprite.svg#vk_footer"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="https://wa.me/89216884777" class="footer__socials-link socials__link">
+              <svg class="footer__socials-icon socials__icon">
+                <use xlink:href="images/sprite.svg#watsap__footer"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer__info">
+          <a class="footer__logo logo" href="index.html">
+            <img class="footer__logo logo__img" src="/images/logo_footer.svg" alt="Логотип">
+          </a>
+
+          <ul class="footer__phones">
+            <li class="footer__phones-item">
+              <a href="tel:+78202525652" class="footer__phone">+7 (8202) 52-56-52</a>
+            </li>
+            <li class="footer__phones-item">
+              <a href="tel:+79216884777" class="footer__phone">+7 (921) 688-47-77</a>
+            </li>
+          </ul>
+
+          <button class="footer__request-call">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+
+</html>

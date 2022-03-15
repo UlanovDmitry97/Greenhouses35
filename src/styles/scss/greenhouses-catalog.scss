@@ -12,6 +12,12 @@
     &_gazebos {
       grid-template-columns: repeat(3, 1fr)
     }
+
+    &_poly {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -19,6 +25,10 @@
 
     &_garden-bed {
       grid-column-start: 2;
+    }
+
+    &_poly {
+      width: calc(25% - 30px);
     }
   }
 

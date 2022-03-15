@@ -2408,11 +2408,19 @@ html {
 .catalog__list_gazebos {
   grid-template-columns: repeat(3, 1fr);
 }
+.catalog__list_poly {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .catalog__item {
   grid-column: 1 span;
 }
 .catalog__item_garden-bed {
   grid-column-start: 2;
+}
+.catalog__item_poly {
+  width: calc(25% - 30px);
 }
 .catalog__bread-crumbs {
   display: block;
@@ -2938,11 +2946,44 @@ html {
 .greenhouse-product__color_red {
   background-color: #E01616;
 }
+.greenhouse-product__color_dark-red {
+  background-color: #A30412;
+}
+.greenhouse-product__color_black {
+  background-color: #2D290A;
+}
+.greenhouse-product__color_blue {
+  background-color: #1A43B3;
+}
+.greenhouse-product__color_grey {
+  background-color: #85888F;
+}
+.greenhouse-product__color_green {
+  background-color: #14774B;
+}
+.greenhouse-product__color_grey-light {
+  background-color: #F0F0F0;
+}
+.greenhouse-product__color_turquoise {
+  background-color: #3C8BAA;
+}
+.greenhouse-product__color_yellow {
+  background-color: #E9C946;
+}
+.greenhouse-product__color_brown {
+  background-color: #B05803;
+}
+.greenhouse-product__color_orange {
+  background-color: #FEA13D;
+}
 .greenhouse-product__color_active {
   border-color: #000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .greenhouse-product__color-selection-list {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 450px;
   gap: 20px;
 }
 .greenhouse-product__info {
@@ -3109,6 +3150,11 @@ html {
   justify-content: center;
   margin-bottom: 30px;
 }
+.greenhouse-product__constructor-btns_poly {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 85px;
+}
 .greenhouse-product__constructor-btn-long {
   background-color: transparent;
   padding: 0;
@@ -3132,6 +3178,9 @@ html {
 .greenhouse-product__constructor-btn-long_active {
   color: #2A2A2A;
   background-color: #C4E3C2;
+}
+.greenhouse-product__constructor-btn-long_poly {
+  width: 100%;
 }
 .greenhouse-product__constructor-btn-step {
   background-color: transparent;
@@ -3807,7 +3856,7 @@ html {
   }
 
   .greenhouse-product__color-selection-list {
-    gap: 10px;
+    gap: 9px;
   }
 
   .greenhouse-product__color-selection-title {
