@@ -38,6 +38,25 @@
     margin-bottom: 30px;
   }
 
+  &__title-additional {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 21px;
+    color: $darckText;
+  }
+
+  &__list-additional {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1;
+    color: $darckText;
+  }
+
+  &__item-additional:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   &__text {
     max-width: 1430px;
     margin: 0 auto 25px;
@@ -682,6 +701,14 @@
       font-size: 19px;
     }
 
+    &__list-additional {
+      font-size: 17px;
+    }
+
+    &__title-additional {
+      font-size: 17px;
+    }
+
     &__gazebo-text {
       font-size: 17px;
     }
@@ -947,6 +974,19 @@
       line-height: 10px;
     }
 
+    &__title-additional {
+      margin-bottom: 10px;
+      font-size: 10px;
+    }
+
+    &__list-additional {
+      font-size: 10px;
+    }
+
+    &__item-additional:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
     &__price-hotebed {
       font-size: 15px;
     }
@@ -963,6 +1003,10 @@
       &_hotebed {
         margin-bottom: 10px;
       }
+    }
+
+    &__gazebo-text_additional {
+      margin-bottom: 10px;
     }
 
     &__info-title {

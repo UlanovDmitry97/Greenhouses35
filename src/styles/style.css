@@ -2436,6 +2436,9 @@ html {
   margin-bottom: 60px;
 }
 
+.product_additional {
+  justify-content: start;
+}
 .product__title {
   margin-bottom: 35px;
   font-size: 23px;
@@ -2444,6 +2447,9 @@ html {
   color: #2A2A2A;
   text-align: center;
   text-transform: uppercase;
+}
+.product__title_additional {
+  font-size: 21px;
 }
 .product__title_gazebos span {
   display: block;
@@ -2475,6 +2481,9 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.product__info_additional {
+  margin-top: auto;
 }
 .product__inner {
   display: flex;
@@ -2900,6 +2909,22 @@ html {
 .greenhouse-product__title {
   width: 100%;
   margin-bottom: 30px;
+}
+.greenhouse-product__title-additional {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+  color: #2A2A2A;
+}
+.greenhouse-product__list-additional {
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 1;
+  color: #2A2A2A;
+}
+.greenhouse-product__item-additional:not(:last-child) {
+  margin-bottom: 10px;
 }
 .greenhouse-product__text {
   max-width: 1430px;
@@ -3470,6 +3495,12 @@ html {
   .greenhouse-product__text {
     font-size: 19px;
   }
+  .greenhouse-product__list-additional {
+    font-size: 17px;
+  }
+  .greenhouse-product__title-additional {
+    font-size: 17px;
+  }
   .greenhouse-product__gazebo-text {
     font-size: 17px;
   }
@@ -3696,6 +3727,16 @@ html {
     font-size: 8px;
     line-height: 10px;
   }
+  .greenhouse-product__title-additional {
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+  .greenhouse-product__list-additional {
+    font-size: 10px;
+  }
+  .greenhouse-product__item-additional:not(:last-child) {
+    margin-bottom: 5px;
+  }
   .greenhouse-product__price-hotebed {
     font-size: 15px;
   }
@@ -3708,6 +3749,9 @@ html {
     line-height: 12px;
   }
   .greenhouse-product__text_hotebed {
+    margin-bottom: 10px;
+  }
+  .greenhouse-product__gazebo-text_additional {
     margin-bottom: 10px;
   }
   .greenhouse-product__info-title {
