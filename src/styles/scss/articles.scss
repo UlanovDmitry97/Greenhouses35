@@ -12,6 +12,10 @@
   &__green-bg {
     top: 72px;
     height: 460px;
+
+    &_single-page {
+      top: 150px;
+    }
   }
 
   &__list {
@@ -19,6 +23,55 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 30px;
+  }
+
+  &__container-single-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.article-more-info {
+
+  &__title {
+    margin-bottom: 85px;
+    font-size: 35px;
+    line-height: 1;
+    color: $darckText;
+    text-align: center;
+  }
+
+  &__img:not(:last-child) {
+    margin-bottom: 70px;
+  }
+
+  &__left {
+    margin-right: 35px;
+  }
+
+  &__right {
+    max-width: 1100px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: $darckText;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    padding-left: 22px;
+    list-style-type: decimal;
   }
 }
 
@@ -36,6 +89,35 @@
     height: 100%;
     width: 50%;
     margin-left: 19px;
+  }
+
+  &__more-info {
+    visibility: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-in-out;
+
+    &_visable {
+      visibility: visible;
+      margin-top: 50px;
+      max-height: 3000px;
+    }
+  }
+
+   &__more {
+    @include buttonReset();
+    margin: 50px auto 0;
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+  &__more-icon {
+    width: 57px;
+    height: 57px;
+    fill: #2a2a2a;
+    transition: fill .2s ease-in-out,opacity .2s ease-in-out;
+    opacity: .1;
   }
 
   &__title {
@@ -90,6 +172,22 @@
       grid-template-rows: repeat(3, 1fr);
     }
   }
+
+  .article-more-info__inner {
+    flex-direction: column;
+  }
+
+  .article-more-info__img:not(:first-child) {
+    display: none;
+  }
+
+  .article-more-info__img:first-child {
+    margin: 0 auto 40px;
+  }
+
+  .articles__green-bg_single-page  {
+    height: 100%;
+  }
 }
 
 @media (max-width: 976px) {
@@ -108,6 +206,10 @@
       top: 50px;
       height: 700px;
     }
+  }
+
+  .article-more-info__text {
+    font-size: 19px;
   }
 
   .article {
@@ -152,6 +254,10 @@
     &__item:nth-child(n+4) {
       display: none;
     }
+  }
+
+  .article-more-info__text {
+    font-size: 10px;
   }
 
   .article {

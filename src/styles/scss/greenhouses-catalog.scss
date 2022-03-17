@@ -77,6 +77,10 @@
     &-green {
       color: $hoverGreenText;
     }
+
+    &_set {
+      display: block;
+    }
   }
 
   &__img {
