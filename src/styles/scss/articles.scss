@@ -26,7 +26,6 @@
   }
 
   &__container-single-page {
-    position: relative;
     display: flex;
     flex-direction: column;
   }
@@ -170,6 +169,10 @@
     &__list {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
+    }
+
+    &__container-single-page {
+      position: relative;
     }
   }
 

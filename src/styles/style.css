@@ -1799,7 +1799,6 @@ html {
   gap: 30px;
 }
 .articles__container-single-page {
-  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -1922,6 +1921,9 @@ html {
   .articles__list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+  }
+  .articles__container-single-page {
+    position: relative;
   }
 
   .article-more-info__inner {
