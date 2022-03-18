@@ -4,6 +4,8 @@ const btnVisableProduct = document.querySelector('.greenhouse-product__more');
 const hiddenInfoProduct = document.querySelector('.greenhouse-product__more-info');
 const btnVisableArticles = document.querySelector('.article__more');
 const hiddenInfoArticles = document.querySelector('.article__more-info');
+const btnVisableReviews = document.querySelector('.reviews-section__feedback');
+const hiddenInfoReviews = document.querySelector('.form-review');
 
 if (btnVisable) {
   btnVisable.addEventListener('mouseover', () => {
@@ -14,6 +16,12 @@ if (btnVisable) {
   btnVisable.addEventListener('click', () => {
     hiddenInfo.classList.add('product-more-info_visable');
     btnVisable.classList.add('advantages-product__more_hidden');
+  });
+}
+
+if (btnVisableReviews) {
+  btnVisableReviews.addEventListener('click', () => {
+    hiddenInfoReviews.classList.toggle('form-review_visable');
   });
 }
 

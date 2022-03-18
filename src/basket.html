@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+  <link rel="preload" href="fonts/manrope-extralight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Это ↓ подключение js для слайдеров, очень важно его не пропустить -->
+  <script src="./swiper/swiper-bundle.min.js"></script>
+  <!-- Это ↓ подключение js для карты, очень важно его не пропустить, на деле там вроде еще надо будет подшаманить с ключем -->
+  <script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" defer>
+  </script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="normalize.css">
+  <!-- Это ↓ подключение стилей для слайдеров, очень важно его не пропустить -->
+  <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- Это верхнаяя часть header -->
+      <div class="header__top">
+        <a class="header__logo logo" href="index.html">
+          <img class="logo__img" src="images/logo.svg" alt="Логотип">
+
+          <p class="logo__info">
+            <span class="logo__location">Вологда</span>
+            <span class="logo__name">завод&nbsp;по производству теплиц</span>
+          </p>
+        </a>
+
+        <ul class="header__socials socials">
+          <li class="socials__item">
+            <a href="https://vk.com/cherteplica" class="socials__link">
+              <svg class="socials__icon">
+                <use xlink:href="images/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="https://wa.me/89216884777" class="socials__link">
+              <svg class="socials__icon">
+                <use xlink:href="images/sprite.svg#watsap"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="header__phones phones">
+          <li class="phones__item">
+            <a href="tel:+78202525652" class="phones__phone">+7 (8202) 52-56-52</a>
+          </li>
+          <li class="phones__item">
+            <a href="tel:+79216884777" class="phones__phone">+7 (921) 688-47-77</a>
+          </li>
+        </ul>
+
+        <div class="header__inner">
+          <div class="menu menu-mobile">
+            <button id="burgerMobile" class="burger">Меню</button>
+
+            <div id="burgerMenuMobile" class="menu__wrapp">
+              <div class="menu__info">
+                <span class="menu__title">Меню</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="./greenhouses.html" class="menu__link">Теплицы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="hotbed.html" class="menu__link">Парники</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Грядки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="flower-beds.html" class="menu__link">Клумбы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Поликарбонат</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Беседки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Душевые кабины</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Компостер</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Штакетник</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Атопроветриватель</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Дополнительные товары</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <button class="header__request-call">Заказать звонок</button>
+
+          <button class="basket basket_full">
+            <!-- Класс basket_full, отвечает за отрисовку корзины с товаром внутри -->
+            <svg class="basket__icon">
+              <use xlink:href="images/sprite.svg#basket"></use>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header__delimiter"></div>
+    <!-- Нижнаяя часть header -->
+    <div class="header__bottom">
+      <div class="container">
+        <nav class="header__nav nav">
+          <div class="menu">
+            <button id="burger" class="burger">Меню</button>
+
+            <div id="burgerMenu" class="menu__wrapp">
+              <div class="menu__info">
+                <span class="menu__title">Меню</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="./greenhouses.html" class="menu__link">Теплицы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="hotbed.html" class="menu__link">Парники</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Грядки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="flower-beds.html" class="menu__link">Клумбы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Поликарбонат</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Беседки</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Душевые кабины</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Компостер</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Штакетник</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Атопроветриватель</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Дополнительные товары</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__info">
+                <span class="menu__title">О компании</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="./about-us.html" class="menu__link">О компании</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Видео</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Наши работы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Отзывы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оптовое сотрудничество</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оплата и доставка</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__info">
+                <span class="menu__title">Помощь покупателю</span>
+
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Полезные статьи</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Отзывы покупателей</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" class="menu__link">Оплапта и доставка</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./about-us.html" class="nav__link">о компании</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">видео</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">наши работы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">оптовое сотрудничество</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">отзывы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- BASKET -->
+    <section class="basket-section">
+      <div class="container basket-section__container">
+        <div class="bread-crumbs us-ptojects__bread-crumbs">
+          <span class="bread-crumbs__bread-crumb ">главная / корзина</span>
+        </div>
+
+        <div class="basket-section__inner">
+          <div class="basket-section__left">
+            <h3 class="basket-section__left-title">Ваш заказ:</h3>
+
+            <ul class="basket-section__list">
+              <li class="basket-section__item">
+                <div class="basket-section__good">
+                  <div class="basket-section__good-top">
+                    <img src="./images/basket/good1.jpg" alt="Товар" class="basket-section__img">
+
+                    <div class="basket-section__good-inner">
+                      <p class="basket-section__good-name">
+                        <span class="basket-section__good-name-span">Парник Бабочка</span>
+                        <span>Размер1,1 м х 2,0 м</span>
+                      </p>
+
+                      <div class="basket-section__control">
+                        <button class="basket-section__minus">-</button>
+
+                        <span class="basket-section__counter">1</span>
+
+                        <button class="basket-section__plus">+</button>
+                      </div>
+
+                      <div class="basket-section__price-inner">
+                        <p class="basket-section__price">5500 &#8381</p>
+
+                        <button class="basket-section__delete"></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="basket-section__good-bottom">
+                    <p class="basket-section__price basket-section__price-final">Итого: 5500 &#8381</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="basket-section__right">
+            <form autocapitalize="" action="" class="form-basket">
+              <fieldset class="form-basket__fieldset">
+                <legend class="form-basket__legend">Оформление заказа:</legend>
+
+                <label class="form-basket__label">
+                  ФИО*
+                  <input required type="text" class="form-basket__input">
+                </label>
+
+                <label required class="form-basket__label">
+                  Телефон*
+                  <input type="tel" class="form-basket__input">
+                </label>
+
+                <label class="form-basket__label">
+                  E-mail
+                  <input type="email" class="form-basket__input">
+                </label>
+
+                <ul class="form-basket__check-list">
+                  <li class="form-basket__check-item">
+                    <label class="form-basket__label-check">
+                      <input class="form-basket__check" type="radio" value="Самовывоз" name="Доставка">
+
+                      <span class="form-basket__check-visual"></span>
+
+                      <div class="form-basket__check-inner">
+                        <span class="form-basket__check-title">
+                          Самовывоз
+                        </span>
+
+                        <span class="form-basket__check-text">
+                          Стоимость доставки,
+                          уточняйте у консульантов
+                        </span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="form-basket__check-item">
+                    <label class="form-basket__label-check">
+                      <input class="form-basket__check" type="radio" value="Доставка" name="Доставка">
+
+                      <span class="form-basket__check-visual"></span>
+
+                      <div class="form-basket__check-inner">
+                        <span class="form-basket__check-title">
+                          Доставка
+                        </span>
+
+                        <span class="form-basket__check-text">
+                          Стоимость доставки,
+                          уточняйте у консульантов
+                        </span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="form-basket__check-item">
+                    <label class="form-basket__label-check">
+                      <input class="form-basket__check" type="radio" value="Установка своими силами" name="Установка">
+
+                      <span class="form-basket__check-visual"></span>
+
+                      <div class="form-basket__check-inner">
+                        <span class="form-basket__check-title">
+                          Установка
+                          своими
+                          силами
+                        </span>
+                      </div>
+                    </label>
+                  </li>
+                  <li class="form-basket__check-item">
+                    <label class="form-basket__label-check">
+                      <input class="form-basket__check" type="radio" value="Установка нашими специалистами"
+                        name="Установка">
+
+                      <span class="form-basket__check-visual"></span>
+
+                      <div class="form-basket__check-inner">
+                        <span class="form-basket__check-title">
+                          Установка
+                          нашими
+                          специалистами
+                        </span>
+
+                        <span class="form-basket__check-text">
+                          Стоимость установки,
+                          уточняйте у консульантов
+                        </span>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+
+                <label class="form-basket__massage">
+                  Коментарии к заказу:
+                  <textarea class="form-basket__massage-text" name="massage"></textarea>
+                </label>
+              </fieldset>
+
+              <button class="form-basket__submit">Заказать</button>
+
+              <p class="form-basket__agreement">Оставляя заказ, Вы даете согласие на обработку
+                <span class="form-basket__agreement-green">персональных данных</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BASKET END -->
+    <!-- LOCATION -->
+    <section class="location">
+      <div class="container location__container">
+        <h2 class="section-title location__title">Мы находимся в <span class="section-title__green">г.Череповец</span>
+          Вологодской области
+        </h2>
+
+        <div class="location__wrapp">
+          <div id="map" class="location__map"></div>
+
+          <div class="location__info">
+            <p class="location__text">
+              Вы можете обратиться к нам по телефону, по электронной почте или договориться о встрече в нашем офисе.
+              Будем
+              рады
+              помочь вам и ответить на все ваши вопросы.
+            </p>
+
+            <p class="location__text location__text_phone">
+              Телефоны:
+            </p>
+
+            <ul class="location__phone-list">
+              <li class="location__phone-item">
+                <a href="tel:+78202525652" class="location__phone-link">+7 (8202) 52-56-52</a>
+              </li>
+              <li class="location__phone-item">
+                <a href="tel:+79216884777" class="location__phone-link">+7 (921) 688 47 77</a>
+              </li>
+              <li class="location__phone-item">
+                <a href="tel:+78202521052" class="location__phone-link">+7 (8202) 52-10-52</a>
+              </li>
+            </ul>
+
+            <p class="location__text">Email:
+              <a class="location__email" href="mailto:cherepovets.teplitsa@yandex.ru">cherepovets.teplitsa@yandex.ru</a>
+            </p>
+
+            <p class="location__text location__text_location">
+              Адресс:
+              <span class="location__address">
+                г. Череповец, ул.Городского Питомника м.&nbsp;1
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- LOCATION END -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <div class="footer__inner">
+          <div class="footer-menu">
+            <span class="footer-menu__title">Меню</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="./greenhouses.html" class="footer-menu__link">Теплицы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="hotbed.html" class="footer-menu__link">Парники</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Грядки</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="flower-beds.html" class="footer-menu__link">Клумбы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Поликарбонат</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Беседки</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Душевые кабины</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Компостер</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Штакетник</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Атопроветриватель</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Дополнительные товары</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-menu">
+            <span class="footer-menu__title">О компании</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="./about-us.html" class="footer-menu__link">О компании</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="./projects.html" class="footer-menu__link">Наши работы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Отзывы</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оптовое сотрудничество</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оплата и доставка</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-menu">
+            <span class="footer-menu__title">Помощь покупателю</span>
+
+            <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Полезные статьи</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Отзывы покупателей</a>
+              </li>
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">Оплпта и доставка</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-mobile footer-menu-mobile">
+            <ul class="footer-menu-mobile__list">
+              <li class="footer-menu-mobile__item">
+                <button data-target="footerMenuDropdowTop"
+                  class="footer-menu-mobile__link footer-menu-mobile__btn">Меню</button>
+
+                <div class="footer-menu-mobile__dropdown-top footer-dropdown-top">
+                  <ul id="footerMenuDropdowTop" class="footer-dropdown-top__list">
+                    <li class="footer-dropdown-top__item">
+                      <a href="./greenhouses.html" class="footer-dropdown-top__link">Теплицы</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="hotbed.html" class="footer-dropdown-top__link">Парники</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Грядки</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="flower-beds.html" class="footer-dropdown-top__link">Клумбы</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Поликарбонат</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Беседки</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Душевые кабины</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Компостер</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Штакетник</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Автопроветриватель</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link footer-menu-mobile__btn">Дополнительные товары</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="./about-us.html" class="footer-menu-mobile__link">О компании</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Видео</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="./projects.html" class="footer-menu-mobile__link">Наши работы</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Отзывы</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Оптовое сотрудничество</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Оплата и доставка</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <a href="#" class="footer-menu-mobile__link">Контакты</a>
+              </li>
+              <li class="footer-menu-mobile__item">
+                <button data-target="footerMenuDropdowBottom"
+                  class="footer-menu-mobile__link footer-menu-mobile__btn">Помощь покупателю</button>
+
+                <div class="footer-menu-mobile__dropdown-top footer-dropdown-top">
+                  <ul id="footerMenuDropdowBottom" class="footer-dropdown-top__list">
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Полезные статьи</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Отзывы покупателей</a>
+                    </li>
+                    <li class="footer-dropdown-top__item">
+                      <a href="#" class="footer-dropdown-top__link">Оплпта и доставка</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="footer__copy">&copy;Череповецкие теплицы, 2010-2022&nbsp;| Все права защищены</p>
+      </div>
+
+      <div class="footer__right">
+        <ul class="footer__socials socials">
+          <li class="footer__socials-item">
+            <a href="https://vk.com/cherteplica" class="footer__socials-link socials__link">
+              <svg class="footer__socials-icon socials__icon">
+                <use xlink:href="images/sprite.svg#vk_footer"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a href="https://wa.me/89216884777" class="footer__socials-link socials__link">
+              <svg class="footer__socials-icon socials__icon">
+                <use xlink:href="images/sprite.svg#watsap__footer"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer__info">
+          <a class="footer__logo logo" href="index.html">
+            <img class="footer__logo logo__img" src="/images/logo_footer.svg" alt="Логотип">
+          </a>
+
+          <ul class="footer__phones">
+            <li class="footer__phones-item">
+              <a href="tel:+78202525652" class="footer__phone">+7 (8202) 52-56-52</a>
+            </li>
+            <li class="footer__phones-item">
+              <a href="tel:+79216884777" class="footer__phone">+7 (921) 688-47-77</a>
+            </li>
+          </ul>
+
+          <button class="footer__request-call">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+
+</html>

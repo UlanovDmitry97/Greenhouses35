@@ -1,0 +1,258 @@
+@import '_variables.scss';
+@import '_mixin.scss';
+
+.reviews-section {
+  margin-bottom: 90px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    margin-bottom: 100px;
+  }
+
+  &__feedback {
+    @include buttonReset();
+    padding-right: 35px;
+    background-image: url("images/reviews_btn-icon.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    font-size: 20px;
+    line-height: 30px;
+    color: #2a2a2a;
+  }
+
+  &__form {
+    margin: 0 auto;
+    max-width: 620px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form-review {
+  display: none;
+  align-items: start;
+  visibility: hidden;
+  min-width: 620px;
+
+  &_visable {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    padding-top: 30px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1;
+    color: $darckText;
+  }
+
+  &__label:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__label-text {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  &__input {
+    width: 100%;
+    height: 58px;
+    background-color: #F5F5F5;
+    border: none;
+  }
+
+  &__massage {
+    height: 260px;
+    padding: 10px;
+    background-color: #F5F5F5;
+    resize: none;
+    border: none;
+  }
+
+  &__upload-label {
+    position: relative;
+    padding-right: 40px;
+    background-image: url("./images/upload__icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    cursor: pointer;
+  }
+
+  // &__upload {
+  //   position: absolute;
+  //   opacity: 0;
+  // }
+
+  &__submit {
+    @include buttonReset();
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 14px 55px;
+    font-size: 21px;
+    line-height: 1;
+    color: $darckText;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background-color: #FFC000;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+    transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: $hoverGreenText;
+      color: $whiteText;
+    }
+
+    &:active {
+      background-color: $activeGreenText;
+      color: $whiteText;
+    }
+  }
+}
+
+.review {
+  display: flex;
+
+  &__img {
+    margin-right: 65px;
+    width: 150px;
+    height: 150px;
+  }
+
+  &__assessment {
+    display: flex;
+  }
+
+  &__name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 21px;
+    line-height: 1;
+    color: $darckText;
+    text-align: left;
+  }
+
+  &__text {
+    max-width: 1120px;
+    font-size: 24px;
+    line-height: 1.25;
+    color: $darckText;
+    text-align: left;
+  }
+}
+
+
+@media (max-width: 968px) {
+  .review {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    &__img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &__assessment {
+      justify-content: center;
+    }
+
+    &__name {
+      font-size: 17px;
+      text-align: center;
+    }
+
+    &__text {
+      font-size: 21px;
+      text-align: center;
+    }
+  }
+
+  .form-review {
+    min-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .review {
+
+    &__img {
+      width: 60px;
+      height: 60px;
+    }
+
+    &__star-img {
+      width: 11px;
+      height: 11px;
+    }
+
+    &__name {
+      font-size: 15px;
+    }
+
+    &__text {
+      font-size: 17px;
+    }
+  }
+
+  .reviews-section__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .reviews-section__list {
+    margin-bottom: 50px;
+  }
+
+  .reviews-section {
+    margin-bottom: 30px;
+  }
+
+  .reviews-section__feedback {
+    font-size: 17px;
+  }
+
+  .form-review {
+    min-width: 200px;
+    width: 250px;
+
+    &__label {
+      font-size: 9px;
+    }
+
+    &__label:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &__input {
+      height: 25px;
+    }
+
+    &__massage {
+      height: 115px;
+    }
+
+    &__upload {
+      font-size: 9px;
+    }
+
+    &__submit {
+      font-size: 10px;
+    }
+  }
+
+
+}
